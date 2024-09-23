@@ -1,0 +1,2959 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BSK PDF Manager 1.0\n"
+"POT-Creation-Date: 2022-07-26 18:56+0800\n"
+"PO-Revision-Date: 2022-07-26 18:57+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_attr__;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: bsk-pdf-manager-pro.php:987
+#, php-format
+msgid ""
+"Directory <strong>%s</strong> can not be created. Please create it first "
+"yourself."
+msgstr ""
+"La directory <strong>%s</strong> non può essere creata. Per favore, crealo "
+"prima tu."
+
+#: bsk-pdf-manager-pro.php:988
+#, php-format
+msgid "Directory <strong>%s</strong> is not writeable ! "
+msgstr "Directory %s non è scrivibile! "
+
+#: bsk-pdf-manager-pro.php:988
+#: classes/dashboard/settings/settings-upload.php:238
+#, php-format
+msgid "Check %s for how to set the permission."
+msgstr "Controlla %s per come impostare l’autorizzazione."
+
+#: classes/common/display.php:1027
+msgid "The content of this category requires password:"
+msgstr "Il contenuto di questa categoria richiede una password:"
+
+#: classes/common/display.php:1029
+msgid "enter password..."
+msgstr "inserire la password…"
+
+#: classes/common/display.php:1030
+msgid "Verify"
+msgstr "Verificare"
+
+#: classes/common/display.php:1034
+msgid "Invalid category password"
+msgstr "Password della categoria non valida"
+
+#: classes/common/filter-tags.php:127 classes/dashboard/pdfs.php:51
+#: classes/widgets/widget-selector.php:730 classes/widgets/widget.php:673
+msgid "All"
+msgstr "Tutto"
+
+#: classes/common/search.php:84
+msgid ""
+"Exact match type in search is only available on Creator licenses and above."
+msgstr ""
+"Il tipo di corrispondenza esatta nella ricerca è disponibile solo per le "
+"licenze Creator e superiori."
+
+#: classes/dashboard/categories.php:68 classes/dashboard/categories.php:384
+#: classes/dashboard/migrate.php:58 classes/dashboard/notifications.php:30
+#: classes/dashboard/notifications.php:44 classes/dashboard/pdfm-tags.php:57
+#: classes/dashboard/pdfm-tags.php:242 classes/dashboard/pdfs-action.php:222
+#: classes/dashboard/pdfs-action.php:299 classes/dashboard/pdfs-action.php:365
+#: classes/dashboard/pdfs-action.php:427 classes/dashboard/pdfs-action.php:518
+#: classes/dashboard/pdfs-action.php:617 classes/dashboard/pdfs-action.php:687
+#: classes/dashboard/pdfs-action.php:768 classes/dashboard/pdfs.php:161
+#: classes/dashboard/pdfs.php:239
+msgid "ID"
+msgstr "ID"
+
+#: classes/dashboard/categories.php:69 classes/dashboard/categories.php:385
+#: classes/dashboard/ftp.php:271 classes/dashboard/ftp.php:352
+#: classes/dashboard/media-library.php:178
+#: classes/dashboard/media-library.php:188 classes/dashboard/migrate.php:59
+#: classes/dashboard/pdfm-tags.php:243 classes/dashboard/pdfs-action.php:223
+#: classes/dashboard/pdfs-action.php:300 classes/dashboard/pdfs-action.php:366
+#: classes/dashboard/pdfs-action.php:428 classes/dashboard/pdfs-action.php:519
+#: classes/dashboard/pdfs-action.php:618 classes/dashboard/pdfs-action.php:688
+#: classes/dashboard/pdfs-action.php:769 classes/dashboard/pdfs.php:162
+#: classes/dashboard/pdfs.php:240 classes/widgets/widget-category.php:693
+#: classes/widgets/widget-selector.php:786 classes/widgets/widget.php:688
+msgid "Title"
+msgstr "Titolo"
+
+#: classes/dashboard/categories.php:70 classes/dashboard/categories.php:386
+#: classes/dashboard/pdf.php:802 classes/dashboard/pdfm-tags.php:59
+#: classes/dashboard/pdfm-tags.php:244 classes/dashboard/pdfs.php:171
+#: classes/dashboard/pdfs.php:249
+msgid "Description"
+msgstr "Descrizione"
+
+#: classes/dashboard/categories.php:71 classes/dashboard/categories.php:387
+msgid "Password"
+msgstr "Password"
+
+#: classes/dashboard/categories.php:72 classes/dashboard/categories.php:388
+#: classes/dashboard/pdf.php:576 classes/dashboard/pdf.php:581
+#: classes/dashboard/pdfm-tags.php:60 classes/dashboard/pdfm-tags.php:245
+#: classes/dashboard/pdfs.php:183 classes/dashboard/pdfs.php:261
+msgid "Date&amp;Time"
+msgstr "Data&amp;Orario"
+
+#: classes/dashboard/categories.php:73 classes/dashboard/pdfm-tags.php:61
+msgid "Documents Count"
+msgstr "Documenti Conte"
+
+#: classes/dashboard/categories.php:98 classes/dashboard/notifications.php:161
+#: classes/dashboard/pdfm-tags.php:86
+msgid "Delete"
+msgstr "Elimina"
+
+#: classes/dashboard/categories.php:389 classes/dashboard/pdfm-tags.php:246
+msgid "PDFs Count"
+msgstr "PDFs Conte"
+
+#: classes/dashboard/category.php:25 classes/dashboard/notification.php:41
+#: classes/dashboard/pdf.php:140 classes/dashboard/pdf.php:2445
+#: classes/dashboard/pdf.php:2476 classes/dashboard/pdfm-tag.php:26
+#: classes/shortcodes/category/category-columns.php:23
+#: classes/shortcodes/category/category-dropdown.php:21
+#: classes/shortcodes/category/category-ul-ol.php:44
+#: classes/shortcodes/pdfs/pdfs-columns.php:22
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:22
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:44
+#: classes/shortcodes/selector/selector-columns.php:26
+#: classes/shortcodes/selector/selector-dropdown.php:24
+#: classes/shortcodes/selector/selector-ul-ol.php:46
+msgid "Please activate your license first"
+msgstr "Si prega di attivare prima la licenza"
+
+#: classes/dashboard/category.php:29 classes/dashboard/category.php:166
+#: classes/dashboard/ftp.php:77 classes/dashboard/media-library.php:28
+#: classes/dashboard/notification.php:45 classes/dashboard/notification.php:342
+#: classes/dashboard/pdf.php:188 classes/dashboard/pdf.php:192
+#: classes/dashboard/pdfm-tag.php:30 classes/dashboard/pdfm-tag.php:159
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+"Non disponi delle autorizzazioni sufficienti per accedere a questa pagina."
+
+#: classes/dashboard/category.php:65
+msgid "Select parent category..."
+msgstr "Seleziona la categoria principale …"
+
+#: classes/dashboard/category.php:69
+msgid "Category Title *"
+msgstr "Categoria Titolo *"
+
+#: classes/dashboard/category.php:74
+msgid "Parent Category"
+msgstr "Genitore Categoria"
+
+#: classes/dashboard/category.php:87
+msgid ""
+"The max category depth is 3, it means you can only chose categories with "
+"depth 1 or 2 as parent category."
+msgstr ""
+"La profondità massima della categoria è 3, significa che puoi scegliere solo "
+"categorie con profondità 1 o 2 come genitore categoria."
+
+#: classes/dashboard/category.php:94
+msgid ""
+"The current category alreay have child category so you can only chose "
+"categoreis with depth 1 as its parent category."
+msgstr ""
+"La categoria corrente ha già una categoria figlio, quindi puoi scegliere "
+"solo categorie con profondità 1 come genitore categoria."
+
+#: classes/dashboard/category.php:101 classes/dashboard/pdfm-tag.php:72
+msgid "Description:"
+msgstr "Descrizione:"
+
+#: classes/dashboard/category.php:117
+msgid "Category Password:"
+msgstr "Password Categoria:"
+
+#: classes/dashboard/category.php:122
+msgid "Message for empty category"
+msgstr "Messaggio per categoria vuota"
+
+#: classes/dashboard/category.php:138 classes/dashboard/pdfm-tag.php:88
+msgid "Date * :"
+msgstr "Data * :"
+
+#: classes/dashboard/category.php:162 classes/dashboard/notification.php:338
+#: classes/dashboard/pdf.php:1025 classes/dashboard/pdfm-tag.php:155
+msgid "Security issue, please refresh the page to test again!"
+msgstr "Problema di sicurezza, aggiorna la pagina per riprovare!"
+
+#: classes/dashboard/dashboard.php:134 classes/dashboard/dashboard.php:135
+#: classes/dashboard/dashboard.php:240 classes/dashboard/dashboard.php:241
+#: classes/dashboard/settings/settings-capabilities.php:339
+msgid "License & Update"
+msgstr "Licenza & Aggiornamento"
+
+#: classes/dashboard/dashboard.php:142 classes/dashboard/dashboard.php:143
+#: classes/dashboard/settings/settings-capabilities.php:112
+msgid "PDF / Documents"
+msgstr "PDF / Documenti"
+
+#: classes/dashboard/dashboard.php:151
+msgid "Add New / Edit"
+msgstr "Aggiungi nuovo/Modifica"
+
+#: classes/dashboard/dashboard.php:174 classes/dashboard/dashboard.php:175
+#: classes/dashboard/settings/settings-capabilities.php:234
+msgid "Add by FTP"
+msgstr "Aggiungi tramite FTP"
+
+#: classes/dashboard/dashboard.php:183 classes/dashboard/dashboard.php:184
+#: classes/dashboard/settings/settings-capabilities.php:259
+msgid "Add by Media Library"
+msgstr "Aggiungi da Libreria multimediale"
+
+#: classes/dashboard/dashboard.php:192 classes/dashboard/dashboard.php:193
+#: classes/dashboard/pdf.php:929
+#: classes/dashboard/settings/settings-capabilities.php:284
+msgid "Categories"
+msgstr "Categorie"
+
+#: classes/dashboard/dashboard.php:204 classes/dashboard/dashboard.php:205
+#: classes/dashboard/settings/settings-capabilities.php:297
+msgid "Tags"
+msgstr "Tag"
+
+#: classes/dashboard/dashboard.php:213 classes/dashboard/dashboard.php:214
+#: classes/dashboard/settings/settings-capabilities.php:310
+msgid "Notifications"
+msgstr "Notifiche"
+
+#: classes/dashboard/dashboard.php:222 classes/dashboard/dashboard.php:223
+#: classes/dashboard/ftp.php:189 classes/dashboard/media-library.php:85
+#: classes/dashboard/settings/settings-capabilities.php:323
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: classes/dashboard/dashboard.php:231 classes/dashboard/dashboard.php:232
+#: classes/dashboard/dashboard.php:698
+msgid "Migrate"
+msgstr "Migrare"
+
+#: classes/dashboard/dashboard.php:352
+msgid "BSK PDF Documents"
+msgstr "BSK PDF Documenti"
+
+#: classes/dashboard/dashboard.php:352 classes/dashboard/dashboard.php:397
+#: classes/dashboard/dashboard.php:452 classes/dashboard/dashboard.php:469
+#: classes/dashboard/dashboard.php:505 classes/dashboard/dashboard.php:572
+#: classes/dashboard/dashboard.php:603 classes/dashboard/dashboard.php:1039
+#: classes/dashboard/dashboard.php:1043
+#: classes/dashboard/settings/settings-capabilities.php:197
+msgid "Add New"
+msgstr "Aggiungi nuovo"
+
+#: classes/dashboard/dashboard.php:356
+msgid "search"
+msgstr "ricerca"
+
+#: classes/dashboard/dashboard.php:362
+msgid "Shortocde to show this category in list"
+msgstr "Shortcode per mostrare questa categoria in lista"
+
+#: classes/dashboard/dashboard.php:362 classes/dashboard/dashboard.php:363
+#: classes/dashboard/dashboard.php:364 classes/dashboard/dashboard.php:368
+#: classes/dashboard/dashboard.php:369 classes/dashboard/dashboard.php:370
+msgid "click here for more shortcode attributes"
+msgstr "fai clic qui per ulteriori attributi di shortcode"
+
+#: classes/dashboard/dashboard.php:363
+msgid "Shortocde to show this category in columns"
+msgstr "Shortcode per mostrare questa categoria in colonne"
+
+#: classes/dashboard/dashboard.php:364
+msgid "Shortocde to show this category in dropdown"
+msgstr "Shortcode per mostrare questa categoria in campo a discesa"
+
+#: classes/dashboard/dashboard.php:368
+msgid "Shortocde to show PDFs / Documents in list"
+msgstr "Shortcode per mostrare PDFs / Documenti in lista"
+
+#: classes/dashboard/dashboard.php:369
+msgid "Shortocde to show PDFs / Documents in columns"
+msgstr "Shortcode per mostrare PDFs / Documenti in colonne"
+
+#: classes/dashboard/dashboard.php:370
+msgid "Shortocde to show PDFs / Documents in dropdown"
+msgstr "Shortcode per mostrare PDFs / Documenti in campo a discesa"
+
+#: classes/dashboard/dashboard.php:452
+msgid "BSK PDF Categories"
+msgstr "BSK PDF Categorie"
+
+#: classes/dashboard/dashboard.php:465
+msgid "Edit Category"
+msgstr "Modifica categoria"
+
+#: classes/dashboard/dashboard.php:465
+msgid "New Category"
+msgstr "Nuova categoria"
+
+#: classes/dashboard/dashboard.php:473 classes/dashboard/dashboard.php:619
+#: classes/dashboard/notifications.php:117
+msgid "Cancel"
+msgstr "Annulla"
+
+#: classes/dashboard/dashboard.php:474 classes/dashboard/dashboard.php:525
+#: classes/dashboard/dashboard.php:620 classes/dashboard/pdf.php:905
+msgid "Save"
+msgstr "Salva"
+
+#: classes/dashboard/dashboard.php:505
+msgid "BSK PDF Tags"
+msgstr "BSK PDF Tag"
+
+#: classes/dashboard/dashboard.php:518
+msgid "Edit Tag"
+msgstr "Modifica etichetta"
+
+#: classes/dashboard/dashboard.php:518
+msgid "New Tag"
+msgstr "Nuova etichetta"
+
+#: classes/dashboard/dashboard.php:572
+msgid "BSK PDF Notifications"
+msgstr "BSK PDF Notifiche"
+
+#: classes/dashboard/dashboard.php:599
+msgid "Edit Notification"
+msgstr "Modifica notifica"
+
+#: classes/dashboard/dashboard.php:599
+msgid "New Notification"
+msgstr "Nuova notifica"
+
+#: classes/dashboard/dashboard.php:640
+msgid "Save notification failed, please try again later."
+msgstr "Salvataggio della notifica non riuscito, riprova più tardi."
+
+#: classes/dashboard/dashboard.php:667
+msgid "Bulk Add by FTP"
+msgstr "Aggiungi in blocco tramite FTP"
+
+#: classes/dashboard/dashboard.php:683
+msgid "Bulk Add by Media Library"
+msgstr "Aggiungi in blocco tramite Libreria Media"
+
+#: classes/dashboard/dashboard.php:720
+msgid "License Activation"
+msgstr "Attivazione licenza"
+
+#: classes/dashboard/dashboard.php:721
+msgid ""
+"In the field below please enter your license key to activate this plugin"
+msgstr ""
+"Nel campo sottostante inserisci la chiave di licenza per attivare questo "
+"plugin"
+
+#: classes/dashboard/dashboard.php:728
+msgid "Deactivate License"
+msgstr "Disattiva licenza"
+
+#: classes/dashboard/dashboard.php:730
+msgid "Activate License"
+msgstr "Attiva licenza"
+
+#: classes/dashboard/dashboard.php:766 classes/dashboard/dashboard.php:829
+msgid "Invalid nonce, please refresh page to check again"
+msgstr "Nonce non valido, aggiorna la pagina per ricontrollare"
+
+#: classes/dashboard/dashboard.php:803
+msgid "License Status"
+msgstr "Stato della licenza"
+
+#: classes/dashboard/dashboard.php:863
+msgid "Congratulations!"
+msgstr "Congratulazioni!"
+
+#: classes/dashboard/dashboard.php:864
+msgid ""
+"You have upgraded to Pro version successfully, the free version has been "
+"deactivated. To avoid confusion we suggest you delete free version instantly."
+msgstr ""
+"La versione Pro è stata aggiornata correttamente, la versione gratuita è "
+"stata disattivata. Per evitare confusione, ti consigliamo di eliminare "
+"immediatamente la versione gratuita."
+
+#: classes/dashboard/dashboard.php:865
+msgid "Go to delete free version!"
+msgstr "Eliminare la versione gratuita!"
+
+#: classes/dashboard/dashboard.php:873
+msgid "Number of documents per page:"
+msgstr "Numero di documenti per pagina:"
+
+#: classes/dashboard/dashboard.php:884
+msgid "Number of categories per page:"
+msgstr "Numero di categorie per pagina:"
+
+#: classes/dashboard/dashboard.php:999
+msgid "View PDFs / Documents"
+msgstr "Visualizza PDF/Documenti"
+
+#: classes/dashboard/dashboard.php:1003
+msgid "Edit their own"
+msgstr "Modifica il proprio"
+
+#: classes/dashboard/dashboard.php:1007
+msgid "Edit not pending"
+msgstr "Modifica non in attesa"
+
+#: classes/dashboard/dashboard.php:1011
+msgid "Edit of other users"
+msgstr "Modifica di altri utenti"
+
+#: classes/dashboard/dashboard.php:1015
+msgid "Delete their own"
+msgstr "Elimina i propri"
+
+#: classes/dashboard/dashboard.php:1019
+msgid "Delete not pending"
+msgstr "Elimina non in attesa"
+
+#: classes/dashboard/dashboard.php:1023
+msgid "Delete of other users"
+msgstr "Elimina altri utenti"
+
+#: classes/dashboard/dashboard.php:1027
+msgid "Upload from computer"
+msgstr "Caricare dal computer"
+
+#: classes/dashboard/dashboard.php:1031
+msgid "Upload from Media Library"
+msgstr "Carica dalla libreria multimediale"
+
+#: classes/dashboard/dashboard.php:1035 classes/dashboard/pdf.php:877
+#: classes/dashboard/pdf.php:915
+msgid "Publish"
+msgstr "Pubblicare"
+
+#: classes/dashboard/dashboard.php:1047
+msgid "Manage Categories"
+msgstr "Gestisci categorie"
+
+#: classes/dashboard/dashboard.php:1051
+msgid "Manage Tags"
+msgstr "Gestisci tag"
+
+#: classes/dashboard/dashboard.php:1055
+msgid "Manage Notifications"
+msgstr "Gestisci le notifiche"
+
+#: classes/dashboard/dashboard.php:1059
+msgid "Do settings"
+msgstr "Esegui le impostazioni"
+
+#: classes/dashboard/dashboard.php:1063
+msgid "Activate / Deactivate license"
+msgstr "Attiva / Disattiva licenza"
+
+#: classes/dashboard/ftp.php:25
+msgid "Uploading results:"
+msgstr "Carica risultati:"
+
+#: classes/dashboard/ftp.php:92 classes/dashboard/media-library.php:44
+#: classes/dashboard/pdf.php:945 classes/dashboard/pdf.php:976
+#: classes/dashboard/pdfs-action.php:141
+#: classes/dashboard/settings/settings-capabilities.php:762
+#, php-format
+msgid "Please %s first"
+msgstr "Per favore, %s prima"
+
+#: classes/dashboard/ftp.php:92 classes/dashboard/media-library.php:44
+#: classes/dashboard/pdf.php:945
+#: classes/dashboard/settings/settings-capabilities.php:762
+msgid "create category"
+msgstr "creare categoria"
+
+#: classes/dashboard/ftp.php:178
+#, php-format
+msgid "Please uplaod all you documents( %s ) to the folder <b>%s</b> first."
+msgstr ""
+"Per favore, carica prima tutti i tuoi documenti( %s ) nella cartella <b>%s</"
+"b>."
+
+#: classes/dashboard/ftp.php:181
+msgid "After uploading, your documents will be moved out from this folder."
+msgstr ""
+"Dopo il caricamento, i tuoi documenti verranno spostati da questa cartella."
+
+#: classes/dashboard/ftp.php:183 classes/dashboard/media-library.php:69
+#, php-format
+msgid ""
+"To avoid server timeout errors, up to %d documents can be listed here. This "
+"means that you can import up to %d documents at a time but you can come here "
+"multiple times until all PDFs are uploaded. If you enable \"Generate "
+"Featured Images\", you can upload up to %d PDFs at a time."
+msgstr ""
+"Per evitare errori di timeout del server, qui possono essere elencati fino a "
+"%d documenti. Ciò significa che puoi importare fino a %d documenti alla "
+"volta, ma puoi venire qui più volte fino a quando non vengono caricati tutti "
+"i PDF. Se abiliti “Genera immagini in primo piano”, puoi caricare fino a %d "
+"PDF alla volta."
+
+#: classes/dashboard/ftp.php:190
+#, php-format
+msgid "Exclude extension( %s ) from title"
+msgstr "Escludere estensione( %s ) dal titolo"
+
+#: classes/dashboard/ftp.php:194 classes/dashboard/ftp.php:205
+#: classes/dashboard/ftp.php:216 classes/dashboard/media-library.php:90
+#: classes/dashboard/media-library.php:101
+#: classes/dashboard/notifications.php:107
+#: classes/dashboard/notifications.php:111 classes/dashboard/pdf.php:318
+#: classes/dashboard/pdf.php:329 classes/dashboard/pdf.php:339
+#: classes/dashboard/pdf.php:389
+msgid "Yes"
+msgstr "Sì"
+
+#: classes/dashboard/ftp.php:197 classes/dashboard/ftp.php:208
+#: classes/dashboard/ftp.php:219 classes/dashboard/media-library.php:93
+#: classes/dashboard/media-library.php:104
+#: classes/dashboard/notifications.php:108
+#: classes/dashboard/notifications.php:112 classes/dashboard/pdf.php:319
+#: classes/dashboard/pdf.php:330 classes/dashboard/pdf.php:340
+#: classes/dashboard/pdf.php:390
+msgid "No"
+msgstr "No"
+
+#: classes/dashboard/ftp.php:201 classes/dashboard/media-library.php:86
+msgid "Replace all _ in title to space"
+msgstr "Sostituisci tutti i _ nel titolo nello spazio"
+
+#: classes/dashboard/ftp.php:212 classes/dashboard/media-library.php:97
+msgid "Replace all - in title to space"
+msgstr "Sostituisci tutti i - nel titolo nello spazio"
+
+#: classes/dashboard/ftp.php:223 classes/dashboard/media-library.php:108
+msgid "Set document's date&time with"
+msgstr "Impostare data&Orario del documento con"
+
+#: classes/dashboard/ftp.php:227
+msgid "Document's last modified date&amp;time"
+msgstr "Ultima Modificata Data& Orario del documento"
+
+#: classes/dashboard/ftp.php:230 classes/dashboard/media-library.php:115
+#: classes/dashboard/pdfs-action.php:211
+msgid "Current server date&time"
+msgstr "Data&Orario corrente del server"
+
+#: classes/dashboard/ftp.php:233 classes/dashboard/media-library.php:118
+msgid "Parsed date from filename"
+msgstr "Data analizzata dal nome file"
+
+#: classes/dashboard/ftp.php:237 classes/dashboard/ftp.php:273
+#: classes/dashboard/ftp.php:354 classes/dashboard/media-library.php:144
+#: classes/dashboard/media-library.php:180
+#: classes/dashboard/media-library.php:190
+#: classes/dashboard/pdfs-action.php:471 classes/dashboard/pdfs.php:671
+msgid "Generate Featured Image"
+msgstr "Genera immagine in primo piano"
+
+#: classes/dashboard/ftp.php:238 classes/dashboard/media-library.php:145
+#: classes/dashboard/pdfs-action.php:472
+msgid ""
+"This action will generate a thumbnail from the selected page of the PDF "
+"document and set it as the featured image of the PDF document."
+msgstr ""
+"Questa azione genererà una miniatura dalla pagina selezionata del documento "
+"PDF e la imposterà come immagine in primo piano del documento PDF."
+
+#: classes/dashboard/ftp.php:239 classes/dashboard/media-library.php:146
+#: classes/dashboard/pdfs-action.php:473
+msgid ""
+"If the selected page number exceeds the maximum page number, the first page "
+"will be used by default."
+msgstr ""
+"Se il numero di pagina selezionato supera il numero massimo di pagine, per "
+"impostazione predefinita verrà utilizzata la prima pagina."
+
+#: classes/dashboard/ftp.php:270 classes/dashboard/ftp.php:351
+#: classes/dashboard/media-library.php:177
+#: classes/dashboard/media-library.php:187 classes/dashboard/pdf.php:422
+#: classes/dashboard/pdfs-action.php:224 classes/dashboard/pdfs-action.php:301
+#: classes/dashboard/pdfs-action.php:367 classes/dashboard/pdfs-action.php:429
+#: classes/dashboard/pdfs-action.php:520 classes/dashboard/pdfs-action.php:619
+#: classes/dashboard/pdfs-action.php:689 classes/dashboard/pdfs-action.php:770
+msgid "File"
+msgstr "File"
+
+#: classes/dashboard/ftp.php:272 classes/dashboard/ftp.php:353
+#: classes/dashboard/media-library.php:179
+#: classes/dashboard/media-library.php:189
+#: classes/dashboard/pdfs-action.php:225 classes/dashboard/pdfs-action.php:302
+#: classes/dashboard/pdfs-action.php:368 classes/dashboard/pdfs-action.php:430
+msgid "Date&Time"
+msgstr "Data&Orario"
+
+#: classes/dashboard/ftp.php:281 classes/dashboard/pdfs-action.php:234
+#: classes/dashboard/pdfs-action.php:377 classes/dashboard/pdfs-action.php:531
+#: classes/dashboard/pdfs-action.php:699
+msgid "No valid PDF files found"
+msgstr "Nessun file PDF valido trovato"
+
+#: classes/dashboard/ftp.php:324
+msgid "Parse date failed, use last modified"
+msgstr "Data di analisi fallita, utilizzare l’ultima modificata"
+
+#: classes/dashboard/ftp.php:330 classes/dashboard/media-library.php:197
+msgid "Check to generate "
+msgstr "Controlla per generare "
+
+#: classes/dashboard/ftp.php:334 classes/dashboard/media-library.php:198
+#, php-format
+msgid "from the page No. %s of the PDF"
+msgstr "dalla pagina n. %s del PDF"
+
+#: classes/dashboard/ftp.php:363 classes/dashboard/media-library.php:202
+#: classes/dashboard/notification.php:173 classes/dashboard/pdfs.php:174
+#: classes/dashboard/pdfs.php:252 classes/widgets/widget-category.php:666
+msgid "Category"
+msgstr "Categoria"
+
+#: classes/dashboard/ftp.php:370
+#: classes/dashboard/settings/settings-upload.php:43
+msgid "Upload Directory"
+msgstr "Directory di caricamento"
+
+#: classes/dashboard/ftp.php:381
+msgid "Current upload directory:"
+msgstr "Directory di caricamento corrente:"
+
+#: classes/dashboard/ftp.php:387
+msgid "Upload..."
+msgstr "Caricare…"
+
+#: classes/dashboard/ftp.php:435 classes/dashboard/ftp.php:452
+#, php-format
+msgid "Directory: %s not writable."
+msgstr "Directory: %s non scrivibile."
+
+#: classes/dashboard/ftp.php:444 classes/dashboard/media-library.php:529
+#: classes/dashboard/media-library.php:545 classes/dashboard/pdf.php:1576
+#: classes/dashboard/pdf.php:1592 classes/dashboard/pdf.php:1671
+#: classes/dashboard/pdf.php:1687
+#, php-format
+msgid "Create folder: %s failed."
+msgstr "Crea cartella: %s fallito."
+
+#: classes/dashboard/ftp.php:604 classes/dashboard/media-library.php:407
+msgid "file(s) have been uploaded successfully"
+msgstr "file è stato caricato correttamente"
+
+#: classes/dashboard/ftp.php:606
+msgid " failed."
+msgstr " failed."
+
+#: classes/dashboard/media-library.php:67
+#, php-format
+msgid ""
+"Please click the below button to open your Media Library to select "
+"documents. Only documents with extension of:%s can be added."
+msgstr ""
+"Fare clic sul pulsante in basso per aprire la Libreria multimediale per "
+"selezionare i documenti. È possibile aggiungere solo documenti con "
+"estensione: %s."
+
+#: classes/dashboard/media-library.php:83
+msgid "Open Media Library to Select Documents"
+msgstr "Aprire Libreria Media per selezionare documenti"
+
+#: classes/dashboard/media-library.php:112
+msgid "Document's last modified date&time"
+msgstr "Ultima Modificata Data&Orario del documento"
+
+#: classes/dashboard/media-library.php:131
+msgid "Upload and Move option:"
+msgstr "Opzione Carica e sposta:"
+
+#: classes/dashboard/media-library.php:134 classes/dashboard/pdf.php:516
+msgid "Upload the selected document to current upload directory: "
+msgstr ""
+"Carica il documento selezionato nella directory di caricamento corrente: "
+
+#: classes/dashboard/media-library.php:140 classes/dashboard/pdf.php:522
+msgid ""
+"Delete the document from Media Library. This means the document will be only "
+"managed by BSK PDF Manager."
+msgstr ""
+"Elimina il documento dalla libreria multimediale. Ciò significa che il "
+"documento verrà gestito solo da BSK PDF Manager."
+
+#: classes/dashboard/media-library.php:216
+msgid "Submit..."
+msgstr "Invia…"
+
+#: classes/dashboard/media-library.php:465
+#: classes/dashboard/notification.php:439
+#: classes/dashboard/notification.php:480
+#: classes/dashboard/notification.php:509
+#: classes/dashboard/notification.php:540 classes/dashboard/pdf.php:2335
+#: classes/dashboard/pdf.php:2505 classes/dashboard/pdfm-tag.php:115
+#: classes/dashboard/settings/settings-capabilities.php:456
+#: classes/dashboard/settings/settings-capabilities.php:523
+#: classes/dashboard/settings/settings-capabilities.php:556
+#: classes/dashboard/settings/settings-capabilities.php:607
+#: classes/dashboard/settings/settings-capabilities.php:647
+#: classes/dashboard/settings/settings-capabilities.php:695
+#: classes/dashboard/settings/settings-capabilities.php:780
+#: classes/dashboard/settings/settings-capabilities.php:941
+#: classes/updater/update-helper.php:451
+msgid "Invalid nonce, please refresh page to try again"
+msgstr "Nonce non valido, aggiorna la pagina per riprovare"
+
+#: classes/dashboard/media-library.php:473 classes/dashboard/pdf.php:2343
+msgid "Invalid string to parse, please refresh page to try again."
+msgstr "Stringa non valida da analizzare, aggiorna la pagina per riprovare."
+
+#: classes/dashboard/media-library.php:488
+#: classes/dashboard/media-library.php:491 classes/dashboard/pdf.php:2358
+#: classes/dashboard/pdf.php:2361
+msgid "format"
+msgstr "formato"
+
+#: classes/dashboard/media-library.php:506 classes/dashboard/pdf.php:2376
+msgid "Parse date failed, use last modified instead"
+msgstr "Data di analisi fallita, utilizzare l’ultima modificata"
+
+#: classes/dashboard/media-library.php:536
+#: classes/dashboard/media-library.php:552 classes/dashboard/pdf.php:1583
+#: classes/dashboard/pdf.php:1599 classes/dashboard/pdf.php:1678
+#: classes/dashboard/pdf.php:1694
+#, php-format
+msgid "Directory %s not writable."
+msgstr "Directory %s non scrivibile."
+
+#: classes/dashboard/media-library.php:570
+#: classes/dashboard/media-library.php:590 classes/dashboard/pdf.php:1620
+#: classes/dashboard/pdf.php:1642 classes/dashboard/pdf.php:1712
+#: classes/dashboard/pdf.php:1732
+#, php-format
+msgid "Upload file to: %s failed."
+msgstr "Caricamento del file su %s non riuscito."
+
+#: classes/dashboard/migrate.php:60
+msgid "Edit URL"
+msgstr "Modifica URL"
+
+#: classes/dashboard/notification-send.php:18
+#: classes/dashboard/notification.php:586
+msgid ""
+"This feature requires a CREATOR( or above ) license, your license type is: "
+"PERSONAL."
+msgstr ""
+"Questa funzione richiede una licenza CREATOR (o superiore), il tuo tipo di "
+"licenza è: PERSONAL."
+
+#: classes/dashboard/notification-send.php:28
+msgid "Please enter email address to test."
+msgstr "Si prega di inserire l’indirizzo e-mail per il test."
+
+#: classes/dashboard/notification-send.php:40
+msgid "No send to email found."
+msgstr "Nessun invio a email trovato."
+
+#: classes/dashboard/notification-send.php:92
+msgid "No recipient found, please check your notification."
+msgstr "Nessun destinatario trovato, controlla la tua notifica."
+
+#: classes/dashboard/notification-send.php:116
+#, php-format
+msgid "The notification has been sent to %d email(s)."
+msgstr "La notifica è stata inviata a %d email."
+
+#: classes/dashboard/notification.php:100
+#: classes/dashboard/notifications.php:32
+#: classes/dashboard/notifications.php:46 classes/dashboard/pdfm-tags.php:58
+#: classes/dashboard/settings/settings-featured-image.php:71
+#: classes/dashboard/settings/settings-featured-image.php:88
+msgid "Name"
+msgstr "Nome"
+
+#: classes/dashboard/notification.php:121
+#: classes/dashboard/notifications.php:33
+#: classes/dashboard/notifications.php:47
+msgid "Trigger by"
+msgstr "Attiva da"
+
+#: classes/dashboard/notification.php:123
+msgid "Rules"
+msgstr "Regole"
+
+#: classes/dashboard/notification.php:126
+msgid "Manually"
+msgstr "Manualmente"
+
+#: classes/dashboard/notification.php:133
+msgid "Event"
+msgstr "Evento"
+
+#: classes/dashboard/notification.php:150
+#: classes/dashboard/notifications.php:31
+#: classes/dashboard/notifications.php:45 classes/dashboard/pdf.php:884
+msgid "Status"
+msgstr "Stato"
+
+#: classes/dashboard/notification.php:174
+msgid "All categories"
+msgstr "Tutte le categorie"
+
+#: classes/dashboard/notification.php:175
+msgid "Specific categories"
+msgstr "Categorie specifiche"
+
+#: classes/dashboard/notification.php:203
+#: classes/dashboard/notifications.php:34
+#: classes/dashboard/notifications.php:48
+msgid "Send to"
+msgstr "Inviare a"
+
+#: classes/dashboard/notification.php:204
+msgid "Enter Email"
+msgstr "Inserisci l’email"
+
+#: classes/dashboard/notification.php:205
+#: classes/dashboard/notifications.php:272
+msgid "By User Role"
+msgstr "Per ruolo utente"
+
+#: classes/dashboard/notification.php:206
+#: classes/dashboard/notifications.php:284
+msgid "User"
+msgstr "Utente"
+
+#: classes/dashboard/notification.php:240
+#: classes/dashboard/settings/settings-capabilities.php:401
+msgid "Please select a user role..."
+msgstr "Seleziona un ruolo utente…"
+
+#: classes/dashboard/notification.php:244
+#: classes/dashboard/settings/settings-capabilities.php:418
+msgid "Please select a user role first..."
+msgstr "Seleziona prima un ruolo utente…"
+
+#: classes/dashboard/notification.php:246
+#: classes/dashboard/settings/settings-capabilities.php:414
+msgid "Loading users in role: "
+msgstr "Caricamento utenti nel ruolo: "
+
+#: classes/dashboard/notification.php:247
+#: classes/dashboard/settings/settings-capabilities.php:415
+msgid "Please select a role first"
+msgstr "Seleziona prima un ruolo"
+
+#: classes/dashboard/notification.php:274
+msgid "From Name"
+msgstr "Dal nome"
+
+#: classes/dashboard/notification.php:278
+msgid "From Email"
+msgstr "Dall’email"
+
+#: classes/dashboard/notification.php:282
+#: classes/dashboard/notifications.php:35
+#: classes/dashboard/notifications.php:49
+msgid "Subject"
+msgstr "Materia"
+
+#: classes/dashboard/notification.php:288
+msgid "Message"
+msgstr "Messaggio"
+
+#: classes/dashboard/notification.php:447
+#: classes/dashboard/settings/settings-capabilities.php:464
+#: classes/dashboard/settings/settings-capabilities.php:531
+#: classes/dashboard/settings/settings-capabilities.php:564
+#: classes/dashboard/settings/settings-capabilities.php:662
+msgid "Invalid role name"
+msgstr "Nome ruolo non valido"
+
+#: classes/dashboard/notification.php:457
+#: classes/dashboard/settings/settings-capabilities.php:672
+msgid "No user found in role: "
+msgstr "Nessun utente trovato nel ruolo: "
+
+#: classes/dashboard/notification.php:463
+#: classes/dashboard/settings/settings-capabilities.php:678
+msgid "Please select a user..."
+msgstr "Seleziona un utente…"
+
+#: classes/dashboard/notification.php:488
+msgid "Invalid user ID"
+msgstr "ID utente non valido"
+
+#: classes/dashboard/notification.php:518
+#: classes/dashboard/notification.php:548
+msgid "Invalid notification ID"
+msgstr "ID notifica non valido"
+
+#: classes/dashboard/notification.php:570
+msgid "Invalid nonce, please refresh page to try again."
+msgstr "Nonce non valido, aggiorna la pagina per riprovare."
+
+#: classes/dashboard/notification.php:578
+#: classes/dashboard/notification.php:615
+msgid "Invalid notification ID."
+msgstr "ID notifica non valido."
+
+#: classes/dashboard/notification.php:599
+msgid "Invalid email address."
+msgstr "Indirizzo email non valido."
+
+#: classes/dashboard/notifications.php:116
+#: classes/dashboard/notifications.php:167
+msgid "Send"
+msgstr "Inviare"
+
+#: classes/dashboard/notifications.php:130
+msgid "The notificaiton has been sent out."
+msgstr "La notifica è stata inviata."
+
+#: classes/dashboard/notifications.php:155 classes/dashboard/pdfs.php:400
+#, php-format
+msgid "Edit &#8220;%s&#8221;"
+msgstr "Modificare &#8220;%s&#8221;"
+
+#: classes/dashboard/notifications.php:156 classes/dashboard/pdf.php:369
+#: classes/dashboard/pdfs.php:401
+#: classes/dashboard/settings/settings-capabilities.php:922
+msgid "Edit"
+msgstr "Modifica"
+
+#: classes/dashboard/notifications.php:160
+#, php-format
+msgid "Delete &#8220;%s&#8221;"
+msgstr "Elimina &#8220;%s&#8221;"
+
+#: classes/dashboard/notifications.php:166
+#, php-format
+msgid "Send &#8220;%s&#8221;"
+msgstr "Inviare &#8220;%s&#8221;"
+
+#: classes/dashboard/notifications.php:172
+#, php-format
+msgid "Test &#8220;%s&#8221;"
+msgstr "Test &#8220;%s&#8221;"
+
+#: classes/dashboard/notifications.php:173
+msgid "Test"
+msgstr "Test"
+
+#: classes/dashboard/notifications.php:260
+msgid "Email"
+msgstr "E-mail"
+
+#: classes/dashboard/pdf-image-editor.php:28
+msgid ""
+"ImageMagick cannot open the test PDF file, seems PDF is not enabled for "
+"ImageMagick on your server."
+msgstr ""
+"ImageMagick non può aprire il file PDF di prova, sembra che il PDF non sia "
+"abilitato per ImageMagick sul tuo server."
+
+#: classes/dashboard/pdf-image-editor.php:29
+msgid "Error message"
+msgstr "Messaggio di errore"
+
+#: classes/dashboard/pdf-image-editor.php:33
+#, php-format
+msgid ""
+"Seems ghostscript is not availbe on your server, please ask your hosting "
+"support staff to intall it. Please visit %s for more."
+msgstr ""
+"Sembra che ghostscript non sia disponibile sul tuo server, chiedi al "
+"personale di supporto dell’hosting di installarlo. Visita %s per ulteriori "
+"informazioni."
+
+#: classes/dashboard/pdf-image-editor.php:36
+#, php-format
+msgid ""
+"You may ask your hosting support staff to re-eanble PDF for ImageMagick. "
+"Check %s to have a reference."
+msgstr ""
+"Puoi chiedere al personale di supporto dell’hosting di riattivare PDF per "
+"ImageMagick. Seleziona %s per avere un riferimento."
+
+#: classes/dashboard/pdf-image-editor.php:46
+msgid ""
+"You cannot use this feautre becasue ImageMagick is not available on your "
+"server."
+msgstr ""
+"Non puoi usare questa funzione perché ImageMagick non è disponibile sul tuo "
+"server."
+
+#: classes/dashboard/pdf-image-editor.php:47
+#, php-format
+msgid ""
+"Please ask your hosting support staff to install ImageMagick on your server "
+"or refer to %s to install it yourself."
+msgstr ""
+"Chiedi al personale di supporto dell’hosting di installare ImageMagick sul "
+"tuo server o fai riferimento a %s per installarlo da solo."
+
+#: classes/dashboard/pdf-image-editor.php:67 classes/dashboard/pdf.php:2151
+#, php-format
+msgid "Generating thumbnail from PDF is not supported for %s license."
+msgstr "La generazione di miniature da PDF non è supportata per la licenza %s."
+
+#: classes/dashboard/pdf.php:46 classes/dashboard/pdf.php:48
+msgid "The uploaded file exceeds the maximum file size allowed."
+msgstr "Il file caricato supera le dimensioni massime consentite."
+
+#: classes/dashboard/pdf.php:50
+msgid ""
+"The uploaded file was only partially uploaded. Please try again in a few "
+"minutes."
+msgstr ""
+"Il file caricato è stato caricato solo parzialmente. Riprova tra qualche "
+"minuto."
+
+#: classes/dashboard/pdf.php:52
+msgid "No file was uploaded. Please try again in a few minutes."
+msgstr "Nessun file è stato caricato. Riprova tra qualche minuto."
+
+#: classes/dashboard/pdf.php:54
+msgid "File size is 0 please check and try again in a few minutes."
+msgstr "La dimensione del file è 0, controlla e riprova tra qualche minuto."
+
+#: classes/dashboard/pdf.php:56
+msgid ""
+"Failed, seems there is no temporary folder. Please try again in a few "
+"minutes."
+msgstr ""
+"Non riuscito, sembra che non ci sia una cartella temporanea. Riprova tra "
+"qualche minuto."
+
+#: classes/dashboard/pdf.php:58
+msgid "Failed to write file to disk. Please try again in a few minutes."
+msgstr "Impossibile scrivere il file sul disco. Riprova tra qualche minuto."
+
+#: classes/dashboard/pdf.php:60
+msgid ""
+"A PHP extension stopped the file upload. Please try again in a few minutes."
+msgstr ""
+"Un’estensione PHP ha interrotto il caricamento del file. Riprova tra qualche "
+"minuto."
+
+#: classes/dashboard/pdf.php:62
+msgid "Invalid file type, the file you uploaded is not allowed."
+msgstr "Tipo di file non valido, il file che hai caricato non è consentito."
+
+#: classes/dashboard/pdf.php:64
+msgid "Faild to write file to destination folder."
+msgstr "Impossibile scrivere il file nella cartella di destinazione."
+
+#: classes/dashboard/pdf.php:66
+msgid "No file was uploaded or the file is not valid. Please try again."
+msgstr ""
+"Nessun file è stato caricato o il file non è valido. Per favore riprova."
+
+#: classes/dashboard/pdf.php:69
+msgid "Add document successfully."
+msgstr "Aggiungi documento con successo."
+
+#: classes/dashboard/pdf.php:71
+msgid "Failed to add document."
+msgstr "Impossibile aggiungere il documento."
+
+#: classes/dashboard/pdf.php:73
+msgid "Update document successfully."
+msgstr "Aggiorna documento con successo."
+
+#: classes/dashboard/pdf.php:75
+msgid "Failed to update document."
+msgstr "Impossibile aggiornare il documento."
+
+#: classes/dashboard/pdf.php:78 classes/dashboard/pdf.php:80
+#: classes/dashboard/pdf.php:82 classes/dashboard/pdf.php:84
+msgid "Upload file failed."
+msgstr "Caricamento del file non riuscito."
+
+#: classes/dashboard/pdf.php:86
+msgid "1 document moved to the Trash."
+msgstr "1 documento spostato nel Cestino."
+
+#: classes/dashboard/pdf.php:88
+msgid "Invalid document ID"
+msgstr "ID documento non valido"
+
+#: classes/dashboard/pdf.php:90
+msgid "Invalid nonce, please refresh page and try again"
+msgstr "Nonce non valido, aggiorna la pagina e riprova"
+
+#: classes/dashboard/pdf.php:92
+msgid "1 document restored."
+msgstr "1 documento restaurato."
+
+#: classes/dashboard/pdf.php:225 classes/dashboard/pdf.php:1030
+#: classes/dashboard/pdf.php:1783 classes/dashboard/pdf.php:1843
+#: classes/dashboard/pdf.php:1953 classes/dashboard/pdf.php:2053
+#: classes/dashboard/pdf.php:2119 classes/dashboard/pdf.php:2181
+#: classes/dashboard/pdf.php:2283 classes/dashboard/pdf.php:2459
+#: classes/dashboard/pdf.php:2490
+msgid "You are not allowed to do this."
+msgstr "Non ti è permesso farlo."
+
+#: classes/dashboard/pdf.php:293
+msgid "Add title"
+msgstr "Aggiungi titolo"
+
+#: classes/dashboard/pdf.php:303
+msgid "Use file name as title"
+msgstr "Usa il nome del file come titolo"
+
+#: classes/dashboard/pdf.php:315
+msgid "Exclude extension"
+msgstr "Escludi estensione"
+
+#: classes/dashboard/pdf.php:326
+msgid "Replace _ to space"
+msgstr "Sostituisci _ con lo spazio"
+
+#: classes/dashboard/pdf.php:336
+msgid "Replace - to space"
+msgstr "Sostituisci - nello spazio"
+
+#: classes/dashboard/pdf.php:359
+msgid "Permalink"
+msgstr "Permalink"
+
+#: classes/dashboard/pdf.php:369
+msgid "Edit permalink"
+msgstr "Modifica collegamento permanente"
+
+#: classes/dashboard/pdf.php:428
+msgid "File Location"
+msgstr "Posizione del file"
+
+#: classes/dashboard/pdf.php:447
+msgid "File size:"
+msgstr "Dimensione del file:"
+
+#: classes/dashboard/pdf.php:460
+msgid "Upload from"
+msgstr "Carica da"
+
+#: classes/dashboard/pdf.php:465
+msgid "Your Computer"
+msgstr "Il tuo computer"
+
+#: classes/dashboard/pdf.php:474
+msgid "Media Library"
+msgstr "Libreria multimediale"
+
+#: classes/dashboard/pdf.php:507
+msgid "Select from Media Library"
+msgstr "Seleziona dalla Libreria media"
+
+#: classes/dashboard/pdf.php:511
+msgid "Remove the selected"
+msgstr "Rimuovi il file selezionato"
+
+#: classes/dashboard/pdf.php:549
+msgid "Browse"
+msgstr "Navigare"
+
+#: classes/dashboard/pdf.php:551
+#, php-format
+msgid ""
+"Maximum file size: %s To change this please modify your hosting "
+"configuration in php.ini or .htaccess file."
+msgstr ""
+"Dimensione massima del file: %s Per modificare questa opzione, modifica la "
+"configurazione dell’hosting nel file php.ini o .htaccess."
+
+#: classes/dashboard/pdf.php:552
+#, php-format
+msgid "Only %s allowed"
+msgstr "Solo %s consentito"
+
+#: classes/dashboard/pdf.php:565
+msgid "Upload to"
+msgstr "Carica su"
+
+#: classes/dashboard/pdf.php:596
+msgid "Use server date&time"
+msgstr "Usa data & ora del server"
+
+#: classes/dashboard/pdf.php:604
+msgid "Use file last modified date&time"
+msgstr "Utilizza data and ora ultima modifica del file"
+
+#: classes/dashboard/pdf.php:612
+msgid "Use parsed date from filename"
+msgstr "Usa la data analizzata dal nome file"
+
+#: classes/dashboard/pdf.php:647 classes/dashboard/pdfs.php:186
+#: classes/dashboard/pdfs.php:264
+msgid "Publish Date&amp;Time"
+msgstr "Data e ora di pubblicazione"
+
+#: classes/dashboard/pdf.php:658 classes/dashboard/pdf.php:676
+msgid "Only available "
+msgstr "Disponibile solo "
+
+#: classes/dashboard/pdf.php:658
+msgid "same or after"
+msgstr "stesso o dopo"
+
+#: classes/dashboard/pdf.php:658 classes/dashboard/pdf.php:676
+msgid "this date, leave blank for available always"
+msgstr "questa data, lascia in bianco per sempre disponibile"
+
+#: classes/dashboard/pdf.php:665 classes/dashboard/pdfs.php:189
+#: classes/dashboard/pdfs.php:267
+msgid "Expiry Date&amp;Time"
+msgstr "Data e ora di scadenza"
+
+#: classes/dashboard/pdf.php:676
+msgid "before"
+msgstr "prima"
+
+#: classes/dashboard/pdf.php:686 classes/dashboard/pdf.php:691
+#: classes/dashboard/pdfs.php:165 classes/dashboard/pdfs.php:243
+#: classes/dashboard/settings/settings.php:43
+msgid "Featured Image"
+msgstr "Immagine in evidenza"
+
+#: classes/dashboard/pdf.php:716
+msgid "Remove featured image"
+msgstr "Rimuovi Immagine in evidenza"
+
+#: classes/dashboard/pdf.php:725
+msgid "Generate featured image from PDF document."
+msgstr "Genera un’immagine in primo piano dal documento PDF."
+
+#: classes/dashboard/pdf.php:725
+msgid "Only work for PDF document"
+msgstr "Funziona solo per documenti PDF"
+
+#: classes/dashboard/pdf.php:738
+#, php-format
+msgid ""
+"Use page number %s of the PDF to generate thumbnail. If the selected page "
+"number exceeds the maximum page number, the first page will be used by "
+"default."
+msgstr ""
+"Usa il numero di pagina %s del PDF per generare la miniatura. Se il numero "
+"di pagina selezionato supera il numero massimo di pagine, per impostazione "
+"predefinita verrà utilizzata la prima pagina."
+
+#: classes/dashboard/pdf.php:775
+msgid "Image Size"
+msgstr "Dimensione dell’immagine"
+
+#: classes/dashboard/pdf.php:784
+#, php-format
+msgid ""
+"The image size shown in the front is determined by the \"Default Size\" on "
+"%s page. This can be overridden by the shortcode parameter: "
+"featured_image_size. If your shortcode is to display the PDF/document in the "
+"list, you can check the %s more."
+msgstr ""
+"La dimensione dell’immagine mostrata in primo piano è determinata dalla "
+"“Dimensione predefinita” nella pagina %s. Questo può essere sovrascritto dal "
+"parametro shortcode: featuring_image_size. Se il tuo shortcode deve "
+"visualizzare il PDF/il documento nell’elenco, puoi controllare %s in più."
+
+#: classes/dashboard/pdf.php:844 classes/dashboard/pdf.php:886
+#: classes/dashboard/pdfs.php:66 classes/dashboard/pdfs.php:321
+#: classes/dashboard/pdfs.php:1061
+msgid "Draft"
+msgstr "Brutta copia"
+
+#: classes/dashboard/pdf.php:847 classes/dashboard/pdf.php:888
+#: classes/dashboard/pdfs.php:61 classes/dashboard/pdfs.php:1046
+msgid "Published"
+msgstr "Pubblicata"
+
+#: classes/dashboard/pdf.php:851 classes/dashboard/pdfs.php:937
+#: classes/dashboard/pdfs.php:950
+msgid "File Missed"
+msgstr "File perso"
+
+#: classes/dashboard/pdf.php:855 classes/dashboard/pdf.php:889
+#: classes/dashboard/pdfs.php:71 classes/dashboard/pdfs.php:312
+#: classes/dashboard/pdfs.php:1052
+msgid "Scheduled"
+msgstr "Programmata"
+
+#: classes/dashboard/pdf.php:859 classes/dashboard/pdf.php:890
+#: classes/dashboard/pdfs.php:76 classes/dashboard/pdfs.php:315
+#: classes/dashboard/pdfs.php:1056
+msgid "Expired"
+msgstr "Scaduta"
+
+#: classes/dashboard/pdf.php:869 classes/dashboard/pdf.php:887
+#: classes/dashboard/pdfs.php:81 classes/dashboard/pdfs.php:318
+#: classes/dashboard/pdfs.php:1048
+msgid "Pending"
+msgstr "In attesa di"
+
+#: classes/dashboard/pdf.php:886
+msgid "no PDF / document uploaded."
+msgstr "nessun PDF/documento caricato."
+
+#: classes/dashboard/pdf.php:887
+msgid "The PDF / document needs to be published."
+msgstr "Il PDF/documento deve essere pubblicato."
+
+#: classes/dashboard/pdf.php:888
+msgid "The PDF / document is available in the front."
+msgstr "Il PDF/documento è disponibile nella parte anteriore."
+
+#: classes/dashboard/pdf.php:889
+msgid ""
+"The PDF / document will be available in the front same or after the field "
+"value of:  Publish Date&Time."
+msgstr ""
+"Il PDF/documento sarà disponibile in primo piano o dopo il valore del campo: "
+"Data&Ora pubblicazione."
+
+#: classes/dashboard/pdf.php:890
+msgid ""
+"The PDF / document is available in the front only before the field value "
+"of:  Expiry Date&Time."
+msgstr ""
+"Il PDF/documento è disponibile in primo piano solo prima del valore del "
+"campo di: Data e ora di scadenza."
+
+#: classes/dashboard/pdf.php:899
+msgid "Move to Trash"
+msgstr "Sposta nel Cestino"
+
+#: classes/dashboard/pdf.php:907
+msgid "Save as pending"
+msgstr "Salva come in attesa"
+
+#: classes/dashboard/pdf.php:934
+msgid "All Categories"
+msgstr "Tutte le categorie"
+
+#: classes/dashboard/pdf.php:965
+msgid "All Tags"
+msgstr "Tutti i tag"
+
+#: classes/dashboard/pdf.php:976 classes/dashboard/pdfs-action.php:141
+msgid "create tag"
+msgstr "creare tag"
+
+#: classes/dashboard/pdf.php:1038
+msgid "No category found"
+msgstr "Nessuna categoria trovata"
+
+#: classes/dashboard/pdf.php:1044 classes/dashboard/pdf.php:1062
+msgid "No valid category found"
+msgstr "Nessuna categoria valida trovata"
+
+#: classes/dashboard/pdf.php:1078
+msgid "No title found"
+msgstr "Nessun titolo trovato"
+
+#: classes/dashboard/pdf.php:1748 classes/dashboard/pdf.php:1765
+#: classes/dashboard/pdf.php:1797
+#: classes/dashboard/settings/settings-featured-image.php:375
+msgid "ERROR - Invalid nonce, please refresh page to try again"
+msgstr "ERRORE - Nonce non valido, aggiorna la pagina per riprovare"
+
+#: classes/dashboard/pdf.php:1758
+#: classes/dashboard/settings/settings-featured-image.php:388
+#, php-format
+msgid "ERROR - Invalid thumbnail ID: %s"
+msgstr "ERRORE - ID miniatura non valido: %s"
+
+#: classes/dashboard/pdf.php:1770 classes/dashboard/pdf.php:1802
+#, php-format
+msgid "ERROR - Invalid PDF ID: %s"
+msgstr "ERRORE - ID PDF non valido: %s"
+
+#: classes/dashboard/pdf.php:1776 classes/dashboard/pdf.php:1835
+#: classes/dashboard/pdf.php:1945 classes/dashboard/pdf.php:2045
+#: classes/dashboard/pdf.php:2111 classes/dashboard/pdf.php:2173
+#: classes/dashboard/pdf.php:2275 classes/dashboard/pdf.php:2451
+#: classes/dashboard/pdf.php:2482
+#, php-format
+msgid "ERROR - Invalid PDF ID: %s, or you are not allowed to do this."
+msgstr "ERRORE - ID PDF non valido: %s, oppure non sei autorizzato a farlo."
+
+#: classes/dashboard/pdf.php:1790
+msgid "SUCCESS"
+msgstr "SUCCESSO"
+
+#: classes/dashboard/pdf.php:1807
+#, php-format
+msgid "ERROR - get attachment failed ID: %s"
+msgstr "ERRORE - ID allegato non riuscito: %s"
+
+#: classes/dashboard/pdf.php:2513
+msgid "Invalid slug, please enter a valid slug."
+msgstr "Slug non valido, inserisci uno slug valido."
+
+#: classes/dashboard/pdfm-tag.php:63
+msgid "Tag Name *"
+msgstr "Nome etichetta *"
+
+#: classes/dashboard/pdfm-tag.php:101
+msgid "Please enter a valid tag name"
+msgstr "Inserisci un nome tag valido"
+
+#: classes/dashboard/pdfm-tag.php:137
+msgid "The tag name exist already "
+msgstr "Il nome del tag esiste già "
+
+#: classes/dashboard/pdfm-tag.php:144
+msgid "Unknow SQL error: "
+msgstr "Errore SQL sconosciuto: "
+
+#: classes/dashboard/pdfm-tag.php:163
+msgid "No tag ID field found"
+msgstr "Nessun campo ID tag trovato"
+
+#: classes/dashboard/pdfs-action.php:30 classes/dashboard/pdfs.php:667
+msgid "Change Category"
+msgstr "Cambia Categoria"
+
+#: classes/dashboard/pdfs-action.php:36 classes/dashboard/pdfs-action.php:110
+msgid "Choose action to do"
+msgstr "Azioni di gruppo"
+
+#: classes/dashboard/pdfs-action.php:39 classes/dashboard/pdfs-action.php:113
+#: classes/widgets/widget-category.php:787
+msgid "Add"
+msgstr "Aggiungi"
+
+#: classes/dashboard/pdfs-action.php:42 classes/dashboard/pdfs-action.php:116
+#: classes/dashboard/settings/settings-featured-image.php:141
+#: classes/dashboard/settings/settings-featured-image.php:212
+msgid "Remove"
+msgstr "Rimuovere"
+
+#: classes/dashboard/pdfs-action.php:45 classes/dashboard/pdfs-action.php:119
+msgid "Update to"
+msgstr "Aggiorna a"
+
+#: classes/dashboard/pdfs-action.php:48
+msgid "Choose category to be managed"
+msgstr "Scegli la categoria da gestire"
+
+#: classes/dashboard/pdfs-action.php:104 classes/dashboard/pdfs.php:668
+msgid "Change Tag"
+msgstr "Cambia Tag"
+
+#: classes/dashboard/pdfs-action.php:122
+msgid "Choose tag to be managed"
+msgstr "Scegli il tag da gestire"
+
+#: classes/dashboard/pdfs-action.php:187
+msgid "Change Date&amp;Time"
+msgstr "Cambia Data&amp;Orario"
+
+#: classes/dashboard/pdfs-action.php:204
+msgid "Set document's date&amp;time with"
+msgstr "Imposta data&amp;orario con"
+
+#: classes/dashboard/pdfs-action.php:208
+msgid "Current server date"
+msgstr "Data corrente del server"
+
+#: classes/dashboard/pdfs-action.php:214
+msgid "Document's current date&time"
+msgstr "Data&Orario corrente del documento"
+
+#: classes/dashboard/pdfs-action.php:251 classes/dashboard/pdfs-action.php:258
+#: classes/dashboard/pdfs-action.php:394 classes/dashboard/pdfs-action.php:401
+#: classes/dashboard/pdfs-action.php:555 classes/dashboard/pdfs-action.php:562
+msgid "Open PDF"
+msgstr "Apri PDF"
+
+#: classes/dashboard/pdfs-action.php:262 classes/dashboard/pdfs-action.php:405
+#: classes/dashboard/pdfs-action.php:567 classes/dashboard/pdfs-action.php:732
+msgid "Missing file"
+msgstr "File mancante"
+
+#: classes/dashboard/pdfs-action.php:344 classes/dashboard/pdfs.php:670
+msgid "Change Title"
+msgstr "Cambia titolo"
+
+#: classes/dashboard/pdfs-action.php:521 classes/dashboard/pdfs-action.php:620
+msgid "Current Featured Image"
+msgstr "Immagine in primo piano corrente"
+
+#: classes/dashboard/pdfs-action.php:522 classes/dashboard/pdfs-action.php:621
+msgid "Page No."
+msgstr "Pagina numero."
+
+#: classes/dashboard/pdfs-action.php:575
+msgid "Not PDF document"
+msgstr "Non documento PDF"
+
+#: classes/dashboard/pdfs-action.php:666
+msgid "Confirm to Delete Document and Featured Image"
+msgstr "Conferma per eliminare il documento e l’immagine in primo piano"
+
+#: classes/dashboard/pdfs-action.php:690 classes/dashboard/pdfs-action.php:771
+msgid "Delete Featured Image"
+msgstr "Elimina immagine in primo piano"
+
+#: classes/dashboard/pdfs.php:56
+msgid "Mine"
+msgstr "Mio"
+
+#: classes/dashboard/pdfs.php:86 classes/dashboard/pdfs.php:408
+#: classes/dashboard/pdfs.php:666
+msgid "Trash"
+msgstr "Spazzatura"
+
+#: classes/dashboard/pdfs.php:107
+msgid "Please add category first"
+msgstr "Aggiungi prima la categoria"
+
+#: classes/dashboard/pdfs.php:119
+msgid "All category"
+msgstr "Tutta la categoria"
+
+#: classes/dashboard/pdfs.php:120
+msgid "No category"
+msgstr "Nessuna categoria"
+
+#: classes/dashboard/pdfs.php:130
+msgid "All extension"
+msgstr "Tutta l’estensione"
+
+#: classes/dashboard/pdfs.php:168 classes/dashboard/pdfs.php:246
+msgid "Location"
+msgstr "Posizione"
+
+#: classes/dashboard/pdfs.php:177 classes/dashboard/pdfs.php:255
+msgid "Tag"
+msgstr "Tag"
+
+#: classes/dashboard/pdfs.php:180 classes/dashboard/pdfs.php:258
+#: classes/widgets/widget-category.php:698
+#: classes/widgets/widget-selector.php:791 classes/widgets/widget.php:693
+msgid "Order"
+msgstr "Ordine"
+
+#: classes/dashboard/pdfs.php:193 classes/dashboard/pdfs.php:271
+msgid "Download Count"
+msgstr "Scarica Count"
+
+#: classes/dashboard/pdfs.php:407
+#, php-format
+msgid "Move &#8220;%s&#8221; to the Trash"
+msgstr "Sposta &#8220;%s&#8221; nel Cestino"
+
+#: classes/dashboard/pdfs.php:414
+#, php-format
+msgid "Restore &#8220;%s&#8221; from the Trash"
+msgstr "Ripristina &#8220;%s&#8221; dal Cestino"
+
+#: classes/dashboard/pdfs.php:415 classes/dashboard/pdfs.php:676
+msgid "Restore"
+msgstr "Ripristina"
+
+#: classes/dashboard/pdfs.php:421
+#, php-format
+msgid "Delete &#8220;%s&#8221; permanently"
+msgstr "Elimina &#8220;%s&#8221; in modo permanente"
+
+#: classes/dashboard/pdfs.php:422 classes/dashboard/pdfs.php:677
+msgid "Delete Permanently"
+msgstr "Elimina definitivamente"
+
+#: classes/dashboard/pdfs.php:428
+#, php-format
+msgid "View &#8220;%s&#8221;"
+msgstr "Visualizza &#8220;%s&#8221;"
+
+#: classes/dashboard/pdfs.php:429
+msgid "View"
+msgstr "Visualizza"
+
+#: classes/dashboard/pdfs.php:669
+msgid "Change Date"
+msgstr "Cambia data"
+
+#: classes/dashboard/pdfs.php:934 classes/dashboard/pdfs.php:947
+msgid "Open Document"
+msgstr "Apri documento"
+
+#: classes/dashboard/settings/settings-capabilities.php:62
+msgid "Backend Access Settings by Role"
+msgstr "Impostazioni di accesso al back-end per ruolo"
+
+#: classes/dashboard/settings/settings-capabilities.php:65
+msgid ""
+"By default, only Administrator users can access all menu items and do "
+"everyting. Check the checkbox before the Role name to enable all users in "
+"the role to access backend. The menu items that users can access are "
+"determined by the capabilities they have."
+msgstr ""
+"Per impostazione predefinita, solo gli utenti amministratore possono "
+"accedere a tutte le voci di menu e fare tutto. Seleziona la casella di "
+"controllo prima del nome del ruolo per consentire a tutti gli utenti del "
+"ruolo di accedere al back-end. Le voci di menu a cui gli utenti possono "
+"accedere sono determinate dalle capacità di cui dispongono."
+
+#: classes/dashboard/settings/settings-capabilities.php:66
+msgid ""
+"Requried capability in the following table is the WordPress capability value "
+"to be checked."
+msgstr ""
+"La capacità richiesta nella tabella seguente è il valore della capacità di "
+"WordPress da controllare."
+
+#: classes/dashboard/settings/settings-capabilities.php:360
+msgid "User available categories"
+msgstr "Categorie disponibili per gli utenti"
+
+#: classes/dashboard/settings/settings-capabilities.php:361
+msgid ""
+"By default, users in enabled role can add / manage documents / PDFs in all "
+"categories. Here provides a way to make them can only add / manage PDFs / "
+"documents in the assigned categories to them."
+msgstr ""
+"Per impostazione predefinita, gli utenti con ruolo abilitato possono "
+"aggiungere/gestire documenti/PDF in tutte le categorie. Qui fornisce un modo "
+"per far sì che possano solo aggiungere/gestire PDF/documenti nelle categorie "
+"a loro assegnate."
+
+#: classes/dashboard/settings/settings-capabilities.php:392
+msgid "Enable"
+msgstr "Abilitare"
+
+#: classes/dashboard/settings/settings-capabilities.php:427
+msgid "Saved users with available categories list"
+msgstr "Utenti salvati con elenco di categorie disponibili"
+
+#: classes/dashboard/settings/settings-capabilities.php:430
+msgid "Display name with login"
+msgstr "Visualizza nome con login"
+
+#: classes/dashboard/settings/settings-capabilities.php:431
+msgid "Available Categories"
+msgstr "CategorieCategorie disponibili"
+
+#: classes/dashboard/settings/settings-capabilities.php:471
+#: classes/dashboard/settings/settings-capabilities.php:538
+#: classes/dashboard/settings/settings-capabilities.php:571
+#: classes/dashboard/settings/settings-capabilities.php:614
+#: classes/dashboard/settings/settings-capabilities.php:654
+#: classes/dashboard/settings/settings-capabilities.php:702
+#: classes/dashboard/settings/settings-capabilities.php:787
+#: classes/dashboard/settings/settings-capabilities.php:948
+#: classes/updater/update-helper.php:484
+msgid "You are not allowed to do this"
+msgstr "Non sei autorizzato a farlo"
+
+#: classes/dashboard/settings/settings-capabilities.php:584
+msgid "Invalid capability"
+msgstr "Capacità non valida"
+
+#: classes/dashboard/settings/settings-capabilities.php:710
+msgid "Invalid user"
+msgstr "Utente non valido"
+
+#: classes/dashboard/settings/settings-capabilities.php:738
+msgid "Set available categories for user: "
+msgstr "Imposta le categorie disponibili per l’utente: "
+
+#: classes/dashboard/settings/settings-capabilities.php:750
+#: classes/dashboard/settings/settings-capabilities.php:911
+msgid "None"
+msgstr "Nessuno"
+
+#: classes/dashboard/settings/settings-capabilities.php:799
+msgid "Your license type is not BUSINESS or above."
+msgstr "Il tuo tipo di licenza non è BUSINESS o superiore."
+
+#: classes/dashboard/settings/settings-capabilities.php:808
+#: classes/dashboard/settings/settings-capabilities.php:956
+msgid "Invalid user ID: "
+msgstr "ID utente non valido: "
+
+#: classes/dashboard/settings/settings-capabilities.php:815
+msgid "Invalid category ID: "
+msgstr "ID categoria non valido: "
+
+#: classes/dashboard/settings/settings-capabilities.php:868
+msgid "No record found"
+msgstr "Nessun record trovato"
+
+#: classes/dashboard/settings/settings-capabilities.php:919
+msgid "Remove all"
+msgstr "Rimuovi tutto"
+
+#: classes/dashboard/settings/settings-featured-image.php:57
+msgid "Register Image Sizes"
+msgstr "Registra le dimensioni dell’immagine"
+
+#: classes/dashboard/settings/settings-featured-image.php:71
+#: classes/dashboard/settings/settings-featured-image.php:88
+msgid "Width"
+msgstr "Larghezza"
+
+#: classes/dashboard/settings/settings-featured-image.php:71
+#: classes/dashboard/settings/settings-featured-image.php:88
+msgid "Height"
+msgstr "Altezza"
+
+#: classes/dashboard/settings/settings-featured-image.php:73
+#: classes/dashboard/settings/settings-featured-image.php:89
+msgid "Crop thumbnail to exact dimensions?"
+msgstr "Ritaglia l’anteprima a dimensioni esatte?"
+
+#: classes/dashboard/settings/settings-featured-image.php:92
+msgid "Save Image Sizes"
+msgstr "Salva le dimensioni dell’immagine"
+
+#: classes/dashboard/settings/settings-featured-image.php:101
+msgid "Featured Image Settings"
+msgstr "Impostazioni immagine in primo piano"
+
+#: classes/dashboard/settings/settings-featured-image.php:103
+msgid "Enable featured image"
+msgstr "Abilita Immagine in evidenza"
+
+#: classes/dashboard/settings/settings-featured-image.php:123
+msgid "Default featured image for all file types"
+msgstr "Immagine in primo piano predefinita per tutti i tipi di file"
+
+#: classes/dashboard/settings/settings-featured-image.php:124
+msgid ""
+"If no featured image is set for the PDF/document, the default featured image "
+"set here will be used."
+msgstr ""
+"Se non è impostata alcuna immagine in evidenza per il PDF/documento, verrà "
+"utilizzata l’immagine in evidenza predefinita qui impostata."
+
+#: classes/dashboard/settings/settings-featured-image.php:125
+#, php-format
+msgid ""
+"The default image size is used to determine the image size shown in the "
+"front. If a document / pdf has its own featured image, the size can be "
+"overridden by the  shortcode parameter: featured_image_size. If your "
+"shortcode is to display the PDF/document in the list, you can check the %s "
+"more."
+msgstr ""
+"La dimensione dell’immagine predefinita viene utilizzata per determinare la "
+"dimensione dell’immagine mostrata nella parte anteriore. Se un documento/pdf "
+"ha una propria immagine in evidenza, la dimensione può essere sovrascritta "
+"dal parametro shortcode: featuring_image_size. Se il tuo shortcode deve "
+"visualizzare il PDF/il documento nell’elenco, puoi controllare %s in più."
+
+#: classes/dashboard/settings/settings-featured-image.php:140
+#: classes/dashboard/settings/settings-featured-image.php:211
+msgid "Set"
+msgstr "Impostare"
+
+#: classes/dashboard/settings/settings-featured-image.php:176
+msgid "Set featured image by file type"
+msgstr "Imposta l’immagine in primo piano per tipo di file"
+
+#: classes/dashboard/settings/settings-featured-image.php:178
+msgid "Enable to set"
+msgstr "Abilita per impostare"
+
+#: classes/dashboard/settings/settings-featured-image.php:239
+msgid "Save Featured Image Settings"
+msgstr "Salva impostazioni immagine in evidenza"
+
+#: classes/dashboard/settings/settings-featured-image.php:252
+msgid "Crop: No"
+msgstr "Ritaglia: No"
+
+#: classes/dashboard/settings/settings-featured-image.php:253
+msgid "Crop: Yes"
+msgstr "Ritaglia: Yes"
+
+#: classes/dashboard/settings/settings-featured-image.php:270
+#: classes/dashboard/settings/settings-featured-image.php:272
+#: classes/widgets/widget-category.php:756
+#: classes/widgets/widget-category.php:758
+msgid "full"
+msgstr "piena"
+
+#: classes/dashboard/settings/settings-featured-image.php:282
+#: classes/dashboard/settings/settings-featured-image.php:330
+#: classes/dashboard/settings/settings-general.php:151
+#: classes/dashboard/settings/settings-permalinks.php:112
+#: classes/dashboard/settings/settings-styles.php:65
+#: classes/dashboard/settings/settings-upload.php:111
+msgid "Security issue, please refresh page and test again"
+msgstr "Problema di sicurezza, aggiorna la pagina e riprova"
+
+#: classes/dashboard/settings/settings-featured-image.php:287
+#: classes/dashboard/settings/settings-featured-image.php:335
+#: classes/dashboard/settings/settings-featured-image.php:379
+#: classes/dashboard/settings/settings-general.php:155
+#: classes/dashboard/settings/settings-permalinks.php:116
+#: classes/dashboard/settings/settings-styles.php:69
+#: classes/dashboard/settings/settings-upload.php:115
+msgid "You are now allowed to do this"
+msgstr "Ora puoi farlo"
+
+#: classes/dashboard/settings/settings-general.php:34
+msgid "Language"
+msgstr "Linguaggio"
+
+#: classes/dashboard/settings/settings-general.php:35
+msgid ""
+"Currently we support Italian, French, German, Dutch, Spanish, Portuguese. It "
+"will default use same language as your Wordpress. But you may change to use "
+"English always"
+msgstr ""
+"Attualmente supportiamo Italiano, Francese, Tedesco, Olandese, Spagnolo, "
+"Portoghese. Userà di default la stessa lingua del tuo Wordpress. Ma puoi "
+"cambiare per usare sempre Inglese"
+
+#: classes/dashboard/settings/settings-general.php:38
+msgid "Same as Wordpress"
+msgstr "Stesso di Wordpress"
+
+#: classes/dashboard/settings/settings-general.php:45
+msgid "Supported Document Extensions"
+msgstr "Estensioni di documenti supportate"
+
+#: classes/dashboard/settings/settings-general.php:49
+msgid ""
+"It not only supports PDF documents but also documents with the following "
+"extension even it is called BSK PDF Manager"
+msgstr ""
+"Non supporta solo documenti PDF, ma anche documenti con la seguente "
+"estensione, anche chiamato BSK PDF Manager"
+
+#: classes/dashboard/settings/settings-general.php:73
+msgid ""
+"You should ensure no infected file upload to your server as the plugin only "
+"check file extension."
+msgstr ""
+"Dovresti assicurarti che nessun file infetto venga caricato sul tuo server "
+"poiché il plugin controlla solo l’estensione del file."
+
+#: classes/dashboard/settings/settings-general.php:80
+msgid "Downloads"
+msgstr "Download"
+
+#: classes/dashboard/settings/settings-general.php:93
+msgid "Statistics Setting"
+msgstr "Impostazioni statistiche"
+
+#: classes/dashboard/settings/settings-general.php:96
+msgid "Enable Download Statistics"
+msgstr "Abilita download statistiche"
+
+#: classes/dashboard/settings/settings-general.php:101
+msgid "Display download count after title in front"
+msgstr "Visualizza il conteggio dei download dopo il titolo in primo piano"
+
+#: classes/dashboard/settings/settings-general.php:104
+msgid "Download count text"
+msgstr "Scarica il conteggio del testo"
+
+#: classes/dashboard/settings/settings-general.php:106
+msgid "will be replaced to real download count and must be included"
+msgstr "sarà sostituito al conteggio dei download reali e deve essere incluso"
+
+#: classes/dashboard/settings/settings-general.php:124
+msgid "Credit Setting"
+msgstr "Impostazione del credito"
+
+#: classes/dashboard/settings/settings-general.php:127
+msgid "Give us credit"
+msgstr "Dacci credito"
+
+#: classes/dashboard/settings/settings-general.php:131
+msgid "Link text"
+msgstr "Link al testo"
+
+#: classes/dashboard/settings/settings-general.php:135
+msgid "The link"
+msgstr "Il link"
+
+#: classes/dashboard/settings/settings-general.php:135
+msgid "will be shown under your PDFs"
+msgstr "verrà mostrato sotto i tuoi PDF"
+
+#: classes/dashboard/settings/settings-general.php:138
+msgid "Save General Settings"
+msgstr "Salva impostazioni generali"
+
+#: classes/dashboard/settings/settings-permalinks.php:47
+msgid "Permalinks are not in the correct format."
+msgstr "I permalink non sono nel formato corretto."
+
+#: classes/dashboard/settings/settings-permalinks.php:52
+#, php-format
+msgid ""
+"Change the %sWordPress Permalink Settings%s from default to any of the other "
+"options to get started."
+msgstr ""
+"Modifica le %sImpostazioni Permalink di WordPress%s da predefinite a una "
+"qualsiasi delle altre opzioni per iniziare."
+
+#: classes/dashboard/settings/settings-permalinks.php:60
+msgid "Enable Permalink"
+msgstr "Abilita collegamento permanente"
+
+#: classes/dashboard/settings/settings-permalinks.php:62
+msgid ""
+"This offers you the ability to create a custom URL structure for your "
+"permalinks. Custom URL structures can improve the aesthetics, usability, and "
+"forward-compatibility of your links."
+msgstr ""
+"Questo ti offre la possibilità di creare una struttura URL personalizzata "
+"per i tuoi permalink. Le strutture URL personalizzate possono migliorare "
+"l’estetica, l’usabilità e la compatibilità con le versioni successive dei "
+"tuoi collegamenti."
+
+#: classes/dashboard/settings/settings-permalinks.php:96
+msgid "Save Permalink Settings"
+msgstr "Salva le impostazioni del collegamento permanente"
+
+#: classes/dashboard/settings/settings-styles.php:29
+msgid "Version 2.0"
+msgstr "Versione 2.0"
+
+#: classes/dashboard/settings/settings-styles.php:29
+msgid "Version 1.0"
+msgstr "Versione 1.0"
+
+#: classes/dashboard/settings/settings-styles.php:33
+msgid "Default styles version"
+msgstr "Versione stili predefinita"
+
+#: classes/dashboard/settings/settings-styles.php:48
+msgid "Enable bullets for list"
+msgstr "Abilita i punti elenco per l’elenco"
+
+#: classes/dashboard/settings/settings-styles.php:52
+msgid "Save..."
+msgstr "Salva…"
+
+#: classes/dashboard/settings/settings-upload.php:45
+msgid "Current upload directory"
+msgstr "Directory di caricamento corrente"
+
+#: classes/dashboard/settings/settings-upload.php:54
+msgid "Organize uploads into month and year based folders"
+msgstr "Organizza i caricamenti in cartelle basate su mese e anno"
+
+#: classes/dashboard/settings/settings-upload.php:58
+msgid ""
+"To prevents your files from taxing the server's resources and negatively "
+"affect its load time. It is better to limit your directories to no more than "
+"1,024 files/inodes"
+msgstr ""
+"Per impedire ai file di tassare le risorse del server e influire "
+"negativamente sul tempo di caricamento. È meglio limitare le directory a non "
+"più di 1.024 file / inode"
+
+#: classes/dashboard/settings/settings-upload.php:62
+msgid "Change upload directory to"
+msgstr "Cambia directory di caricamento in"
+
+#: classes/dashboard/settings/settings-upload.php:69
+#: classes/dashboard/settings/settings-upload.php:70
+msgid "create sub folder if not blank"
+msgstr "crea una sottocartella se non vuota"
+
+#: classes/dashboard/settings/settings-upload.php:73
+msgid "Select destination path in the below diretory tree"
+msgstr ""
+"Selezionare il percorso di destinazione nella struttura di directory seguente"
+
+#: classes/dashboard/settings/settings-upload.php:75
+msgid "Only Super Admin can visit full directory structure"
+msgstr "Solo Super Admin può visitare la struttura di directory completa"
+
+#: classes/dashboard/settings/settings-upload.php:77
+msgid "Removing previous upload folder may cause PDFs link broken"
+msgstr ""
+"La rimozione della cartella di caricamento precedente potrebbe causare "
+"l’interruzione del collegamento PDF"
+
+#: classes/dashboard/settings/settings-upload.php:98
+msgid "Save Upload Settings"
+msgstr "Salva le impostazioni di caricamento"
+
+#: classes/dashboard/settings/settings-upload.php:230
+#, php-format
+msgid "Directory %s can not be created. Please create it first yourself."
+msgstr ""
+"La directory <strong>%s</strong> non può essere creata. Per favore, crealo "
+"prima tu."
+
+#: classes/dashboard/settings/settings-upload.php:237
+#, php-format
+msgid "Directory %s is not writeable ! "
+msgstr "Directory %s non è scrivibile! "
+
+#: classes/dashboard/settings/settings.php:38
+msgid "BSK PDF Settings"
+msgstr "BSK PDF Impostazioni"
+
+#: classes/dashboard/settings/settings.php:40
+msgid "General settings"
+msgstr "Impostazioni generali"
+
+#: classes/dashboard/settings/settings.php:41
+msgid "Upload"
+msgstr "Caricare"
+
+#: classes/dashboard/settings/settings.php:42
+msgid "Backend Access"
+msgstr "Accesso al back-end"
+
+#: classes/dashboard/settings/settings.php:44
+msgid "Styles"
+msgstr "Stili"
+
+#: classes/dashboard/settings/settings.php:45
+msgid "Permalinks"
+msgstr "Permalink"
+
+#: classes/shortcodes/category/category-columns.php:90
+#: classes/shortcodes/category/category-columns.php:819
+#: classes/shortcodes/category/category-dropdown.php:73
+#: classes/shortcodes/category/category-dropdown.php:885
+#: classes/shortcodes/category/category-ul-ol.php:91
+#: classes/shortcodes/category/category-ul-ol.php:839
+#: classes/shortcodes/selector/selector-columns.php:207
+#: classes/shortcodes/selector/selector-dropdown.php:187
+#: classes/shortcodes/selector/selector-ul-ol.php:224
+#: classes/widgets/widget-selector.php:261
+msgid "No valid category id found"
+msgstr "Nessun ID categoria valido trovato"
+
+#: classes/shortcodes/category/category-columns.php:723
+#: classes/shortcodes/category/category-ul-ol.php:761
+msgid "Security check, please refresh page and try again!"
+msgstr "Controllo di sicurezza, aggiorna la pagina e riprova!"
+
+#: classes/shortcodes/category/category-columns.php:728
+#: classes/shortcodes/category/category-columns.php:742
+#: classes/shortcodes/category/category-dropdown.php:792
+#: classes/shortcodes/category/category-dropdown.php:806
+#: classes/shortcodes/category/category-ul-ol.php:766
+#: classes/shortcodes/category/category-ul-ol.php:780
+#: classes/shortcodes/pdfs/pdfs-columns.php:500
+#: classes/shortcodes/pdfs/pdfs-columns.php:516
+#: classes/shortcodes/pdfs/pdfs-columns.php:665
+#: classes/shortcodes/pdfs/pdfs-columns.php:691
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:546
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:563
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:698
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:724
+msgid "No records found"
+msgstr "Nessun record trovato"
+
+#: classes/shortcodes/category/category-columns.php:738
+#: classes/shortcodes/category/category-dropdown.php:802
+#: classes/shortcodes/pdfs/pdfs-columns.php:510
+#: classes/shortcodes/selector/selector-columns.php:645
+#: classes/shortcodes/selector/selector-dropdown.php:464
+#: classes/shortcodes/selector/selector-ul-ol.php:658
+msgid "Invalid license!"
+msgstr "Licenza non valida!"
+
+#: classes/shortcodes/category/category-common.php:126
+#: classes/shortcodes/category/category.php:141
+#: classes/shortcodes/pdfs/pdfs-columns.php:111
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:66
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:128
+#: classes/shortcodes/selector/selector-columns.php:57
+#: classes/shortcodes/selector/selector-dropdown.php:67
+#: classes/shortcodes/selector/selector-ul-ol.php:78
+#: classes/widgets/widget-category.php:828
+#: classes/widgets/widget-selector.php:600
+#: classes/widgets/widget-selector.php:921 classes/widgets/widget.php:552
+#: classes/widgets/widget.php:830
+msgid "Keywords"
+msgstr "Parola chiave"
+
+#: classes/shortcodes/category/category-common.php:127
+#: classes/shortcodes/category/category.php:142
+#: classes/shortcodes/pdfs/pdfs-columns.php:112
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:67
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:129
+#: classes/shortcodes/selector/selector-columns.php:58
+#: classes/shortcodes/selector/selector-dropdown.php:68
+#: classes/shortcodes/selector/selector-ul-ol.php:79
+#: classes/widgets/widget-selector.php:602 classes/widgets/widget.php:554
+msgid "Any Year"
+msgstr "Qualsiasi anno"
+
+#: classes/shortcodes/category/category-common.php:128
+#: classes/shortcodes/category/category.php:143
+#: classes/shortcodes/pdfs/pdfs-columns.php:113
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:68
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:130
+#: classes/shortcodes/selector/selector-columns.php:59
+#: classes/shortcodes/selector/selector-dropdown.php:69
+#: classes/shortcodes/selector/selector-ul-ol.php:80
+#: classes/widgets/widget-selector.php:601 classes/widgets/widget.php:553
+msgid "Any Category"
+msgstr "Qualsiasi categoria"
+
+#: classes/shortcodes/category/category-common.php:129
+#: classes/shortcodes/category/category.php:144
+#: classes/shortcodes/pdfs/pdfs-columns.php:114
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:69
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:131
+#: classes/shortcodes/selector/selector-columns.php:60
+#: classes/shortcodes/selector/selector-columns.php:675
+#: classes/shortcodes/selector/selector-dropdown.php:70
+#: classes/shortcodes/selector/selector-dropdown.php:508
+#: classes/shortcodes/selector/selector-ul-ol.php:81
+#: classes/shortcodes/selector/selector-ul-ol.php:690
+#: classes/widgets/widget-selector.php:603 classes/widgets/widget.php:555
+msgid "Reset"
+msgstr "Ripristina"
+
+#: classes/shortcodes/category/category-common.php:130
+#: classes/shortcodes/category/category.php:145
+#: classes/shortcodes/pdfs/pdfs-columns.php:115
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:70
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:132
+#: classes/shortcodes/selector/selector-columns.php:61
+#: classes/shortcodes/selector/selector-columns.php:676
+#: classes/shortcodes/selector/selector-dropdown.php:71
+#: classes/shortcodes/selector/selector-dropdown.php:509
+#: classes/shortcodes/selector/selector-ul-ol.php:82
+#: classes/shortcodes/selector/selector-ul-ol.php:691
+msgid "Search"
+msgstr "Ricerca"
+
+#: classes/shortcodes/category/category-common.php:132
+#: classes/shortcodes/category/category-common.php:149
+#: classes/shortcodes/category/category.php:150
+#: classes/shortcodes/category/category.php:167
+#: classes/shortcodes/pdfs/pdfs-columns.php:135
+#: classes/shortcodes/pdfs/pdfs-columns.php:172
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:83
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:114
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:153
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:187
+#: classes/shortcodes/selector/selector-columns.php:82
+#: classes/shortcodes/selector/selector-columns.php:120
+#: classes/shortcodes/selector/selector-columns.php:738
+#: classes/shortcodes/selector/selector-dropdown.php:57
+#: classes/shortcodes/selector/selector-dropdown.php:107
+#: classes/shortcodes/selector/selector-dropdown.php:545
+#: classes/shortcodes/selector/selector-ul-ol.php:103
+#: classes/shortcodes/selector/selector-ul-ol.php:139
+#: classes/shortcodes/selector/selector-ul-ol.php:749
+msgid "Year"
+msgstr "Anno"
+
+#: classes/shortcodes/category/category-common.php:133
+#: classes/shortcodes/category/category-common.php:150
+#: classes/shortcodes/category/category.php:151
+#: classes/shortcodes/category/category.php:168
+#: classes/shortcodes/pdfs/pdfs-columns.php:136
+#: classes/shortcodes/pdfs/pdfs-columns.php:173
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:84
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:115
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:154
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:188
+#: classes/shortcodes/selector/selector-columns.php:83
+#: classes/shortcodes/selector/selector-columns.php:121
+#: classes/shortcodes/selector/selector-columns.php:739
+#: classes/shortcodes/selector/selector-dropdown.php:58
+#: classes/shortcodes/selector/selector-dropdown.php:108
+#: classes/shortcodes/selector/selector-dropdown.php:546
+#: classes/shortcodes/selector/selector-ul-ol.php:104
+#: classes/shortcodes/selector/selector-ul-ol.php:140
+#: classes/shortcodes/selector/selector-ul-ol.php:750
+msgid "Month"
+msgstr "Mese"
+
+#: classes/shortcodes/category/category-common.php:134
+#: classes/shortcodes/category/category-common.php:151
+#: classes/shortcodes/category/category.php:152
+#: classes/shortcodes/category/category.php:169
+#: classes/shortcodes/pdfs/pdfs-columns.php:137
+#: classes/shortcodes/pdfs/pdfs-columns.php:174
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:85
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:116
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:155
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:189
+#: classes/shortcodes/selector/selector-columns.php:84
+#: classes/shortcodes/selector/selector-columns.php:122
+#: classes/shortcodes/selector/selector-columns.php:740
+#: classes/shortcodes/selector/selector-dropdown.php:59
+#: classes/shortcodes/selector/selector-dropdown.php:109
+#: classes/shortcodes/selector/selector-dropdown.php:547
+#: classes/shortcodes/selector/selector-ul-ol.php:105
+#: classes/shortcodes/selector/selector-ul-ol.php:141
+#: classes/shortcodes/selector/selector-ul-ol.php:751
+msgid "Day"
+msgstr "Giorno"
+
+#: classes/shortcodes/category/category-common.php:135
+#: classes/shortcodes/category/category.php:153
+msgid "Weekday"
+msgstr "Giorno della settimana"
+
+#: classes/shortcodes/category/category-common.php:137
+#: classes/shortcodes/category/category.php:155
+#: classes/shortcodes/pdfs/pdfs-columns.php:140
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:158
+#: classes/shortcodes/selector/selector-columns.php:87
+#: classes/shortcodes/selector/selector-ul-ol.php:108
+#: classes/widgets/widget-category.php:48
+#: classes/widgets/widget-category.php:804
+#: classes/widgets/widget-selector.php:53
+#: classes/widgets/widget-selector.php:607
+#: classes/widgets/widget-selector.php:897 classes/widgets/widget.php:189
+#: classes/widgets/widget.php:559 classes/widgets/widget.php:806
+msgid "Previous Page"
+msgstr "Pagina precedente"
+
+#: classes/shortcodes/category/category-common.php:138
+#: classes/shortcodes/category/category.php:156
+#: classes/shortcodes/pdfs/pdfs-columns.php:141
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:159
+#: classes/shortcodes/selector/selector-columns.php:88
+#: classes/shortcodes/selector/selector-ul-ol.php:109
+#: classes/widgets/widget-category.php:49
+#: classes/widgets/widget-category.php:805
+#: classes/widgets/widget-selector.php:54
+#: classes/widgets/widget-selector.php:608
+#: classes/widgets/widget-selector.php:898 classes/widgets/widget.php:190
+#: classes/widgets/widget.php:560 classes/widgets/widget.php:807
+msgid "Next Page"
+msgstr "Pagina successiva"
+
+#: classes/shortcodes/category/category-common.php:140
+#: classes/shortcodes/category/category.php:158
+#: classes/shortcodes/pdfs/pdfs-columns.php:152
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:94
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:167
+#: classes/shortcodes/selector/selector-columns.php:98
+#: classes/shortcodes/selector/selector-columns.php:717
+#: classes/shortcodes/selector/selector-dropdown.php:85
+#: classes/shortcodes/selector/selector-dropdown.php:524
+#: classes/shortcodes/selector/selector-ul-ol.php:118
+#: classes/shortcodes/selector/selector-ul-ol.php:728
+msgid "no records found"
+msgstr "nessun record trovato"
+
+#: classes/shortcodes/category/category-common.php:141
+#: classes/shortcodes/category/category.php:159
+#, php-format
+msgid "%d record found"
+msgstr "%d record trovati"
+
+#: classes/shortcodes/category/category-common.php:142
+#: classes/shortcodes/category/category-common.php:144
+#: classes/shortcodes/category/category-common.php:145
+#: classes/shortcodes/category/category-common.php:146
+#: classes/shortcodes/category/category.php:160
+#: classes/shortcodes/category/category.php:162
+#: classes/shortcodes/category/category.php:163
+#: classes/shortcodes/category/category.php:164
+#, php-format
+msgid "%d records found"
+msgstr "%d record trovati"
+
+#: classes/shortcodes/category/category-common.php:152
+#: classes/shortcodes/category/category.php:170
+#: classes/shortcodes/pdfs/pdfs-columns.php:138
+#: classes/shortcodes/pdfs/pdfs-columns.php:175
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:86
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:117
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:156
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:190
+#: classes/shortcodes/selector/selector-columns.php:85
+#: classes/shortcodes/selector/selector-columns.php:123
+#: classes/shortcodes/selector/selector-columns.php:741
+#: classes/shortcodes/selector/selector-dropdown.php:60
+#: classes/shortcodes/selector/selector-dropdown.php:110
+#: classes/shortcodes/selector/selector-dropdown.php:548
+#: classes/shortcodes/selector/selector-ul-ol.php:106
+#: classes/shortcodes/selector/selector-ul-ol.php:142
+#: classes/shortcodes/selector/selector-ul-ol.php:752
+msgid "Day of week"
+msgstr "Giorno della settimana"
+
+#: classes/shortcodes/category/category-dropdown.php:45
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:53
+#: classes/shortcodes/selector/selector-dropdown.php:61
+msgid "Select to open..."
+msgstr "Seleziona per aprire …"
+
+#: classes/shortcodes/category/category-dropdown.php:787
+#: classes/shortcodes/pdfs/pdfs-columns.php:493
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:375
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:539
+#: classes/shortcodes/selector/selector-columns.php:632
+#: classes/shortcodes/selector/selector-dropdown.php:452
+#: classes/shortcodes/selector/selector-ul-ol.php:645
+msgid "Security check, please refresh page and try again"
+msgstr "Controllo di sicurezza, aggiorna la pagina e riprova"
+
+#: classes/shortcodes/category/category-ul-ol.php:776
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:391
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:557
+#: classes/widgets/widget-category.php:222
+#: classes/widgets/widget-selector.php:230 classes/widgets/widget.php:203
+msgid "Invalid license"
+msgstr "Licenza non valida"
+
+#: classes/shortcodes/category/category.php:146
+#: classes/shortcodes/pdfs/pdfs-columns.php:118
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:73
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:135
+#: classes/shortcodes/selector/selector-columns.php:64
+#: classes/shortcodes/selector/selector-dropdown.php:74
+#: classes/shortcodes/selector/selector-ul-ol.php:85
+msgid "Kewyords match type"
+msgstr "Tipo di corrispondenza delle parole chiave"
+
+#: classes/shortcodes/category/category.php:147
+#: classes/shortcodes/pdfs/pdfs-columns.php:119
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:74
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:136
+#: classes/shortcodes/selector/selector-columns.php:65
+#: classes/shortcodes/selector/selector-dropdown.php:75
+#: classes/shortcodes/selector/selector-ul-ol.php:86
+msgid "Partially"
+msgstr "Parzialmente"
+
+#: classes/shortcodes/category/category.php:148
+#: classes/shortcodes/pdfs/pdfs-columns.php:120
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:75
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:137
+#: classes/shortcodes/selector/selector-columns.php:66
+#: classes/shortcodes/selector/selector-dropdown.php:76
+#: classes/shortcodes/selector/selector-ul-ol.php:87
+msgid "Exactly"
+msgstr "Esattamente"
+
+#: classes/shortcodes/pdfs/pdfs-columns.php:153
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:95
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:168
+#: classes/shortcodes/selector/selector-columns.php:99
+#: classes/shortcodes/selector/selector-columns.php:718
+#: classes/shortcodes/selector/selector-dropdown.php:86
+#: classes/shortcodes/selector/selector-dropdown.php:525
+#: classes/shortcodes/selector/selector-ul-ol.php:119
+#: classes/shortcodes/selector/selector-ul-ol.php:729
+msgid "record found"
+msgstr "record trovato"
+
+#: classes/shortcodes/pdfs/pdfs-columns.php:154
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:96
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:169
+#: classes/shortcodes/selector/selector-columns.php:100
+#: classes/shortcodes/selector/selector-columns.php:719
+#: classes/shortcodes/selector/selector-dropdown.php:87
+#: classes/shortcodes/selector/selector-dropdown.php:526
+#: classes/shortcodes/selector/selector-ul-ol.php:120
+#: classes/shortcodes/selector/selector-ul-ol.php:730
+msgid "records found"
+msgstr "record trovato"
+
+#: classes/shortcodes/pdfs/pdfs-columns.php:659
+#: classes/shortcodes/pdfs/pdfs-columns.php:685
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:477
+#: classes/shortcodes/pdfs/pdfs-dropdown.php:503
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:692
+#: classes/shortcodes/pdfs/pdfs-ul-ol.php:718
+msgid "No valid document ID"
+msgstr "Nessun ID valido"
+
+#: classes/shortcodes/selector/selector-columns.php:42
+#: classes/shortcodes/selector/selector-dropdown.php:39
+#: classes/shortcodes/selector/selector-ul-ol.php:63
+#: classes/widgets/widget-selector.php:33
+#: classes/widgets/widget-selector.php:577
+msgid "Select category to browse..."
+msgstr "Seleziona la categoria da sfogliare…"
+
+#: classes/statistics/download-count.php:93
+msgid "( Downloads: #COUNT# )"
+msgstr "( Download: #COUNT# )"
+
+#: classes/updater/update-helper.php:97
+msgid "New update available for"
+msgstr "Nuovo aggiornamento disponibile per"
+
+#: classes/updater/update-helper.php:97 classes/updater/update-helper.php:99
+msgid "View Details"
+msgstr "Visualizza dettagli"
+
+#: classes/updater/update-helper.php:104 classes/updater/update-helper.php:129
+#: classes/updater/update-helper.php:151
+msgid "Dismiss"
+msgstr "Respingere"
+
+#: classes/updater/update-helper.php:121 classes/updater/update-helper.php:145
+#: classes/updater/update-helper.php:238 classes/updater/update-helper.php:252
+msgid "Learn more here"
+msgstr "Ulteriori informazioni qui"
+
+#: classes/updater/update-helper.php:128
+msgid "Update license"
+msgstr "Aggiorna licenza"
+
+#: classes/updater/update-helper.php:150 classes/updater/update-helper.php:256
+#: classes/updater/update-helper.php:267
+msgid "Buy a license"
+msgstr "Acquista una licenza"
+
+#: classes/updater/update-helper.php:167
+msgid "Please"
+msgstr "Per favore"
+
+#: classes/updater/update-helper.php:167
+msgid "active your license"
+msgstr "attiva la tua licenza"
+
+#: classes/updater/update-helper.php:167
+msgid "fist."
+msgstr "cazzotto."
+
+#: classes/updater/update-helper.php:193
+msgid "Update Centre"
+msgstr "Centro aggiornamenti"
+
+#: classes/updater/update-helper.php:198
+msgid ""
+"As your server cannot connect to ours well so get the latest version and "
+"update manually."
+msgstr ""
+"Poiché il tuo server non riesce a connettersi bene al nostro, procurati "
+"l’ultima versione e aggiorna manualmente."
+
+#: classes/updater/update-helper.php:199
+msgid "Please visit"
+msgstr "Per favore visita"
+
+#: classes/updater/update-helper.php:199 classes/updater/update-helper.php:201
+#: classes/updater/update-helper.php:311
+msgid "Purchase History"
+msgstr "Cronologia degli acquisti"
+
+#: classes/updater/update-helper.php:199
+msgid ""
+"to check if new version available or not first. If you decided to install a "
+"new version, then please follow the instucutres here."
+msgstr ""
+"per verificare se la nuova versione è disponibile o meno per prima. Se hai "
+"deciso di installare una nuova versione, segui le istruzioni qui."
+
+#: classes/updater/update-helper.php:200 classes/updater/update-helper.php:310
+msgid "Manually Update Steps"
+msgstr "Aggiorna manualmente i passaggi"
+
+#: classes/updater/update-helper.php:201
+msgid "1. Download the latest version package from"
+msgstr "1. Ottieni il pacchetto di versione più recente da"
+
+#: classes/updater/update-helper.php:202 classes/updater/update-helper.php:312
+msgid "2. Extract the package to your local"
+msgstr "2. Estrai il pacchetto nel tuo locale"
+
+#: classes/updater/update-helper.php:203 classes/updater/update-helper.php:313
+msgid "3. Upload all files in the package to your server"
+msgstr "3. Carica tutti i file nel pacchetto sul tuo server"
+
+#: classes/updater/update-helper.php:203 classes/updater/update-helper.php:313
+msgid "overwrite all files"
+msgstr "sovrascrivi tutti i file"
+
+#: classes/updater/update-helper.php:212
+#, php-format
+msgid "The version %s you have is the latest"
+msgstr "La versione %s che hai è l’ultima"
+
+#: classes/updater/update-helper.php:238
+#, php-format
+msgid "Updates are not available for %s as your license has expired. "
+msgstr ""
+"Gli aggiornamenti non sono disponibili per %s poiché la licenza è scaduta. "
+
+#: classes/updater/update-helper.php:246
+msgid "Renew license here"
+msgstr "Rinnova la licenza qui"
+
+#: classes/updater/update-helper.php:252
+#, php-format
+msgid "Updates are not available for %s as your license is disabled. "
+msgstr ""
+"Gli aggiornamenti non sono disponibili per %s poiché la licenza è "
+"disabilitata. "
+
+#: classes/updater/update-helper.php:263
+#, php-format
+msgid "Updates are not available for %s as your license is"
+msgstr "Gli aggiornamenti non sono disponibili per %s poiché la licenza è"
+
+#: classes/updater/update-helper.php:289
+#, php-format
+msgid "There is a new version of %s available."
+msgstr "È disponibile una nuova versione di %s."
+
+#: classes/updater/update-helper.php:290
+msgid "What's New"
+msgstr "Cosa c’è di nuovo"
+
+#: classes/updater/update-helper.php:297
+msgid "Update"
+msgstr "Aggiornare"
+
+#: classes/updater/update-helper.php:304
+msgid "You can update to the latest version automatically."
+msgstr "È possibile aggiornare automaticamente all’ultima versione."
+
+#: classes/updater/update-helper.php:305
+msgid "Update Automatically"
+msgstr "Aggiorna automaticamente"
+
+#: classes/updater/update-helper.php:309
+msgid ""
+"The WordPress automatic update feature is disabled on your site. You may "
+"download the latest version and update manually."
+msgstr ""
+"La funzione di aggiornamento automatico di WordPress è disabilitata sul tuo "
+"sito. Puoi scaricare l’ultima versione e aggiornarla manualmente."
+
+#: classes/updater/update-helper.php:311
+msgid "1. Download the latest version package from bskpdfmanager"
+msgstr "1. Scarica l’ultimo pacchetto versione da"
+
+#: classes/updater/update-helper.php:313
+msgid "by"
+msgstr "di"
+
+#: classes/updater/update-helper.php:415
+msgid "License Summary"
+msgstr "Riepilogo licenza"
+
+#: classes/updater/update-helper.php:417
+msgid "Type"
+msgstr "Tipo"
+
+#: classes/updater/update-helper.php:428
+msgid "Expires on"
+msgstr "Scade il"
+
+#: classes/updater/update-helper.php:460
+msgid "License"
+msgstr "Licenza"
+
+#: classes/widgets/widget-category.php:13
+msgid "Display all PDFs within a given category"
+msgstr "Visualizza tutti i PDF in una determinata categoria"
+
+#: classes/widgets/widget-category.php:651
+#: classes/widgets/widget-selector.php:711 classes/widgets/widget.php:654
+msgid "Widget Title"
+msgstr "Titolo widget"
+
+#: classes/widgets/widget-category.php:654
+#: classes/widgets/widget-selector.php:714 classes/widgets/widget.php:657
+msgid "Display widget title in"
+msgstr "Visualizza il titolo del widget in formato"
+
+#: classes/widgets/widget-category.php:670
+#: classes/widgets/widget-selector.php:754
+msgid "Select category..."
+msgstr "Seleziona categoria…"
+
+#: classes/widgets/widget-category.php:679
+msgid "Show category title?"
+msgstr "Mostra il titolo della categoria?"
+
+#: classes/widgets/widget-category.php:685
+msgid "Show category description?"
+msgstr "Mostra la descrizione della categoria?"
+
+#: classes/widgets/widget-category.php:688 classes/widgets/widget.php:682
+msgid "Exclude PDF of ID in"
+msgstr "Escludi PDF di ID in"
+
+#: classes/widgets/widget-category.php:689 classes/widgets/widget.php:680
+#: classes/widgets/widget.php:683
+msgid "Documents' ID list, separated by comma"
+msgstr "Elenco ID documenti, separato da virgola"
+
+#: classes/widgets/widget-category.php:691
+#: classes/widgets/widget-selector.php:783 classes/widgets/widget.php:685
+msgid "Order by"
+msgstr "Ordinato da"
+
+#: classes/widgets/widget-category.php:694
+#: classes/widgets/widget-selector.php:787 classes/widgets/widget.php:689
+msgid "Date"
+msgstr "Data"
+
+#: classes/widgets/widget-category.php:695
+#: classes/widgets/widget-selector.php:788 classes/widgets/widget.php:690
+msgid "Custom Order"
+msgstr "Ordine personalizzato"
+
+#: classes/widgets/widget-category.php:704
+#: classes/widgets/widget-selector.php:797 classes/widgets/widget.php:699
+msgid "Most top of"
+msgstr "La maggior parte di"
+
+#: classes/widgets/widget-category.php:704
+#: classes/widgets/widget-selector.php:797 classes/widgets/widget.php:699
+msgid "documents will be shown"
+msgstr "verranno mostrati i documenti"
+
+#: classes/widgets/widget-category.php:704
+#: classes/widgets/widget-selector.php:797 classes/widgets/widget.php:700
+msgid "0 means not apply"
+msgstr "0 significa non applicabile"
+
+#: classes/widgets/widget-category.php:714
+#: classes/widgets/widget-selector.php:807 classes/widgets/widget.php:710
+msgid "Shows date"
+msgstr "Mostra la data"
+
+#: classes/widgets/widget-category.php:718
+#: classes/widgets/widget-selector.php:811 classes/widgets/widget.php:714
+msgid "Date format"
+msgstr "Formato data"
+
+#: classes/widgets/widget-category.php:720
+msgid "leave blank to use default format  d/m/Y"
+msgstr "lascia vuoto per utilizzare il formato predefinito  d/m/Y"
+
+#: classes/widgets/widget-category.php:724
+#: classes/widgets/widget-selector.php:817 classes/widgets/widget.php:720
+msgid "Shows date before PDF title"
+msgstr "Mostra la data prima del titolo PDF"
+
+#: classes/widgets/widget-category.php:736
+#: classes/widgets/widget-selector.php:829 classes/widgets/widget.php:732
+msgid "Shows featured image"
+msgstr "Mostra immagine in primo piano"
+
+#: classes/widgets/widget-category.php:740
+#: classes/widgets/widget-selector.php:833 classes/widgets/widget.php:736
+msgid "Featured image size"
+msgstr "Dimensione di immagine in primo piano"
+
+#: classes/widgets/widget-category.php:765
+#: classes/widgets/widget-selector.php:858 classes/widgets/widget.php:761
+msgid "Shows PDF title with featured image"
+msgstr "Mostra il titolo con immagine in primo piano"
+
+#: classes/widgets/widget-category.php:775
+#: classes/widgets/widget-selector.php:868 classes/widgets/widget.php:771
+msgid "Show PDF as ordered list"
+msgstr "Mostra PDF come elenco ordinato"
+
+#: classes/widgets/widget-category.php:781
+#: classes/widgets/widget-selector.php:874 classes/widgets/widget.php:777
+msgid "Opens PDF in a new window or tab"
+msgstr "Apre PDF in una nuova finestra o scheda"
+
+#: classes/widgets/widget-category.php:787
+msgid "tag to document link"
+msgstr "tag al collegamento del documento"
+
+#: classes/widgets/widget-category.php:796
+#: classes/widgets/widget-selector.php:889 classes/widgets/widget.php:798
+msgid "Show pagination"
+msgstr "Mostra paginatura"
+
+#: classes/widgets/widget-category.php:800 classes/widgets/widget.php:802
+msgid "Page size"
+msgstr "Dimensioni della pagina"
+
+#: classes/widgets/widget-category.php:808
+#: classes/widgets/widget-selector.php:901 classes/widgets/widget.php:810
+msgid "Text for previous anchor"
+msgstr "Testo per l’ancora precedente"
+
+#: classes/widgets/widget-category.php:812
+#: classes/widgets/widget-selector.php:905 classes/widgets/widget.php:814
+msgid "Text for next anchor"
+msgstr "Testo per la prossima ancora"
+
+#: classes/widgets/widget-category.php:822
+#: classes/widgets/widget-selector.php:915 classes/widgets/widget.php:824
+msgid "Show search bar only"
+msgstr "Mostra solo la barra di ricerca"
+
+#: classes/widgets/widget-category.php:826
+#: classes/widgets/widget-selector.php:919 classes/widgets/widget.php:828
+msgid "Search bar type"
+msgstr "Tipo di barra di ricerca"
+
+#: classes/widgets/widget-category.php:829
+#: classes/widgets/widget-selector.php:922 classes/widgets/widget.php:831
+msgid "Year and Keywords"
+msgstr "Anno e parola chiave"
+
+#: classes/widgets/widget-category.php:840
+#: classes/widgets/widget-selector.php:933 classes/widgets/widget.php:842
+msgid "Search bar year range"
+msgstr "Intervallo di anni nella barra di ricerca"
+
+#: classes/widgets/widget-category.php:844
+#: classes/widgets/widget-selector.php:937 classes/widgets/widget.php:846
+msgid "Search bar year select order"
+msgstr "Ordina per anno seleziona nella barra di ricerca"
+
+#: classes/widgets/widget-category.php:851
+#: classes/widgets/widget-selector.php:944 classes/widgets/widget.php:853
+msgid "Search bar text input placeholder"
+msgstr "Segnaposto per l’inserimento di testo nella barra di ricerca"
+
+#: classes/widgets/widget-category.php:855
+#: classes/widgets/widget-selector.php:948 classes/widgets/widget.php:857
+msgid "Search bar option none for category select"
+msgstr ""
+"Opzione nessuna per la selezione della categoria nella barra di ricerca"
+
+#: classes/widgets/widget-category.php:859
+#: classes/widgets/widget-selector.php:952 classes/widgets/widget.php:861
+msgid "Search bar option none for year select"
+msgstr "Opzione nessuna per la selezione della anno nella barra di ricerca"
+
+#: classes/widgets/widget-category.php:863
+#: classes/widgets/widget-selector.php:956 classes/widgets/widget.php:865
+msgid "Search bar results clear text"
+msgstr "Testo per risultati chiari nella barra di ricerca"
+
+#: classes/widgets/widget-selector.php:13
+msgid ""
+"Show all categories as a menu, allow user to select the category and have "
+"all PDFs associated with the category be shown"
+msgstr ""
+"Mostra tutte le categorie come menu, consenti all’utente di selezionare la "
+"categoria e visualizzare tutti i PDF associati alla categoria"
+
+#: classes/widgets/widget-selector.php:728
+msgid "In selector, display Categories of"
+msgstr "Nel selettore, visualizzare Categorie di"
+
+#: classes/widgets/widget-selector.php:733 classes/widgets/widget.php:676
+msgid "Specific"
+msgstr "Specifica"
+
+#: classes/widgets/widget-selector.php:736
+msgid "Category IDs"
+msgstr "ID Categorie"
+
+#: classes/widgets/widget-selector.php:742
+msgid "Show category hierarchy in selector"
+msgstr "Mostra la gerarchia di categorie nel selettore"
+
+#: classes/widgets/widget-selector.php:749
+msgid "Default category"
+msgstr "Categoria predefinita"
+
+#: classes/widgets/widget-selector.php:761
+msgid "Selector option none"
+msgstr "Opzione di selezione nessuna"
+
+#: classes/widgets/widget-selector.php:764
+msgid "Exclude Category of ID in"
+msgstr "Escludi la categoria di ID in"
+
+#: classes/widgets/widget-selector.php:770
+msgid "Show category description"
+msgstr "Mostra la descrizione della categoria"
+
+#: classes/widgets/widget-selector.php:776
+msgid "Hide empty category"
+msgstr "Nascondi categoria vuota"
+
+#: classes/widgets/widget-selector.php:780
+msgid "Exclude PDF of ID in:"
+msgstr "Escludi PDF di ID in:"
+
+#: classes/widgets/widget-selector.php:781
+msgid "List of PDF ID, separated by comma"
+msgstr "Elenco di ID PDF, separati da virgola"
+
+#: classes/widgets/widget-selector.php:785
+msgid "PDFs ID sequence"
+msgstr "Sequenza ID PDF"
+
+#: classes/widgets/widget-selector.php:813 classes/widgets/widget.php:716
+msgid "leave blank to use default format"
+msgstr "lascia vuoto per utilizzare il formato predefinito"
+
+#: classes/widgets/widget-selector.php:880 classes/widgets/widget.php:783
+msgid "Add rel=\"nofollow\" tag to PDF link"
+msgstr "Aggiungi rel=“nofollow” al link PDF"
+
+#: classes/widgets/widget.php:13
+msgid "Display specific PDFs in widget area"
+msgstr "Mostra PDFs speciale in widget"
+
+#: classes/widgets/widget.php:671
+msgid "Display PDFs of"
+msgstr "Visualizza PDF di"
+
+#: classes/widgets/widget.php:679
+msgid "Documents' ID"
+msgstr "ID di u documenti"
+
+#: classes/widgets/widget.php:687
+msgid "Documents ID sequence"
+msgstr "Sequenza ID documenti"
+
+#~ msgid "Default Featured Image"
+#~ msgstr "Predefinita Immagine in evidenza"
+
+#~ msgid "Set default featured image"
+#~ msgstr "Imposta predefinita Immagine in evidenza"
+
+#~ msgid "Change default featured image"
+#~ msgstr "Cambia predefinita immagine in evidenza"
+
+#~ msgid "Remove default featured image"
+#~ msgstr "Rimuovi predefinita immagine in evidenza"
+
+#~ msgid "Your license has already expired."
+#~ msgstr "La tua licenza è già scaduta."
+
+#~ msgid "BSK PDF Category"
+#~ msgstr "BSK PDF Categoria"
+
+#~ msgid "BSK PDF tag"
+#~ msgstr "BSK PDF Tag"
+
+#~ msgid "BSK PDF Document"
+#~ msgstr "BSK PDF Documenti"
+
+#~ msgid "Current upload direcotry:"
+#~ msgstr "Directory di caricamento corrente:"
+
+#~ msgid "Insert document record into database failed."
+#~ msgstr "Inserimento del record del documento nel database non riuscito."
+
+#, php-format
+#~ msgid "Go to %s"
+#~ msgstr "Andare a %s"
+
+#~ msgid "Old File:"
+#~ msgstr "Vecchio file:"
+
+#~ msgid "Upload new"
+#~ msgstr "Carica nuovo"
+
+#~ msgid "Current upload direcotry"
+#~ msgstr "Directory di caricamento corrente"
+
+#~ msgid "Expiry Date"
+#~ msgstr "Data di scadenza"
+
+#, php-format
+#~ msgid "Title&%sFeatured Image"
+#~ msgstr "Titolo&%sImmagine in evidenza"
+
+#~ msgid ""
+#~ "Allows a user with Author capabilities to access Categories & PDF "
+#~ "Documents menu"
+#~ msgstr ""
+#~ "Consente a un utente con funzionalità di autore di accedere al menu "
+#~ "Categorie & PDF Documenti"
+
+#~ msgid "Allows a user with Editor capabilities to access all menu"
+#~ msgstr ""
+#~ "Consente a un utente con funzionalità Editor di accedere a tutti i menu"
+
+#~ msgid ""
+#~ "By default, only a user with Administrator role can access all menus of "
+#~ "BSK PDF Manager. With above settings you may allow Author users to manage "
+#~ "category & PDF without other settings visible. And allow Editor users "
+#~ "access all menus."
+#~ msgstr ""
+#~ "Per impostazione predefinita, solo un utente con ruolo di amministratore "
+#~ "può accedere a tutti i menu di BSK PDF Manager. Con le impostazioni "
+#~ "precedenti puoi consentire agli utenti di Author di gestire categorie & "
+#~ "PDF senza altre impostazioni visibili. E consentire agli utenti "
+#~ "dell’Editor di accedere a tutti i menu."
+
+#, php-format
+#~ msgid ""
+#~ "To avoid time out error on your server the maximum of documents that can "
+#~ "be listed here is %d. It means you may import max %d documents every "
+#~ "time. You may come to here to import your PDFs for many times untill all "
+#~ "you PDFs uploaded"
+#~ msgstr ""
+#~ "Per evitare errori di timeout sul server, il numero massimo di documenti "
+#~ "che è possibile elencare qui è %d. Ciò significa che è possibile "
+#~ "importare ogni volta un massimo di %d documenti. Puoi venire qui per "
+#~ "importare i tuoi PDF per molte volte fino a quando non hai caricato tutti "
+#~ "i PDF"
+
+#~ msgid "The content of this category requires password"
+#~ msgstr "Il contenuto di questa categoria richiede una password"
+
+#~ msgid "Verify Password"
+#~ msgstr "Verifica la password"
+
+#~ msgid "Invalid password"
+#~ msgstr "Password non valida"
+
+#~ msgid "Please selecte category..."
+#~ msgstr "Seleziona la categoria …"
+
+#~ msgid "ERROR - Empty password"
+#~ msgstr "ERRORE - Password vuota"
+
+#~ msgid "ERROR - Invalid password"
+#~ msgstr "ERRORE - Password non valida"
+
+#~ msgid "Set document's date&time with:"
+#~ msgstr "Imposta la data & orario del documento con:"
+
+#~ msgid "Help"
+#~ msgstr "Aiuto"
+
+#~ msgid "Help & Support"
+#~ msgstr "Aiuto & supporto"
+
+#~ msgid "Date & Time"
+#~ msgstr "Data & Orario"
+
+#, php-format
+#~ msgid ""
+#~ "Directory <strong>%s</strong> is not writeable ! Check <a href=\"http://"
+#~ "codex.wordpress.org/Changing_File_Permissions\">http://codex.wordpress."
+#~ "org/Changing_File_Permissions</a> for how to set the permission."
+#~ msgstr ""
+#~ "La directory <strong>%s</strong> non è scrivibile! Controllare <a "
+#~ "href=“http://codex.wordpress.org/Changing_File_Permissions”>http://codex."
+#~ "wordpress.org/Changing_File_Permissions</a> per come impostare "
+#~ "l’autorizzazione alla directory."
+
+#~ msgid "Current server date&amp;time"
+#~ msgstr "Data&Orario corrente del server"
+
+#~ msgid " file(s) have been uploaded successfully"
+#~ msgstr " file è stato caricato correttamente"
+
+#~ msgid "tag to PDF link"
+#~ msgstr "tag al collegamento PDF"
+
+#~ msgid "Shows PDF as ordered list"
+#~ msgstr "Mostra PDF come elenco ordinato"
