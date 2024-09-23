@@ -1,0 +1,1 @@
+# plugins-bsk-pdf-manager
