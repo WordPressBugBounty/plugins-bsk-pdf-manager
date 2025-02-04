@@ -53,7 +53,7 @@ class BSKPDFM_Dashboard_Settings_Featured_Image {
     <div class="bsk_pdf_manager_settings_featured_image_tab" style="width:80%;">
         <div>
             <form action="<?php echo add_query_arg( 'target', 'featured-image', self::$_bsk_pdf_settings_page_url ) ?>" method="POST" id="bsk_pdfm_register_image_sizes_form_ID">
-            <h3><?php esc_html_e( 'Register Image Sizes', 'bskpdfmanager' ); ?></h3>
+            <h2><?php esc_html_e( 'Register Image Sizes', 'bskpdfmanager' ); ?></h2>
             <?php
             $size_name = '';
             $size_width = '';
@@ -103,6 +103,13 @@ class BSKPDFM_Dashboard_Settings_Featured_Image {
             </p>
             <div id="bsk_pdf_manager_featured_image_settings_containder_ID" style="display:<?php echo $default_enable_featured_image ? 'block' : 'none'; ?>; margin-top: 40px;">
                 <div>
+                    <p>&nbsp;</p>
+                    <h3><?php esc_html_e( 'Generate featured image from PDF document', 'bskpdfmanager' ); ?></h3>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="bsk_pdf_manager_enable_imagemagick" id="bsk_pdf_manager_enable_imagemagick_ID" value="1" checked="checked" /> <?php esc_html_e( 'Enable generating featured image from PDF document', 'bskpdfmanager' ); ?>
+                        </label>
+                    </p>
                     <?php
                     $ajax_loader_img_url = BSKPDFManager::$_ajax_loader_img_url;
                     $default_pdf_icon_url = BSKPDFManager::$_default_pdf_icon_url;
@@ -119,6 +126,9 @@ class BSKPDFM_Dashboard_Settings_Featured_Image {
 
                     $image_attributes_anchor = '<a href="https://www.bannersky.com/document/bsk-pdf-manager/display-all-specific/display-specific-pdfs-in-list/?attrid=featured-image" target="_blank">shortcode featured image attributes</a>';
                     ?>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <h3><?php esc_html_e( 'Default featured image', 'bskpdfmanager' ); ?></h3>
                     <h4><?php esc_html_e( 'Default featured image for all file types', 'bskpdfmanager' ); ?></h4>
                     <p><?php esc_html_e( 'If no featured image is set for the PDF/document, the default featured image set here will be used.', 'bskpdfmanager' ); ?></p>
                     <p><?php printf( esc_html__( 'The default image size is used to determine the image size shown in the front. If a document / pdf has its own featured image, the size can be overridden by the  shortcode parameter: featured_image_size. If your shortcode is to display the PDF/document in the list, you can check the %s more.', 'bskpdfmanager' ), $image_attributes_anchor ); ?></p>

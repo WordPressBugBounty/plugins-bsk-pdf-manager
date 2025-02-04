@@ -4,7 +4,7 @@
 * Plugin Name: BSK PDF Manager
 * Plugin URI: http://www.bannersky.com/bsk-pdf-manager/
 * Description: Help you manage your PDF documents. PDF documents can be filter by category. Support short code to show special PDF documents or all PDF documents under  category. Widget supported.
-* Version: 3.6.2
+* Version: 3.6.3
 * Author: BannerSky.com
 * Author URI: http://www.bannersky.com/
 * License: GPLv2 or later
@@ -32,7 +32,7 @@ class BSKPDFManager {
     public static $_user_available_tbl_name = 'bsk_pdf_manager_user_available';
     public static $_notifications_tbl_name = 'bsk_pdf_manager_notifications';
     
-	public static $_PLUGIN_VERSION_ = '3.6.2';
+	public static $_PLUGIN_VERSION_ = '3.6.3';
 	private static $_plugin_db_version = '3.0';
 	private static $_plugin_saved_db_version_option = '_bsk_pdf_manager_db_ver_';
     private static $_plugin_db_rels_done_option = '_bsk_pdf_manager_rels_done_';
@@ -146,7 +146,7 @@ class BSKPDFManager {
             add_action( 'plugins_loaded', array(self::$instance, 'bsk_pdf_manager_update_database'), 10 );
             add_action( 'plugins_loaded', array(self::$instance, 'bsk_pdf_manager_update_doc_slug_fun'), 16 );
             add_action( 'plugins_loaded', array(self::$instance, 'bsk_pdf_manager_update_file_size_fun'), 18 );
-            add_action( 'plugins_loaded', array(self::$instance, 'bsk_pdf_manager_load_language'), 10 );
+            add_action( 'init', array(self::$instance, 'bsk_pdf_manager_load_language'), 10 );
         }
         
 		return self::$instance;

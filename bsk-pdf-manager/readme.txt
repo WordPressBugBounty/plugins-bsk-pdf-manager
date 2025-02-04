@@ -3,8 +3,8 @@ Contributors: bannersky
 Plugin URI: https://www.bannersky.com/bsk-pdf-manager/
 Tags: PDF manager, meeting minutes tool, printable forms tool, data sheets tool, embed PDF
 Requires at least: 5.3
-Tested up to: 6.6.2
-Stable tag: 3.6.2
+Tested up to: 6.7.1
+Stable tag: 3.6.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,24 @@ Please visit <a href="http://www.bannersky.com/bsk-pdf-manager/">http://www.bann
 4. Permalink settings
 
 == Changelog ==
+
+3.6.3
+
+* Fixed: the warning message of _load_textdomain_just_in_time was called incorrectly.
+
+* Fixed: Cross Site Request Forgery (CSRF) vulnerability when deleting categories in bulk.
+
+* Compatible with WordPress 6.7.1
+
+( In addition to the above, the Pro version also does the following )
+
+* Added: New setting to disable generating featured images from PDF documents. This change helps avoid 503 errors when adding new PDFs on certain hosts that don't fully support ImageMagick.
+
+* Fixed: the background color is black when generating featured image from PDF on some hosting.
+
+* Fixed: capability error when open settings page.
+
+* Fixed: interface error when do capability settings for settings page.
 
 3.6.2
 

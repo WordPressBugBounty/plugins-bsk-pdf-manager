@@ -105,30 +105,27 @@ class BSKPDFM_Dashboard_Categories extends WP_List_Table {
     function do_bulk_action() {
 		global $wpdb;
         
-        if (!isset($_POST['bsk-pdf-manager-categories']) || 
-            !is_array( $_POST['bsk-pdf-manager-categories'] ) || 
-            count( $_POST['bsk-pdf-manager-categories'] ) < 1 ){
+         // Detect when a bulk action is being triggered.
+		$action = $this->current_action();
+		if ( ! $action ) {
+			return;
+		}
+
+        check_admin_referer( 'bulk-' . $this->_args['plural'] );
+        
+        if ( ! isset($_POST['bsk-pdf-manager-categories'] ) || 
+            ! is_array( $_POST['bsk-pdf-manager-categories'] ) || 
+            count( $_POST['bsk-pdf-manager-categories'] ) < 1 ) {
             
 			return;
 		}
+
         $categories_id = array();
         foreach( $_POST['bsk-pdf-manager-categories'] as $category_id ){
-            $categories_id[] = intval(sanitize_text_field($category_id));
+            $categories_id[] = intval( sanitize_text_field( $category_id ) );
         }
 		
-		$action = -1;
-		if (isset($_POST['action'])){
-            $temp_action = sanitize_text_field($_POST['action']);
-			$action = $temp_action != -1 ? $temp_action : $action;
-		}
-        if (isset($_POST['action2'])){
-            $temp_action = sanitize_text_field($_POST['action2']);
-			$action = $temp_action != -1 ? $temp_action : $action;
-		}
-		
-		if ($action == -1){
-			return;
-		}else if ( $action == 'delete' && count($categories_id) ){
+		if ( $action == 'delete' && count( $categories_id ) ){
 			
             $ids = implode(',', esc_sql($categories_id));
 			$ids = trim($ids);
@@ -235,8 +232,6 @@ class BSKPDFM_Dashboard_Categories extends WP_List_Table {
 
         $data = array();
 		
-        add_thickbox();
-
 		$this->do_bulk_action();
        
         $data = $this->get_data();

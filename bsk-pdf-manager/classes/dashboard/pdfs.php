@@ -447,27 +447,24 @@ class BSKPDFM_Dashboard_PDFs extends WP_List_Table {
     function do_bulk_action() {
 		global $wpdb;
 		
-		if (!isset($_POST['bsk-pdf-manager-pdfs']) || !is_array($_POST['bsk-pdf-manager-pdfs']) || count($_POST['bsk-pdf-manager-pdfs']) < 1) {
+        // Detect when a bulk action is being triggered.
+		$action = $this->current_action();
+		if ( ! $action ) {
 			return;
-		}
-        $lists_id = array();
-        foreach( $_POST['bsk-pdf-manager-pdfs'] as $pdf_id ){
-            $lists_id[] = intval(sanitize_text_field($pdf_id));
-        }
-        
-        $action = -1;
-		if (isset($_POST['action'])){
-            $temp_action = sanitize_text_field($_POST['action']);
-			$action = $temp_action != -1 ? $temp_action : $action;
-		}
-        if (isset($_POST['action2'])){
-            $temp_action = sanitize_text_field($_POST['action2']);
-			$action = $temp_action != -1 ? $temp_action : $action;
 		}
 
-        if ( $action == -1 ){
+        check_admin_referer( 'bulk-' . $this->_args['plural'] );
+
+		if ( ! isset( $_POST['bsk-pdf-manager-pdfs'] ) || ! is_array( $_POST['bsk-pdf-manager-pdfs'] ) || count( $_POST['bsk-pdf-manager-pdfs'] ) < 1 ) {
 			return;
-		}else if ( $action == 'bulktrash' ){
+		}
+
+        $lists_id = array();
+        foreach ( $_POST['bsk-pdf-manager-pdfs'] as $pdf_id ) {
+            $lists_id[] = intval( sanitize_text_field( $pdf_id ) );
+        }
+        
+        if ( $action == 'bulktrash' ){
 
 			if( count($lists_id) < 1 ){
 				return;
@@ -478,7 +475,7 @@ class BSKPDFM_Dashboard_PDFs extends WP_List_Table {
                    'SET `trash` = 1 '.
                    'WHERE `id` IN('.implode( ',', $lists_id ).')';
             $wpdb->query( $sql );
-		}else if ( $action == 'bulkuntrash' ){
+		} else if ( $action == 'bulkuntrash' ){
 			if( count($lists_id) < 1 ){
 				return;
 			}
@@ -870,8 +867,6 @@ class BSKPDFM_Dashboard_PDFs extends WP_List_Table {
         }
         
         $data = array();
-		
-        add_thickbox();
 
         $columns = $this->get_columns();
         $hidden = array(); // no hidden columns
