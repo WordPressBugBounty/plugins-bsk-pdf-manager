@@ -3,8 +3,8 @@ Contributors: bannersky
 Plugin URI: https://www.bannersky.com/bsk-pdf-manager/
 Tags: PDF manager, meeting minutes tool, printable forms tool, data sheets tool, embed PDF
 Requires at least: 5.3
-Tested up to: 6.7.1
-Stable tag: 3.6.3
+Tested up to: 6.8
+Stable tag: 3.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,24 @@ Please visit <a href="http://www.bannersky.com/bsk-pdf-manager/">http://www.bann
 4. Permalink settings
 
 == Changelog ==
+
+3.7
+
+* Fixed: incorrect placeholder text in category widget.
+
+* Fixed: warning mesage when display documents / PDFs in list and dropdown mode.
+
+* Compatible: Wordpress 6.8.x
+
+( In addition to the above, the Pro version also does the following )
+
+* Added: duplicate category ( with descendant )
+
+* Added: attributes for shortcode [bsk-pdfm-pdfs-embed] to show download link on desktop and mobile, disable embedded viewer on mobile.
+
+* Added: save user's last choice of "Use file name as title" and "Check duplicate title" when add document / PDF.
+
+* Fixed: warning mesage when do plugin update.
 
 3.6.3
 

@@ -284,21 +284,21 @@ class BSKPDFM_Shortcodes_PDFs_UL_OL {
 
         
         $shortcode_atts = array(  
-                   'ul_or_ol' => sanitize_text_field($_POST['layout']),
-                   'id' => sanitize_text_field($_POST['id']),
-                   'order_by' => sanitize_text_field($_POST['order_by']),
-                   'order' => sanitize_text_field($_POST['order']),
-                   'target' => sanitize_text_field($_POST['target']),
-                   'nofollow_tag' => sanitize_text_field($_POST['nofollow_tag']),
-                   'noopener_tag' => sanitize_text_field($_POST['noopener_tag']),
-                   'noreferrer_tag' => sanitize_text_field($_POST['noreferrer_tag']),
-                   'show_date' => sanitize_text_field($_POST['show_date']),
-                   'date_format' => sanitize_text_field($_POST['date_format']),
-                   'date_before_title' => sanitize_text_field($_POST['date_before_title']),
-                   'most_top' => absint(sanitize_text_field($_POST['most_top'])),
-                   'show_count_desc' => isset($_POST['show_count_desc']) ? sanitize_text_field($_POST['show_count_desc']) : '',
-                   'extension' => isset($_POST['extension']) ? sanitize_text_field($_POST['extension']) : '',
-                   'tags_default' => sanitize_text_field($_POST['tags_default']),
+                   'ul_or_ol' => isset( $_POST['layout'] ) ? sanitize_text_field($_POST['layout']) : 'ul',
+                   'id' => isset( $_POST['id'] ) ? sanitize_text_field($_POST['id']) : '',
+                   'order_by' => isset( $_POST['order_by'] ) ? sanitize_text_field($_POST['order_by']) : '',
+                   'order' => isset( $_POST['order'] ) ? sanitize_text_field($_POST['order']) : '',
+                   'target' => isset( $_POST['target'] ) ? sanitize_text_field($_POST['target']) : '',
+                   'nofollow_tag' => isset( $_POST['nofollow_tag'] ) ? sanitize_text_field($_POST['nofollow_tag']) : 'no',
+                   'noopener_tag' => isset( $_POST['noopener_tag'] ) ? sanitize_text_field($_POST['noopener_tag']) : 'no',
+                   'noreferrer_tag' => isset( $_POST['noreferrer_tag'] ) ? sanitize_text_field($_POST['noreferrer_tag']) : 'no',
+                   'show_date' => isset( $_POST['show_date'] ) ? sanitize_text_field($_POST['show_date']) : 'no',
+                   'date_format' => isset( $_POST['date_format'] ) ? sanitize_text_field($_POST['date_format']) : ' d/m/Y',
+                   'date_before_title' => isset( $_POST['date_before_title'] ) ? sanitize_text_field($_POST['date_before_title']) : 'no',
+                   'most_top' => isset( $_POST['most_top'] ) ? absint(sanitize_text_field($_POST['most_top'])) : 0,
+                   'show_count_desc' => isset( $_POST['show_count_desc'] ) ? sanitize_text_field($_POST['show_count_desc']) : 'no',
+                   'extension' => isset( $_POST['extension'] ) ? sanitize_text_field($_POST['extension']) : 'no',
+                   'tags_default' => isset( $_POST['tags_default'] ) ? sanitize_text_field($_POST['tags_default']) : 'no',
                   );
         $ul_or_ol = strtoupper($shortcode_atts['ul_or_ol']) == 'OL' ? 'ol' : 'ul';
         

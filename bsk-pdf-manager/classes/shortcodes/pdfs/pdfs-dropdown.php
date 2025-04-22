@@ -213,16 +213,16 @@ class BSKPDFM_Shortcodes_PDFs_Dropdown {
         
         
         $shortcode_atts = array(
-                       'id' => sanitize_text_field($_POST['id']),
-                       'option_none' => sanitize_text_field($_POST['option_none']),
-                       'order_by' => sanitize_text_field($_POST['order_by']),
-                       'order' => sanitize_text_field($_POST['order']),
-                       'most_top' => absint(sanitize_text_field($_POST['most_top'])),
-                       'show_date' => sanitize_text_field($_POST['show_date']),
-                       'date_format' => sanitize_text_field($_POST['date_format']),
-                       'show_count_desc' => sanitize_text_field($_POST['show_count_desc']),
-                       'extension' => sanitize_text_field($_POST['extension']),
-                       'tags_default' => sanitize_text_field($_POST['tags_default']),
+                       'id' => isset( $_POST['id'] ) ? sanitize_text_field($_POST['id']) : 0,
+                       'option_none' => isset( $_POST['option_none'] ) ? sanitize_text_field($_POST['option_none']) : esc_html__( 'Select to open...', 'bskpdfmanager' ),
+                       'order_by' => isset( $_POST['order_by'] ) ? sanitize_text_field($_POST['order_by']) : '',
+                       'order' => isset( $_POST['order'] ) ? sanitize_text_field($_POST['order']) : '',
+                       'most_top' => isset( $_POST['most_top'] ) ? absint(sanitize_text_field($_POST['most_top'])) : 0,
+                       'show_date' => isset( $_POST['show_date'] ) ? sanitize_text_field($_POST['show_date']) : 'no',
+                       'date_format' => isset( $_POST['date_format'] ) ? sanitize_text_field($_POST['date_format']) : ' d/m/Y',
+                       'show_count_desc' => isset( $_POST['show_count_desc'] ) ? sanitize_text_field($_POST['show_count_desc']) : 'no',
+                       'extension' => isset( $_POST['extension'] ) ? sanitize_text_field($_POST['extension']) : 'no',
+                       'tags_default' => isset( $_POST['tags_default'] ) ? sanitize_text_field($_POST['tags_default']) : '',
                      );
         //organise ids array
 		$ids_array = array();

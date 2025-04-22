@@ -353,17 +353,13 @@ class BSKPDFManagerWidget_Category extends WP_Widget {
             <?php esc_html_e( 'Page size', 'bskpdfmanager' ); ?><br />
             <input type="number" name="<?php echo esc_attr($this->get_field_name( 'pdfm_pagination_pdfs_per_page' )); ?>" value="" placeholder="10" style="width: 100%;" disabled>
         </p>
-        <?php
-        $previous_placeholder = '&#x000AB; '.esc_html__( 'Previous Page', 'bskpdfmanager' );
-        $next_placeholder = esc_html__( 'Next Page', 'bskpdfmanager' ).' &#x000BB;';
-        ?>
         <p>
             <?php esc_html_e( 'Text for previous anchor', 'bskpdfmanager' ); ?><br />
-            <input type="text" name="<?php echo esc_attr($this->get_field_name( 'pdfm_pagination_previous_text' )); ?>" value="" placeholder="<?php echo esc_attr($previous_placeholder); ?>" style="width: 100%;" disabled>
+            <input type="text" name="<?php echo esc_attr($this->get_field_name( 'pdfm_pagination_previous_text' )); ?>" value="" placeholder="<?php echo esc_attr( '&#x000AB; ' . __( 'Previous Page', 'bskpdfmanager' ) ); ?>" style="width: 100%;" disabled>
         </p>
         <p>
             <?php esc_html_e( 'Text for next anchor', 'bskpdfmanager' ); ?><br />
-            <input type="text" name="<?php echo esc_attr($this->get_field_name( 'pdfm_pagination_next_text' )); ?>" value="" placeholder="<?php echo esc_attr($next_placeholder); ?>" style="width: 100%;" disabled>
+            <input type="text" name="<?php echo esc_attr($this->get_field_name( 'pdfm_pagination_next_text' )); ?>" value="" placeholder="<?php echo esc_attr( __( 'Next Page', 'bskpdfmanager' ) . ' &#x000BB;' ); ?>" style="width: 100%;" disabled>
         </p>
         <p style="padding: 10px 0 10px 0;"><hr /></p>
         <p>
