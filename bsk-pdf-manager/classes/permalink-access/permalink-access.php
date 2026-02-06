@@ -123,42 +123,52 @@ class BSKPDFM_Permalink_AccessCtrl {
         //read global embeded viewer settings
         $embedded_viewer_settings = BSKPDFM_Common_Display::get_embedded_viewer_settings();
 
-        if ( isset( $wp->query_vars[$default_permalink_base] ) && $wp->query_vars[$default_permalink_base] ) {
-            $pdf_slug = $wp->query_vars[$default_permalink_base];
-            $pdf_obj = BSKPDFM_Common_Data_Source::get_document_obj_by_slug( $pdf_slug );
-            if( $pdf_obj == false ){
-                global $wp_query;
-                
-                $wp_query->set_404();
-                status_header( 404 );
-                get_template_part( 404 ); 
-                
-                exit();
-            }
-            
-            $file_path = '';
-            $file_ext = '';
-            $file_url = '';
-            if( $pdf_obj->file_name ){
-                $file_path = BSKPDFManager::$_upload_root_path.$pdf_obj->file_name;
-                $file_ext = pathinfo( $pdf_obj->file_name, PATHINFO_EXTENSION );
-                $file_url = site_url().'/'.$pdf_obj->file_name;
-			}
-            $file_ext = strtolower( $file_ext );
+        if ( ! isset( $wp->query_vars[$default_permalink_base] ) || ! $wp->query_vars[$default_permalink_base] ) {
+            return;
+        }
 
-            if( !file_exists( $file_path ) ){
-                global $wp_query;
-                
-                $wp_query->set_404();
-                status_header( 404 );
-                get_template_part( 404 ); 
-                
-                exit();
-            }
+        $pdf_slug = $wp->query_vars[$default_permalink_base];
+        $pdf_obj = BSKPDFM_Common_Data_Source::get_document_obj_by_slug( $pdf_slug );
+        if( $pdf_obj == false ){
+            global $wp_query;
             
+            $wp_query->set_404();
+            status_header( 404 );
+            get_template_part( 404 ); 
+            
+            exit();
+        }
+        
+        $file_path = '';
+        $file_ext = '';
+        $file_url = '';
+        if ( $pdf_obj->file_name ) {
+            $file_path = BSKPDFManager::$_upload_root_path.$pdf_obj->file_name;
+            $file_ext = pathinfo( $pdf_obj->file_name, PATHINFO_EXTENSION );
+            $file_url = site_url().'/'.$pdf_obj->file_name;
+        }
+        $file_ext = strtolower( $file_ext );
+
+        if ( ! file_exists( $file_path ) ) {
+            global $wp_query;
+            
+            $wp_query->set_404();
+            status_header( 404 );
+            get_template_part( 404 ); 
+            
+            exit();
+        }
+        //if a PDF is restricted, then cannot be redirected to its file url
+        if ( $pdf_obj->restricted ) {
+            //TO DO......
+           //need check user's permission
+           
+           /* echo '<p>You are now alloed to access this document / PDF.</p>';
+           exit; */
+        } else {
             if ( $permalink_redirect_to == 'YES' ||
-                 ( $permalink_redirect_to == 'NO' && $pdf_obj->redirect_permalink ) ) {
-                     
+                    ( $permalink_redirect_to == 'NO' && $pdf_obj->redirect_permalink ) ) {
+                        
                 if( $file_url == "" ){
                     wp_die( 'Cannot get valid URL for the document, document slug: '.$pdf_slug );
                 }
@@ -174,62 +184,81 @@ class BSKPDFM_Permalink_AccessCtrl {
                 wp_redirect( $file_url );
                 exit;
             }
-
-            //output docment content
-            if ( is_array( $embedded_viewer_settings ) && isset( $embedded_viewer_settings ) && $embedded_viewer_settings['enable'] && $file_ext == 'pdf' ) {
-                ob_start();
-                ?>
-                <!DOCTYPE html>
-                <html>
-                    <head>
-                        <meta name="viewport" content="width=device-width, initial-scale=1">
-                        <title><?php echo $pdf_obj->title; ?></title>
-                        <style>
-                        .container {
-                            position: relative;
-                            width: 100%;
-                            overflow: hidden;
-                            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-                        }
-
-                        .responsive-iframe {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            bottom: 0;
-                            right: 0;
-                            width: 100%;
-                            height: 100%;
-                            border: none;
-                        }
-                        </style>
-                    </head>
-                    <body>
-                        <div class="container"> 
-                        <iframe class="responsive-iframe" src="<?php echo BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html?file=' . $file_url . $embedded_viewer_settings['paras']; ?>"></iframe>
-                        </div>
-                    </body>
-                </html>
-                <?php
-                $html_content = ob_get_contents();
-                ob_end_clean();
-
-                echo $html_content;
-            } else {
-                $wp_filetype = wp_check_filetype( $file_path, null );
-                
-                // Header content type
-                header('Content-Type: '.$wp_filetype['type']);
-                header("Content-Length: " . filesize( $file_path ) );
-                header('Content-Disposition: inline; filename="' . basename( $file_path ) . '"');
-                header('Content-Transfer-Encoding: binary');
-                header('Accept-Ranges: bytes');
-
-                // Read the file
-                @readfile( $file_path );
-            }
-            exit();
         }
+
+        if ( isset( $_GET['read'] ) && intval( $_GET['read'] ) == 1 ) {
+
+            $wp_filetype = wp_check_filetype( $file_path, null );
+            // Header content type
+            header('Content-Type: '.$wp_filetype['type']);
+            header("Content-Length: " . filesize( $file_path ) );
+            header('Content-Disposition: inline; filename="' . basename( $file_path ) . '"');
+            header('Content-Transfer-Encoding: binary');
+            header('Accept-Ranges: bytes');
+
+            // Read the file
+            @readfile( $file_path );
+        }
+
+        //output docment content
+        if ( is_array( $embedded_viewer_settings ) && isset( $embedded_viewer_settings ) && $embedded_viewer_settings['enable'] && $file_ext == 'pdf' ) {
+            ob_start();
+
+            //for restricted file, the url should be change to use permalink with read=1
+            if ( $pdf_obj->restricted ) {
+                $file_url = site_url().'/'.$default_permalink_base.'/'.$pdf_obj->slug.'/?read=1';
+            }
+            ?>
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <title><?php echo $pdf_obj->title; ?></title>
+                    <style>
+                    .container {
+                        position: relative;
+                        width: 100%;
+                        overflow: hidden;
+                        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+                    }
+
+                    .responsive-iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                    }
+                    </style>
+                </head>
+                <body>
+                    <div class="container"> 
+                    <iframe class="responsive-iframe" src="<?php echo BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html?file=' . rawurlencode( $file_url ) . $embedded_viewer_settings['paras']; ?>"></iframe>
+                    </div>
+                </body>
+            </html>
+            <?php
+            $html_content = ob_get_contents();
+            ob_end_clean();
+
+            echo $html_content;
+        } else {
+            $wp_filetype = wp_check_filetype( $file_path, null );
+            
+            // Header content type
+            header('Content-Type: '.$wp_filetype['type']);
+            header("Content-Length: " . filesize( $file_path ) );
+            header('Content-Disposition: inline; filename="' . basename( $file_path ) . '"');
+            header('Content-Transfer-Encoding: binary');
+            header('Accept-Ranges: bytes');
+
+            // Read the file
+            @readfile( $file_path );
+        }
+        exit();
     }
     
     public function bsk_pdfm_permalink_add_rewrite_rule(){

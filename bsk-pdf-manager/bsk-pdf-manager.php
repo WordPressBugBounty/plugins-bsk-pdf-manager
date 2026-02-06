@@ -4,7 +4,7 @@
 * Plugin Name: BSK PDF Manager
 * Plugin URI: http://www.bannersky.com/bsk-pdf-manager/
 * Description: Help you manage your PDF documents. PDF documents can be filter by category. Support short code to show special PDF documents or all PDF documents under  category. Widget supported.
-* Version: 3.7
+* Version: 3.7.2
 * Author: BannerSky.com
 * Author URI: http://www.bannersky.com/
 * License: GPLv2 or later
@@ -32,8 +32,8 @@ class BSKPDFManager {
     public static $_user_available_tbl_name = 'bsk_pdf_manager_user_available';
     public static $_notifications_tbl_name = 'bsk_pdf_manager_notifications';
     
-	public static $_PLUGIN_VERSION_ = '3.7';
-	private static $_plugin_db_version = '3.0';
+	public static $_PLUGIN_VERSION_ = '3.7.2';
+	private static $_plugin_db_version = '3.1';
 	private static $_plugin_saved_db_version_option = '_bsk_pdf_manager_db_ver_';
     private static $_plugin_db_rels_done_option = '_bsk_pdf_manager_rels_done_';
     private static $_plugin_db_upgrading = '_bsk_pdf_manager_db_upgrading_';
@@ -65,8 +65,6 @@ class BSKPDFManager {
     public static $url_to_upgrade = 'https://www.bannersky.com/document/bsk-pdf-manager-documentatio-v2/how-to-upgrade-to-pro-version/';
     
     public static $_category_max_depth = 3;
-
-    public static $_dropdown_shortcodes_pages_option = 'bsk_pdfm_dropdown_shortcodes_pages_';
 	
 	//objects
 	public $_bsk_pdfm_pro_OBJ_dashboard = NULL;
@@ -173,6 +171,7 @@ class BSKPDFManager {
 	
 	function bsk_pdf_manager_deactivate(){
         wp_clear_scheduled_hook( 'bsk_pdfm_free_schedule_check_promote_weekly' );
+        wp_clear_scheduled_hook( 'bsk_pdfm_free_schedule_check_promote_daily' );
 	}
     
     function bsk_pdf_manager_update_doc_slug_fun(){
@@ -441,6 +440,7 @@ class BSKPDFManager {
                                           `author_id` int(11) NOT NULL DEFAULT 0,
                                           `size` int(11) NOT NULL DEFAULT 0,
                                           `redirect_permalink` tinyint(1) NOT NULL DEFAULT 0,
+                                          `restricted` tinyint(1) NOT NULL DEFAULT 0,
                                           UNIQUE KEY id (id)
                                         ) $charset_collate;";
 		dbDelta($sql);
@@ -612,6 +612,16 @@ class BSKPDFManager {
 
             $table_name = $wpdb->prefix . self::$_pdfs_tbl_name;
             $sql = 'ALTER TABLE `'.$table_name.'` ADD `draft` tinyint(1) NOT NULL DEFAULT 0 AFTER `pending`;';
+            $wpdb->query( $sql );
+
+        }
+
+        //upgrade db version to 3.1
+        if ( version_compare( $db_version, '3.1', '<' ) ) {
+            require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+
+            $table_name = $wpdb->prefix . self::$_pdfs_tbl_name;
+            $sql = 'ALTER TABLE `'.$table_name.'` ADD `restricted` tinyint(1) NOT NULL DEFAULT 0 AFTER `redirect_permalink`;';
             $wpdb->query( $sql );
 
         }

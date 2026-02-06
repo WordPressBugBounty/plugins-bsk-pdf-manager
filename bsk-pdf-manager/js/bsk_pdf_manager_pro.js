@@ -4,14 +4,53 @@ jQuery(document).ready( function($) {
       * PDFs Dropdown
       */
     $(".bsk-pdfm-output-container").on("change", ".bsk-pdfm-pdfs-dropdown", function(){
-        var target = $(this).data("target");
+        
+        var output_container = $(this).parents(".bsk-pdfm-output-container");
 		var url = $(this).val();
+        
+		if ( url ) {
+			//window.open( url, target);
+            var form_ID_random = $( this ).data( "from-id" );
 
-        target = target == '_blank' ? '_blank' : '_self';
-		if( url ){
-			window.open( url, target);
+            //if pdfjs enabled
+            var pdfjs_enabled = output_container.find( ".bsk-pdfm-pdfs-dropdown-pdfs-enable" ).val();
+            var permalink_enabled = output_container.find( ".bsk_pdfm_settings_enalbe_permalink_cls" ).val() > 0 ? true : false ;
+            var file_extension = bsk_pdfm_get_fiel_extension( url );
+            if ( pdfjs_enabled == 'YES' && permalink_enabled == false && file_extension == 'PDF' ) {
+                //change file's value
+                $( "#bsk_pdfm_pdfs_dropdown_to_open_ID_" + form_ID_random ).val( url );
+            } else {
+                //change form's action
+                $( "#bsk_pdfm_pdfs_dropdown_open_form_ID_" + form_ID_random ).prop( "action", url );
+                //remove all form's fields
+                $( "#bsk_pdfm_pdfs_dropdown_open_form_ID_" + form_ID_random ).find( ".bsk-pdfm-pdfs-dropdown-form-fields" ).remove();
+            }
+            $( "#bsk_pdfm_pdfs_dropdown_open_form_ID_" + form_ID_random ).submit();
 		}
     });
+
+    function bsk_pdfm_get_fiel_extension(url) {
+        try {
+          const urlObj = new URL(url);
+          const pathname = urlObj.pathname;
+          
+          if (!pathname.includes('.')) {
+            return null;
+          }
+          
+          const filename = pathname.split('/').pop();
+          const extension = filename.split('.').pop();
+          
+          if (extension === filename) {
+            return null;
+          }
+          
+          return extension.toUpperCase();
+        } catch (error) {
+          console.error('Invalid URL:', error);
+          return null;
+        }
+    }
     
     $(".bsk-pdfm-output-container").on("click", ".bsk-pdfm-extension-filter-anchor, .bsk-pdfm-tags-filter-anchor", function(){
         

@@ -77,6 +77,14 @@ class BSKPDFM_Dashboard_PDF {
 												 'type' => 'SUCCESS');
         $this->_file_upload_message[41] = array( 'message' => __( 'The document was foced to draft as no file uploaded.', 'bskpdfmanager' ), 
 												 'type' => 'WARNING');
+        $this->_file_upload_message[42] = array( 'message' => __( 'The validator failed to detect file type!', 'bskpdfmanager' ), 
+												 'type' => 'ERROR');
+        $this->_file_upload_message[43] = array( 'message' => __( 'The file you uploaded may contain malicious code.', 'bskpdfmanager' ), 
+												 'type' => 'ERROR');
+        $this->_file_upload_message[44] = array( 'message' => __( 'The validator failed to clean up the file content!', 'bskpdfmanager' ), 
+												 'type' => 'ERROR');
+        $this->_file_upload_message[45] = array( 'message' => __( 'The file extension does not match the file type detected by the system!', 'bskpdfmanager' ), 
+												 'type' => 'ERROR');
 	}
 	
 	function bsk_pdf_manager_admin_notice(){
@@ -464,6 +472,8 @@ class BSKPDFM_Dashboard_PDF {
                             if ($maximum_uploaded_numeric > 1024){
                                 $maximum_uploaded_numeric_str = floor( $maximum_uploaded_numeric / 1024).' M bytes.';
                             }
+                            $all_supported_extensions = BSKPDFM_Common_Backend::get_supported_extension_with_mime_type();
+                            $extensions_array = array_keys( $all_supported_extensions );
                             ?>
                             <div class="row" id="bsk_pdfm_upload_from_computer_row_ID" style="margin-top: 20px;display: <?php echo $upload_computer_row_display;?>;">
                                 <div class="left-column">
@@ -471,7 +481,7 @@ class BSKPDFM_Dashboard_PDF {
                                 </div>
                                 <div class="right-column">
                                     <div id="bsk_pdfm_upload_from_computer_div_ID">
-                                        <input type="file" name="bsk_pdf_file" id="bsk_pdf_file_id" value="<?php esc_html_e( 'Browse', 'bskpdfmanager' ); ?>" />
+                                        <input type="file" name="bsk_pdf_file" id="bsk_pdf_file_id" value="<?php esc_html_e( 'Browse', 'bskpdfmanager' ); ?>" accept="<?php echo '.' . implode( ',.', $extensions_array ); ?>" />
                                     </div>
                                     <p style="font-style:italic;"><?php printf( esc_html__( 'Maximum file size: %s To change this please modify your hosting configuration in php.ini or .htaccess file.', 'bskpdfmanager' ), $maximum_uploaded_numeric_str ); ?></p>
                                     <p style="font-style:italic;"><?php printf( esc_html__( 'Only %s allowed', 'bskpdfmanager' ), '<strong>'.implode( ', ', $supported_extension ).'</strong>' ); ?></p>
@@ -1157,14 +1167,8 @@ class BSKPDFM_Dashboard_PDF {
         //$pdf_status = sanitize_text_field($_REQUEST['pdf_status']);
         //$redirect_to = add_query_arg( 'pdf_status', $pdf_status, $redirect_to );
 		
-        //$redirect_to = add_query_arg( 'message', $message_id, $redirect_to );
-        if( isset( $data['bsk_pdf_manager_list_cat_id'] ) ){
-            $bsk_pdf_manager_list_cat_id = intval(sanitize_text_field($data['bsk_pdf_manager_list_cat_id']));
-            if( $bsk_pdf_manager_list_cat_id ){
-                $redirect_to = add_query_arg( 'cat', $bsk_pdf_manager_list_cat_id, $redirect_to );
-            }
-        }
-		
+        $redirect_to = add_query_arg( 'message', $message_id, $redirect_to );
+
 		wp_redirect( $redirect_to );
 		exit;
 	}
@@ -1219,7 +1223,7 @@ class BSKPDFM_Dashboard_PDF {
 			return false;
         }
         $file_extension = $file_extension_array[count($file_extension_array) - 1];
-        
+        $file_extension = strtolower( $file_extension );
         $supported_extension_and_mime_type = BSKPDFM_Common_Backend::get_supported_extension_with_mime_type();
         if( !array_key_exists( strtolower($file_extension), $supported_extension_and_mime_type) ){
             update_option( BSKPDFManager::$_plugin_temp_option_prefix.'message_id_15', 'File Extension: '.$file_extension );
@@ -1231,6 +1235,43 @@ class BSKPDFM_Dashboard_PDF {
             update_option( BSKPDFManager::$_plugin_temp_option_prefix.'message_id_15', 'Mime Type: '.$file['type'] );
             $message_id = 15;
             return false;
+        }
+		
+        //validate PDF file and svg files
+        if ( $file_extension == 'pdf' || $file_extension == 'svg' ) {
+            require_once( BSK_PDFM_PLUGIN_DIR . 'classes/dashboard/security-validator.php');
+            require_once( BSK_PDFM_PLUGIN_DIR . 'classes/dashboard/security-sanitizer.php');
+
+            $validator = new BSKPDFM_Security_Validator();
+            $sanitizer = new BSKPDFM_Security_Sanitizer();
+
+            // Detect file type
+            $file_type = $validator->bsk_dd_detect_file_type(
+                $file['tmp_name'], 
+                $file['name']
+            );
+            
+            if (!$file_type) {
+                $message_id = 42;
+                return false;
+            }
+
+            if ( $file_type != $file_extension ) {
+                $message_id = 45;
+                return false;
+            }
+
+            // Validate file content
+            if (!$validator->bsk_dd_validate_uploaded_file($file['tmp_name'], $file['name'])) {
+                $message_id = 43;
+                return false;
+            }
+            
+            // Sanitize file
+            if (!$sanitizer->bsk_dd_sanitize_uploaded_file($file['tmp_name'], $file_type)) {
+                $message_id = 44;
+                return false;
+            }
         }
 		
         $current_upload_path = BSKPDFManager::$_upload_path; 

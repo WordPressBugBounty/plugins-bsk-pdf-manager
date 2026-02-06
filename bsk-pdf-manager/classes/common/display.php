@@ -31,50 +31,6 @@ class BSKPDFM_Common_Display {
 
         return $return_bool;
     }//end of function
-        
-    public static function show_pdf_item_single_div( 
-                                                     $pdf_item_obj, 
-                                                     $description,
-                                                     $featured_image, $featured_image_size, 
-                                                     $default_thumbnail_html,
-												     $open_target_str, $nofollow_tag_str, $column_class_item,
-                                                     $show_pdf_title, $pdf_title_position,
-                                                     $show_date_in_title, $date_format_str, $date_before_title
-                                                   ){
-        $utc_timezone = new DateTimeZone( 'UTC' );
-        $date_class = ' data-date="'.wp_date( 'Y-m-d-D', strtotime($pdf_item_obj->last_date), $utc_timezone ).'"';
-		
-		$file_url = site_url().'/'.$pdf_item_obj->file_name;
-		if( $pdf_item_obj->by_media_uploader ){
-			$file_url = wp_get_attachment_url( $pdf_item_obj->by_media_uploader );
-            if( $file_url == false ){
-                return '';
-            }
-		}
-		
-        //PDF titile str
-		$pdf_item_obj_title = esc_html($pdf_item_obj->title);
-        $pdf_title_str = '<span class="bsk-pdfm-pdf-title-string">'.$pdf_item_obj_title.'</span>';
-		if( $pdf_title_str == "" ){
-			$pdf_item_obj_title_array = explode( '/', $file_url );
-			$pdf_title_str = esc_html($pdf_item_obj_title_array[count($pdf_item_obj_title_array) - 1]);
-		}
-        if( $show_date_in_title ){
-            $date_str = '<span class="bsk-pdfm-pdf-date">'.esc_html(date($date_format_str, strtotime($pdf_item_obj->last_date))).'</span>';
-            $pdf_title_str = $date_before_title ? $date_str.$pdf_title_str : $pdf_title_str.$date_str;
-        }
-        
-        //pdf title link
-        $pdf_title_str = '<a href="'.esc_url($file_url).'"'.esc_attr($open_target_str.$nofollow_tag_str).'  title="'.esc_attr($pdf_item_obj_title).'" class="bsk-pdfm-pdf-link-for-title pdf-id-'.esc_attr($pdf_item_obj->id).'">'.$pdf_title_str.'</a>';
-        /*
-          * organise return str
-          */
-        $forStr = '<div class="bsk-pdfm-columns-single'.esc_attr($column_class_item).' pdf-id-'.esc_attr($pdf_item_obj->id).'"'.$date_class.'>';
-        $forStr .= '<h3>'.$pdf_title_str.'</h3>';
-        $forStr .= '</div>'."\n";
-		
-		return $forStr;
-	}
     
     public static function show_pdfs_in_dropdown( $pdf_items_results, 
                                                 $class, 
@@ -83,19 +39,17 @@ class BSKPDFM_Common_Display {
                                                 $show_date_in_title, 
                                                 $date_format_str,
                                                 $date_before_title,
-                                                $default_enable_permalink
+                                                $default_enable_permalink,
+                                                $form_id_random
                                               ){
         if( !$pdf_items_results || !is_array($pdf_items_results) || count($pdf_items_results) < 1 ){
             return '';
         }
         
-        //read global embeded viewer settings
-        $embedded_viewer_settings = self::get_embedded_viewer_settings();
-
         $utc_timezone = new DateTimeZone( 'UTC' );
         
         $forStr = '';
-        $forStr .= '<select class="'.esc_attr($class).'"'.$target.'>'."\n";
+        $forStr .= '<select class="'.esc_attr($class).'" id="bsk_pdfm_pdfs_dropdown_'.rand( 20, 90 ).'" data-from-id="'.$form_id_random.'">'."\n";
         if( $option_none_str ){
             $forStr .= '<option value="" selected="selected">'.esc_attr($option_none_str).'</option>';
         }
@@ -115,11 +69,6 @@ class BSKPDFM_Common_Display {
             $file_extension_array = explode('.', $file_url );
             if( is_array( $file_extension_array ) && count($file_extension_array) > 1 ){
                 $file_extension = strtolower( $file_extension_array[count($file_extension_array) - 1] );
-            }
-
-            //if pdfjs enabled
-            if ( $embedded_viewer_settings['enable'] && $file_extension == 'pdf' ) {
-                $file_url = BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html?file=' . $file_url . $embedded_viewer_settings['paras'];
             }
 
             if( $default_enable_permalink ){
@@ -149,8 +98,6 @@ class BSKPDFM_Common_Display {
                                                     $date_before_title,
                                                     $default_enable_permalink
                                                   ){
-        //read global embeded viewer settings
-        $embedded_viewer_settings = self::get_embedded_viewer_settings();
         $utc_timezone = new DateTimeZone( 'UTC' );
         
         $forStr = '';
@@ -176,11 +123,6 @@ class BSKPDFM_Common_Display {
                     $file_extension = strtolower( $file_extension_array[count($file_extension_array) - 1] );
                 }
                 
-                //if pdfjs enabled
-                if ( $embedded_viewer_settings['enable'] && $file_extension == 'pdf' ) {
-                    $file_url = BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html?file=' . $file_url . $embedded_viewer_settings['paras'];
-                }
-
                 if( $default_enable_permalink ){
                     $file_url = site_url().'/bsk-pdf-manager/'.$pdf_item_obj->slug.'/';
                 }
@@ -208,11 +150,12 @@ class BSKPDFM_Common_Display {
                                                     $target, 
                                                     $show_date_in_title, 
                                                     $date_format_str,
-                                                    $date_before_title
+                                                    $date_before_title,
+                                                    $form_id_random
                                                   ){
 
         $forStr = '';
-        $forStr .= '<select class="'.esc_attr($class).'"'.$target.' style="display: none;">'."\n";
+        $forStr .= '<select class="'.esc_attr($class).'" style="display: none;" id="bsk_pdfm_pdfs_dropdown_'.rand( 20, 90 ).'" data-from-id="'.$form_id_random.'">'."\n";
         if( $option_none_str ){
             $forStr .= '<option value="" selected="selected">'.esc_attr($option_none_str).'</option>';
         }
@@ -254,8 +197,6 @@ class BSKPDFM_Common_Display {
             return $forStr;
         }
         
-        //read global embeded viewer settings
-        $embedded_viewer_settings = self::get_embedded_viewer_settings();
         $utc_timezone = new DateTimeZone( 'UTC' );
         
         foreach( $pdf_results_of_the_category as $pdf_item_obj ){
@@ -274,11 +215,6 @@ class BSKPDFM_Common_Display {
             $file_extension_array = explode('.', $file_url );
             if( is_array( $file_extension_array ) && count($file_extension_array) > 1 ){
                 $file_extension = strtolower( $file_extension_array[count($file_extension_array) - 1] );
-            }
-
-            //if pdfjs enabled
-            if ( $embedded_viewer_settings['enable'] && $file_extension == 'pdf' ) {
-                $file_url = BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html?file=' . $file_url . $embedded_viewer_settings['paras'];
             }
 
             if( $default_enable_permalink ){
@@ -352,35 +288,46 @@ class BSKPDFM_Common_Display {
         }
 
         $paras_string_array = array();
+        $paras_array = array();
         if ( isset( $embedded_viewer_settings['disable_right_click'] ) && $embedded_viewer_settings['disable_right_click'] == true ) {
             $paras_string_array[] = 'mright=1';
+            $paras_array['mright'] = 1;
         }
         if ( isset( $embedded_viewer_settings['show_toolbar'] ) && $embedded_viewer_settings['show_toolbar'] == false ) {
             $paras_string_array[] = 'toolbar=1';
+            $paras_array['toolbar'] = 1;
         } else {
             if ( isset( $embedded_viewer_settings['text_button'] ) && $embedded_viewer_settings['text_button'] == false ) {
                 $paras_string_array[] = 'freetext=1';
+                $paras_array['freetext'] = 1;
             }
             if ( isset( $embedded_viewer_settings['draw_button'] ) && $embedded_viewer_settings['draw_button'] == false ) {
                 $paras_string_array[] = 'ink=1';
+                $paras_array['ink'] = 1;
             }
             if ( isset( $embedded_viewer_settings['stamp_button'] ) && $embedded_viewer_settings['stamp_button'] == false ) {
                 $paras_string_array[] = 'stamp=1';
+                $paras_array['stamp'] = 1;
             }
             if ( isset( $embedded_viewer_settings['download_button'] ) && $embedded_viewer_settings['download_button'] == false ) {
                 $paras_string_array[] = 'download=1';
+                $paras_array['download'] = 1;
             }
             if ( isset( $embedded_viewer_settings['print_button'] ) && $embedded_viewer_settings['print_button'] == false ) {
                 $paras_string_array[] = 'print=1';
+                $paras_array['print'] = 1;
             }
             if ( isset( $embedded_viewer_settings['open_file_button'] ) && $embedded_viewer_settings['open_file_button'] == false ) {
                 $paras_string_array[] = 'open=1';
+                $paras_array['open'] = 1;
             }
             if ( isset( $embedded_viewer_settings['text_selection_tool'] ) && $embedded_viewer_settings['text_selection_tool'] == false ) {
                 $paras_string_array[] = 'textsel=1';
+                $paras_array['textsel'] = 1;
             }
             if ( isset( $embedded_viewer_settings['document_properties_menu'] ) && $embedded_viewer_settings['document_properties_menu'] == false ) {
                 $paras_string_array[] = 'docprop=1';
+                $paras_array['docprop'] = 1;
             }
         }
         
@@ -389,6 +336,7 @@ class BSKPDFM_Common_Display {
         }
 
         $return_array['paras'] = '&' . implode( '&', $paras_string_array );
+        $return_array['paras_array'] = $paras_array;
         return $return_array;
     }
 
@@ -438,7 +386,7 @@ class BSKPDFM_Common_Display {
 
             //if pdfjs enabled
             if ( $embedded_viewer_settings['enable'] && $file_extension == 'pdf' ) {
-                $file_url = BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html?file=' . $file_url . $embedded_viewer_settings['paras'];
+                $file_url = BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html?file=' . rawurlencode( $file_url ) . $embedded_viewer_settings['paras'];
             }
 
             if( $default_enable_permalink ){
@@ -505,7 +453,7 @@ class BSKPDFM_Common_Display {
 
         //if pdfjs enabled
         if ( $embedded_viewer_settings['enable'] && $file_extension == 'pdf' ) {
-            $file_url = BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html?file=' . $file_url . $embedded_viewer_settings['paras'];
+            $file_url = BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html?file=' . rawurlencode( $file_url ) . $embedded_viewer_settings['paras'];
         }
         
         if( $default_enable_permalink ){

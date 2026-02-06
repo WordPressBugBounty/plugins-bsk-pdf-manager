@@ -682,16 +682,16 @@ jQuery(document).ready( function($) {
     });
     
     $("#bsk_pdf_manager_pdf_titile_id").keypress( function(){
-        $( "#bsk_pdfm_doc_title_prompt_text" ).css( 'display', 'none' );
-        
         $("#bsk_pdfm_pdf_titile_error_ID").html( "" );
         $("#bsk_pdfm_pdf_titile_error_ID").css( "display", "none" );
     })
-    
-    $("#bsk_pdf_manager_pdf_titile_id").keyup( function(){
-        var title_val = $.trim( $(this).val() );
-        if( title_val == '' ){
-            $( "#bsk_pdfm_doc_title_prompt_text" ).css( 'display', 'block' );
+
+    $("#bsk_pdf_manager_pdf_titile_id").on('input', function(){
+        var title_val = $.trim($(this).val());
+        if(title_val == ''){
+            $("#bsk_pdfm_doc_title_prompt_text").css('display', 'block');
+        } else {
+            $("#bsk_pdfm_doc_title_prompt_text").css('display', 'none');
         }
     });
     

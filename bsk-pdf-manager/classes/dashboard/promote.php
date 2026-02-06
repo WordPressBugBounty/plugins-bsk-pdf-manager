@@ -22,6 +22,12 @@ class BSKPDFM_Dashboard_Promote {
     var $_bsk_pdfm_free_promote_data_dismissed_prefix = '_bsk_pdfm_free_promote_data_dismissed_prefix_';
 	
 	public function __construct() {
+
+		$debug = false;
+		if ( $debug ) {
+			$this->_bsk_pdfm_plugin_home_url = 'http://localhost/wp-bannersky-250902/';
+	    	$this->_bsk_pdfm_plugin_product_details_page_url = 'http://localhost/wp-bannersky-250902/bsk-pdf-manager/';
+		}
 		
 		$this->plugin_slug_for_action = str_replace( '-', '_', $this->_bsk_pdfm_plugin_slug );
 		$this->_bsk_pdfm_plugin_base_url = admin_url( 'admin.php?page='.BSKPDFM_Dashboard::$_bsk_pdfm_pro_pages['base'] );
@@ -31,10 +37,11 @@ class BSKPDFM_Dashboard_Promote {
 			add_action( "wp_ajax_bsk_pdfm_free_dismiss_promote_" . $this->plugin_slug_for_action, array( $this, 'bsk_pdfm_notice_dismiss_promote_fun' ) );
 		}
         
-        add_action( 'bsk_pdfm_free_schedule_check_promote_weekly', array( $this, 'bsk_pdfm_free_schedule_check_promote_weekly_fun') );
+		wp_clear_scheduled_hook( 'bsk_pdfm_free_schedule_check_promote_weekly' );
+        add_action( 'bsk_pdfm_free_schedule_check_promote_daily', array( $this, 'bsk_pdfm_free_schedule_check_promote_daily_fun') );
         if ( function_exists('wp_next_scheduled') && function_exists('wp_schedule_event') ) {
-			if ( ! wp_next_scheduled( 'bsk_pdfm_free_schedule_check_promote_weekly' ) ) {
-				wp_schedule_event( time(), 'weekly', 'bsk_pdfm_free_schedule_check_promote_weekly' );
+			if ( ! wp_next_scheduled( 'bsk_pdfm_free_schedule_check_promote_daily' ) ) {
+				wp_schedule_event( time(), 'daily', 'bsk_pdfm_free_schedule_check_promote_daily' );
 			}
 		}
 
@@ -63,12 +70,17 @@ class BSKPDFM_Dashboard_Promote {
 		$promote_end_date_d = intval( substr( $promote_data['end_date'], 8, 2 ) );
 		$months_string = array( 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' );
 		$promote_end_date_formated = $months_string[$promote_end_date_m] . ' ' . $promote_end_date_d . ', ' . $promote_end_date_y;
+
+		$details_page_url = $this->_bsk_pdfm_plugin_product_details_page_url;
+		if ( $promote_data['coupon'] ) {
+			$details_page_url = add_query_arg( 'bskddcoupon', $promote_data['coupon'], $details_page_url );
+		}
 		?>
 		<div class='notice notice-info' style='padding:15px; position:relative;' id='bsk_pdfm_dashboard_message_<?php echo $this->plugin_slug_for_action; ?>'>
 			<a href="javascript:void(0);" onclick="bsk_pdfm_dashboard_promote_<?php echo $this->plugin_slug_for_action; ?>();" style='float:right;'><?php esc_html_e( 'Dismiss', 'bskpdfmanager' ); ?></a>
 			<?php echo $promote_message; ?>
 			<p>By the end of <span class="bskpdfm_promote_end_date"><?php echo $promote_end_date_formated; ?></span>.</p>
-			<p>Click <a href="<?php echo $this->_bsk_pdfm_plugin_product_details_page_url; ?>" target="_blank"><?php echo $this->_bsk_pdfm_plugin_product_details_page_url; ?></a> to save your money!</p>
+			<p>Click <a href="<?php echo $details_page_url; ?>" target="_blank"><?php echo $details_page_url; ?></a> to save your money!</p>
 		</div>
 		<script type="text/javascript">
 			function bsk_pdfm_dashboard_promote_<?php echo $this->plugin_slug_for_action; ?>(){
@@ -94,10 +106,9 @@ class BSKPDFM_Dashboard_Promote {
 		$return_data = array( 'success' => false, 'message' => 'Unknown error !' );
 		
 		$api_params = array( 
-			'bskddaction' 	=> 'get_promote',
+			'bskddaction' 	=> 'get_promote_free',
 			'product_id' 	=> $this->_bsk_pdfm_plugin_product_id,
             'site'          => site_url(),
-			
 		);
 
         $response = wp_remote_get( add_query_arg( $api_params, $this->_bsk_pdfm_plugin_home_url ),
@@ -132,7 +143,7 @@ class BSKPDFM_Dashboard_Promote {
         return $return_data;
 	}
     
-    function bsk_pdfm_free_schedule_check_promote_weekly_fun(){
+    function bsk_pdfm_free_schedule_check_promote_daily_fun(){
 
 		$return_data = $this->bsk_pdfm_get_promote_data();
         if ( ! $return_data || ! $return_data['success'] ) {

@@ -131,6 +131,11 @@ class BSKPDFM_Shortcodes_PDFs_Dropdown {
             $pdfs_results_array = $pdfs_query_return['pdfs'];
             $total_pdfs = $pdfs_query_return['total'];
         }
+
+        $form_id_random = rand( 10000000,99999999 ) ;
+
+        //read global embeded viewer settings
+        $embedded_viewer_settings = BSKPDFM_Common_Display::get_embedded_viewer_settings();
         
         $output_container_class = trim($shortcode_atts['output_container_class']) ? ' '.trim($shortcode_atts['output_container_class']) : '';
         $str_body = '<div class="bsk-pdfm-output-container shortcode-pdfs layout-dropdown'.esc_attr($output_container_class).'">';
@@ -157,9 +162,10 @@ class BSKPDFM_Shortcodes_PDFs_Dropdown {
                                              $open_target_str,
                                              $show_date, 
                                              $date_format_str,
-                                             $date_before_title
+                                             $date_before_title,
+                                             $form_id_random
                                         );
-        }else{
+        } else {
             //show count description bar
             $str_body .= BSKPDFM_Common_Count_Desc_Bar::show_count_desc_bar( 
                                                                       $total_pdfs,
@@ -176,24 +182,44 @@ class BSKPDFM_Shortcodes_PDFs_Dropdown {
                                                  $show_date, 
                                                  $date_format_str,
                                                  $date_before_title,
-                                                 $default_enable_permalink
+                                                 $default_enable_permalink,
+                                                 $form_id_random
                                             );
         }
+
+        //form with method:get to open file in new window
+        $form_target_str = '';
+        if( $shortcode_atts['target'] == '_blank' ){
+            $form_target_str = ' target="_blank"';
+        }
+        $action = '';
+        $pdfjs_paras = '';
+        //if pdfjs enabled
+        if ( $embedded_viewer_settings['enable'] ) {
+            $action = BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html';
+            foreach ( $embedded_viewer_settings['paras_array'] as $para_name => $para_value ) {
+                $pdfjs_paras .= '<input type="hidden" value="' . $para_value . '" name="' . $para_name . '" class="bsk-pdfm-pdfs-dropdown-form-fields" />';
+            }
+        }
+
+        $str_body .= '<form action="' . $action . '" method="get" id="bsk_pdfm_pdfs_dropdown_open_form_ID_'.$form_id_random.'"' . $form_target_str . '>
+                        <input type="hidden" value="default" name="file" id="bsk_pdfm_pdfs_dropdown_to_open_ID_'.$form_id_random.'" class="bsk-pdfm-pdfs-dropdown-form-fields" />'
+                        . $pdfjs_paras .
+                     '</form>';
+
         $str_body .= '</div><!--// bsk-pdfm-pdfs-output-->';
         
         //output all shortcode parameters and ajax nonce
         $str_body .= BSKPDFM_Common_Display::get_shortcode_attributes_and_ajax_nonce( $shortcode_atts );
         
-        $str_body .= '</div><!--// bsk-pdfm-output-container-->';
-
-        global $post;
-        
-        if ( $post->ID && $open_target_str ) {
-            $_dropdown_shortcodes_pages = get_option( BSKPDFManager::$_dropdown_shortcodes_pages_option, array() );
-            $_dropdown_shortcodes_pages[$post->ID] = $post->ID;
-
-            update_option( BSKPDFManager::$_dropdown_shortcodes_pages_option, $_dropdown_shortcodes_pages );
+        //pdfjs embeded
+        if ( $embedded_viewer_settings['enable'] ) {
+            $str_body .= '<input type="hidden" class="bsk-pdfm-pdfs-dropdown-pdfs-enable" value="YES">';
+        } else {
+            $str_body .= '<input type="hidden" class="bsk-pdfm-pdfs-dropdown-pdfs-enable" value="NO">';
         }
+        
+        $str_body .= '</div><!--// bsk-pdfm-output-container-->';
 
         return $str_body;
 	}

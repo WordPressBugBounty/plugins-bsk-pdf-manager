@@ -146,7 +146,6 @@ class BSKPDFM_Dashboard {
 
         add_action( 'wp_print_scripts', array ( $this, 'bsk_pdfm_remove_the_event_calendar_js_fun' ), 999 );
 
-        add_action( 'admin_notices', array ( $this, 'bsk_pdfm_dropdown_warning_fun' ) );
 	}
 	
 	function bsk_pdf_manager_dashboard_menu() {
@@ -775,33 +774,5 @@ class BSKPDFM_Dashboard {
             wp_deregister_script( 'tribe-events-jquery-resize' );
             wp_deregister_script( 'tribe-events-bootstrap-datepicker' );
         }
-    }
-
-    function bsk_pdfm_dropdown_warning_fun() {
-
-        $_dropdown_shortcodes_pages = get_option( BSKPDFManager::$_dropdown_shortcodes_pages_option, array() );
-        if ( count( $_dropdown_shortcodes_pages ) < 1 ) {
-            return;
-        }
-
-        $page = isset( $_GET['page'] ) ? $_GET['page'] : '';
-        if ( $page == '' || ! in_array( $page, self::$_bsk_pdfm_pro_pages ) ) {
-            return;
-        }
-        ?>
-        <div class="notice notice-warning is-dismissible">
-            <p>You are using dropdown layout to display PDFs / documents on the below page(s): </p>
-            <ul>
-            <?php
-            foreach( $_dropdown_shortcodes_pages as $page_ID ) {
-            ?>
-            <a href="<?php echo get_permalink( $page_ID ); ?>"><?php echo get_permalink( $page_ID ); ?></a>
-            <?php
-            }
-            ?>
-            </ul>
-            <p>The PDF/document is designed to open in a new tab/window when the dropdown changes. But some browsers block new tabs/windows by default. To avoid this trouble, please update to our <a href="https://www.bannersky.com/document/bsk-pdf-manager-documentatio-v2/how-to-upgrade-to-pro-version/" target="_blank">Pro version</a>. The pro version doesn't have this problem because it uses a different method.
-        </div>
-        <?php
     }
 }

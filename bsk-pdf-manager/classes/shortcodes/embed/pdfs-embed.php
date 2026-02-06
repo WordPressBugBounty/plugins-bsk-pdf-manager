@@ -140,7 +140,7 @@ class BSKPDFM_Shortcodes_PDFs_Embeded {
             ob_start();
             ?>
             <div class="bsk-pdfm-output-container embeded-pdf-container">
-                <iframe class="responsive-iframe" src="<?php echo BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html?file=' . $file_url . $embedded_viewer_settings['paras']; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" <?php echo $style_string; ?>></iframe>
+                <iframe class="responsive-iframe" src="<?php echo BSK_PDFM_PLUGIN_URL . 'pdfjs/web/viewer.html?file=' . rawurlencode( $file_url ) . $embedded_viewer_settings['paras']; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" <?php echo $style_string; ?>></iframe>
             </div><!-- //end for bsk-pdfm-output-container embeded-pdf-container-->
             <?php
             $html_content = ob_get_contents();

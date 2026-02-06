@@ -3,8 +3,8 @@ Contributors: bannersky
 Plugin URI: https://www.bannersky.com/bsk-pdf-manager/
 Tags: PDF manager, meeting minutes tool, printable forms tool, data sheets tool, embed PDF
 Requires at least: 5.3
-Tested up to: 6.8
-Stable tag: 3.7
+Tested up to: 6.8.3
+Stable tag: 3.7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,13 +53,29 @@ Please visit <a href="http://www.bannersky.com/bsk-pdf-manager/">http://www.bann
 
 == Changelog ==
 
+3.7.2
+
+* Fixed: Vulnerability allowing authenticated users (administrators and above) to launch stored cross-site scripting attacks via SVG file uploads.
+
+* Fixed: The "Add title" placeholder remains visible when input is provided via non-English input methods or paste operations.
+
+* Fixed: No error message if failed to upload file.
+
+* Improved: The file picker now filters by the allowed formats configured in Settings (e.g., PDF, PNG, ZIP), guiding users to select valid files.
+
+3.7.1
+
+* Added: A new implementation to open PDF/documents from the drop-down menu. This way, the browser will no longer display security warnings or warnings when opening PDF/documents in a new window.
+
+* Compatible: Wordpress 6.8.3
+
 3.7
 
 * Fixed: incorrect placeholder text in category widget.
 
 * Fixed: warning mesage when display documents / PDFs in list and dropdown mode.
 
-* Compatible: Wordpress 6.8.x
+* Compatible: Wordpress 6.8.1
 
 ( In addition to the above, the Pro version also does the following )
 
