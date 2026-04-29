@@ -592,3 +592,16 @@ ol.bsk-pdfm-without-featured-image.bsk-pdfm-without-description li{
     text-align: center;
     margin-top: 0.5rem;
 }
+
+/*
+ * Pub upload
+ */
+ .bsk-pdfm-pub-upload-error {
+    font-size: 0.8em;
+    color: #880000;
+}
+
+.bsk-pdfm-pub-upload-success {
+    font-size: 0.8em;
+    color: #008800;
+}

@@ -90,7 +90,8 @@ class BSKPDFM_Dashboard {
                                     'Featured image',
                                     'Statistics',
                                     'Change permalink URL structure base',
-                                    'Enable Editor, Author, Contributor to access backend'
+                                    'Enable Editor, Author, Contributor to access backend',
+                                    'Allow users to upload files on the frontend of your website by form plugin Integration'
                                    );
     private static $_pro_tips_for_notifications = array( 
                                     'All'

@@ -3,8 +3,8 @@ Contributors: bannersky
 Plugin URI: https://www.bannersky.com/bsk-pdf-manager/
 Tags: PDF manager, meeting minutes tool, printable forms tool, data sheets tool, embed PDF
 Requires at least: 5.3
-Tested up to: 6.8.3
-Stable tag: 3.7.2
+Tested up to: 6.9.4
+Stable tag: 3.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,20 @@ Please visit <a href="http://www.bannersky.com/bsk-pdf-manager/">http://www.bann
 4. Permalink settings
 
 == Changelog ==
+
+3.8
+
+* Added: Allow users or guests to upload files via the front page. Simply including the shortcode [bsk-pdfm-pub-upload] on a page will allow users or guests to easily upload files. Make sure the option "Allow Front File Uploads for Subscribers and Guests" is enabled in Dashboard → BSK PDF Pro → Settings → Global File Upload.
+
+* Fixed: An unauthenticated IDOR vulnerability, it fails to validate the document's status (such as "Draft" or "Trash") before processing the bskpdfm-id parameter, allowing unauthenticated attackers to access and download unpublished or deleted PDF documents.
+
+* Improved: Backend interface adjustment to make it more user-friendly.
+
+* Compatible: Wordpress 6.9.4
+
+( In addition to the above, the Pro version also does the following )
+
+* Added: Allow users or guests to upload files through existing forms on the website, which currently supports Gravity Forms. Make sure the option "Allow Front File Uploads for Subscribers and Guests" and "Form Plugin Integration" are checked in Dashboard → BSK PDF Pro → Settings → Global File Upload. Also, you need to enable the corresponding option in Gravity Forms under the File Upload field's Advanced tab → BSK PDF Manager.
 
 3.7.2
 

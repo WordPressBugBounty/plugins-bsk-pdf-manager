@@ -44,7 +44,7 @@ class BSKPDFM_Dashboard_Settings {
                 <div class="wrap">
                     <h2 class="nav-tab-wrapper">
                         <a class="nav-tab nav-tab-active" href="javascript:void(0);" id="bsk_pdfm_setings_tab-general-settings"><?php esc_html_e( 'General settings', 'bskpdfmanager' ); ?></a>
-                        <a class="nav-tab" href="javascript:void(0);" id="bsk_pdfm_setings_tab-upload"><?php esc_html_e( 'Upload', 'bskpdfmanager' ); ?></a>
+                        <a class="nav-tab" href="javascript:void(0);" id="bsk_pdfm_setings_tab-upload"><?php esc_html_e( 'Global File Upload', 'bskpdfmanager' ); ?></a>
                         <a class="nav-tab" href="javascript:void(0);" id="bsk_pdfm_setings_tab-capabilities"><?php esc_html_e( 'Backend Access', 'bskpdfmanager' ); ?></a>
                         <a class="nav-tab" href="javascript:void(0);" id="bsk_pdfm_setings_tab-featured-image"><?php esc_html_e( 'Featured Image', 'bskpdfmanager' ); ?></a>
                         <a class="nav-tab" href="javascript:void(0);" id="bsk_pdfm_setings_tab-styles"><?php esc_html_e( 'Styles', 'bskpdfmanager' ); ?></a>

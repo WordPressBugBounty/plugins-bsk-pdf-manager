@@ -1512,6 +1512,33 @@ jQuery(document).ready( function($) {
 	$("#bsk_pdf_manager_settings_general_tab_save_form_ID").click(function(){
 		$("#bsk_pdfm_general_settings_form_ID").submit();
 	});
+
+    /*
+     * upload settings
+     */
+	$( "#bsk_pdf_manager_settings_upload_tab_save_form_ID" ).click(function(){
+        var $allow_front_upload = $('#bsk_pdfm_allow_file_uploads_for_subscribers_and_guests_ID');
+        var $allow_for_subsriber = $('#bsk_pdfm_allow_file_uploads_for_subscribers_ID');
+        var $allow_for_guest = $('#bsk_pdfm_allow_file_uploads_for_guests_ID');
+        var $checkboxes = $('.bsk-pdfm-pub-upload-default-catgory-checkbox');
+        
+        function hasCheckedCheckbox() {
+            return $checkboxes.is(':checked');
+        }
+
+        if ( $allow_front_upload.is(':checked') && ($allow_for_subsriber.is(':checked') || $allow_for_guest.is(':checked')) && !hasCheckedCheckbox()) {
+            var $errorMsg = $('.bsk-pdfm-pub-upload-default-catgory-error-message');
+            $errorMsg.text('No category checked').show();
+            
+            $('html, body').animate({
+                scrollTop: $errorMsg.offset().top - 100
+            }, 500);
+            
+            return false;
+        }
+
+		$( "#bsk_pdfm_upload_settings_form_ID" ).submit();
+	});
 	
 	/* multi-column settings */
 	$("#bsk_pdf_manager_settings_styles_save_form_ID").click(function(){
@@ -1660,6 +1687,26 @@ jQuery(document).ready( function($) {
     $("#bsk_pdfm_set_upload_folder_sub_ID").keyup( function(){
         //only number & letters
         this.value = this.value.replace(/[^a-zA-z0-9\-]/g, '');
+    });
+
+    $("#bsk_pdfm_allow_file_uploads_for_subscribers_and_guests_ID").click(function(){
+        var is_checked = $(this).is(":checked");
+        if( is_checked ){
+            $("#bsk_pdfm_allow_file_uploads_for_subscribers_and_guests_panel_ID").css("display", "block");
+        } else {
+            $("#bsk_pdfm_allow_file_uploads_for_subscribers_and_guests_panel_ID").css("display", "none");
+        }
+    });
+
+    $("#bsk_pdfm_allow_file_uploads_for_subscribers_ID, #bsk_pdfm_allow_file_uploads_for_guests_ID").click(function(){
+        var is_subscribers_checked = $("#bsk_pdfm_allow_file_uploads_for_subscribers_ID").is(":checked");
+        var is_guests_checked = $("#bsk_pdfm_allow_file_uploads_for_guests_ID").is(":checked");
+
+        if( is_subscribers_checked || is_guests_checked ){
+            $("#bsk_pdfm_public_file_uploads_settings_panel_ID").css("display", "block");
+        } else {
+            $("#bsk_pdfm_public_file_uploads_settings_panel_ID").css("display", "none");
+        }
     });
     
     //credit setting

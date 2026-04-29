@@ -4,7 +4,7 @@
 * Plugin Name: BSK PDF Manager
 * Plugin URI: http://www.bannersky.com/bsk-pdf-manager/
 * Description: Help you manage your PDF documents. PDF documents can be filter by category. Support short code to show special PDF documents or all PDF documents under  category. Widget supported.
-* Version: 3.7.2
+* Version: 3.8
 * Author: BannerSky.com
 * Author URI: http://www.bannersky.com/
 * License: GPLv2 or later
@@ -32,7 +32,7 @@ class BSKPDFManager {
     public static $_user_available_tbl_name = 'bsk_pdf_manager_user_available';
     public static $_notifications_tbl_name = 'bsk_pdf_manager_notifications';
     
-	public static $_PLUGIN_VERSION_ = '3.7.2';
+	public static $_PLUGIN_VERSION_ = '3.8';
 	private static $_plugin_db_version = '3.1';
 	private static $_plugin_saved_db_version_option = '_bsk_pdf_manager_db_ver_';
     private static $_plugin_db_rels_done_option = '_bsk_pdf_manager_rels_done_';
@@ -62,7 +62,7 @@ class BSKPDFManager {
 	public static $_ajax_loader_img_url = '';
     public static $_delete_cat_icon_url = '';
     
-    public static $url_to_upgrade = 'https://www.bannersky.com/document/bsk-pdf-manager-documentatio-v2/how-to-upgrade-to-pro-version/';
+    public static $url_to_upgrade = 'https://bannersky.com/bsk-pdf-manager/';
     
     public static $_category_max_depth = 3;
 	
@@ -129,6 +129,10 @@ class BSKPDFManager {
             self::$instance->_bsk_pdfm_pro_OBJ_dashboard = new BSKPDFM_Dashboard();
             self::$instance->_bsk_pdfm_pro_OBJ_shortcodes = new BSKPDFM_Shortcodes();
             self::$instance->_bsk_pdfm_pro_OBJ_permalink_accessCtrl = new BSKPDFM_Permalink_AccessCtrl();
+
+            //forms integration, pub upload form, just require
+            require_once( BSK_PDFM_PLUGIN_DIR.'classes/forms/forms-integration.php' );
+            require_once( BSK_PDFM_PLUGIN_DIR.'classes/shortcodes/pub/pub-upload.php' );
 
             //hooks
             register_activation_hook(__FILE__, array(self::$instance, 'bsk_pdf_manager_activate') );

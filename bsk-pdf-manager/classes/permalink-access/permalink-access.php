@@ -39,7 +39,7 @@ class BSKPDFM_Permalink_AccessCtrl {
         
         global $wpdb;
         
-        $sql = 'SELECT `file_name`, `by_media_uploader`, `slug` FROM `'.esc_sql($wpdb->prefix.BSKPDFManager::$_pdfs_tbl_name).'` '.
+        $sql = 'SELECT `file_name`, `by_media_uploader`, `slug`, `trash`, `draft` FROM `'.esc_sql($wpdb->prefix.BSKPDFManager::$_pdfs_tbl_name).'` '.
                'WHERE `id` = %d';
         
         $sql = $wpdb->prepare( $sql, $pdf_id );
@@ -49,6 +49,11 @@ class BSKPDFM_Permalink_AccessCtrl {
         }
         
         $pdf_obj = $pdf_results[0];
+
+        if( $pdf_obj->trash || $pdf_obj->draft ){
+            wp_die( 'The document is not available at this stage!' );
+        }
+
         if( $pdf_obj->file_name == "" &&  $pdf_obj->by_media_uploader < 1 ){
             wp_die( 'Invalid file name and nor uploaded by, document ID: '.$pdf_id );
         }

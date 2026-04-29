@@ -84,7 +84,7 @@ class BSKPDFM_Dashboard_Category {
                                             'wpautop' => false,
                                          );
                         $description = '<p>'.esc_html__( 'Description only support in Pro version', 'bskpdfmanager' ).'</p>';
-                        $description .= '<p><a style="color: #ff5b00;" href="https://www.bannersky.com/document/bsk-pdf-manager-documentatio-v2/how-to-upgrade-to-pro-version/" target="_blank" rel="noopener">'.esc_html__( 'Upgrade to Pro', 'bskpdfmanager' ).'</a></p>';
+                        $description .= '<p><a style="color: #ff5b00;" href="https://bannersky.com/bsk-pdf-manager/" target="_blank" rel="noopener">'.esc_html__( 'Upgrade to Pro', 'bskpdfmanager' ).'</a></p>';
                         wp_editor( $description, 'cat_description', $settings );
                     ?>
                     <div style="clear: both;"></div>
@@ -107,7 +107,7 @@ class BSKPDFM_Dashboard_Category {
                                         'wpautop' => false,
                                      );
                     $cat_empty_message = '<p>'.esc_html__( 'Empty message only support in Pro version', 'bskpdfmanager' ).'</p>';
-                    $cat_empty_message .= '<p><a style="color: #ff5b00;" href="https://www.bannersky.com/document/bsk-pdf-manager-documentatio-v2/how-to-upgrade-to-pro-version/" target="_blank" rel="noopener">'.esc_html__( 'Upgrade to Pro', 'bskpdfmanager' ).'</a></p>';
+                    $cat_empty_message .= '<p><a style="color: #ff5b00;" href="https://bannersky.com/bsk-pdf-manager/" target="_blank" rel="noopener">'.esc_html__( 'Upgrade to Pro', 'bskpdfmanager' ).'</a></p>';
                     wp_editor( $cat_empty_message, 'cat_empty_message', $settings );
                 ?>
                 <div style="clear: both;"></div>
