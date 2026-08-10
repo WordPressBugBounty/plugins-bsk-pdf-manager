@@ -58,14 +58,14 @@ class BSKPDFM_Pub_Upload_Shortcode_Simple extends BSKPDFM_Pub_Upload_Shortcodes 
         ?>
         <div class="bsk-pdfm-pub-upload-container">
             <?php if ($message) { ?>
-            <p class="<?php echo ' ' . $message_class; ?>"><?php echo $message; ?></p>
+            <p class="<?php esc_attr_e( $message_class ); ?>"><?php esc_html_e($message); ?></p>
             <?php } ?>
             <form id="bsk_pdfm_pub_upload_form_ID" method="post" enctype="multipart/form-data" action="">
                 <p>
                     <input type="file" name="bsk_pdfm_pub_upload_file" id="bsk_pdfm_pub_upload_file_ID" required />
                 </p>
                 <p>
-                    <input type="submit" name="bsk_pdfm_pub_upload_submit" value="<?php echo $atts['submit_text']; ?>" />
+                    <input type="submit" name="bsk_pdfm_pub_upload_submit" value="<?php esc_attr_e($atts['submit_text']); ?>" />
                 </p>
             </form>
         </div>

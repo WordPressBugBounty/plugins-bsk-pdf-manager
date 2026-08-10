@@ -233,7 +233,7 @@ abstract class BSKPDFM_Pub_Upload_Shortcodes {
                 return $return_data;
             }
             if( !file_exists($current_upload_path.$year.'/'.$month.'/index.php') ){
-                copy( BSK_PDFM_PRO_PLUGIN_DIR.'/assets/index.php',
+                copy( BSK_PDFM_PLUGIN_DIR.'/assets/index.php',
                       $current_upload_path.$year.'/'.$month.'/index.php' );
             }
             

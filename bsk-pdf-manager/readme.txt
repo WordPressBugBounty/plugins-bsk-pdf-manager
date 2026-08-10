@@ -3,8 +3,8 @@ Contributors: bannersky
 Plugin URI: https://www.bannersky.com/bsk-pdf-manager/
 Tags: PDF manager, meeting minutes tool, printable forms tool, data sheets tool, embed PDF
 Requires at least: 5.3
-Tested up to: 6.9.4
-Stable tag: 3.8
+Tested up to: 7.0.3
+Stable tag: 3.8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,14 @@ Please visit <a href="http://www.bannersky.com/bsk-pdf-manager/">http://www.bann
 4. Permalink settings
 
 == Changelog ==
+
+3.8.1
+
+* Fixed: the XSS vulnerability (CVE-2026-65528)
+
+* Improved: Removed dangerous attributes like 'onbegin', 'onend', and 'ontoggle' when uploading SVG images. Thank you to Artus KG for pointing out this potential security issue.
+
+* Compatible: Wordpress 7.0.3
 
 3.8
 

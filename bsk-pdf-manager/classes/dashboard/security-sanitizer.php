@@ -51,8 +51,8 @@ class BSKPDFM_Security_Sanitizer {
         $nodes = $xpath->query('//*');
         $dangerous_attributes = array(
             'onload', 'onclick', 'onerror', 'onmouseover', 'onmouseout',
-            'onfocus', 'onblur', 'onkeypress', 'onkeydown', 'onkeyup',
-            'href', 'xlink:href'
+            'onfocus', 'onblur', 'onkeypress', 'onkeydown', 'onkeyup', 'onbegin', 'onend', 'ontoggle',
+            'href', 'xlink:href',
         );
         
         foreach ($nodes as $node) {
