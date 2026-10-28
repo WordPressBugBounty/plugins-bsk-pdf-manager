@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! class_exists( 'WP_List_Table' ) ) {
     require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 }
@@ -92,7 +96,7 @@ class BSKPDFM_Dashboard_Tags extends WP_List_Table {
 		}
         $tags_id = array();
         foreach( $_POST['bsk-pdf-manager-tags'] as $temp_tag_id ) {
-            $tags_id[] = intval(sanitize_text_field($temp_tag_id));
+            $tags_id[] = sanitize_text_field($temp_tag_id);
         }
         
 		$action = -1;
@@ -112,8 +116,8 @@ class BSKPDFM_Dashboard_Tags extends WP_List_Table {
 		if ( $action == -1 ) {
 			return;
 		} else if ( $action == 'delete' ) {
-			$ids = implode(',', esc_sql($tags_id));
-			$ids = trim($ids);
+            $tags_id = array_map( 'intval', (array) $tags_id );
+			$ids = implode(',', $tags_id);
             
             //delete all tags
 			$sql = 'DELETE FROM `'.$wpdb->prefix.BSKPDFManager::$_cats_tbl_name.'` WHERE `id` IN('.$ids.') AND `type` LIKE "TAG"';

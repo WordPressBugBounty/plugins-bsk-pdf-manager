@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 abstract class BSKPDFM_Pub_Upload_Shortcodes {
 
 	protected $_plugin_settings;

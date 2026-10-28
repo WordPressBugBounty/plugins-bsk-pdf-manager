@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! class_exists( 'WP_List_Table' ) ) {
     require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 }
@@ -127,8 +131,8 @@ class BSKPDFM_Dashboard_Categories extends WP_List_Table {
 		
 		if ( $action == 'delete' && count( $categories_id ) ){
 			
-            $ids = implode(',', esc_sql($categories_id));
-			$ids = trim($ids);
+            $ids = implode(',', $categories_id);
+
             $sql = 'SELECT `id`, `parent` FROM `'.esc_sql($wpdb->prefix.BSKPDFManager::$_cats_tbl_name).'` WHERE `id` IN('.$ids.')';
             $categories_to_delete = $wpdb->get_results( $sql );
             if( !$categories_to_delete && !is_array($categories_to_delete) && count($categories_to_delete) < 1 ){

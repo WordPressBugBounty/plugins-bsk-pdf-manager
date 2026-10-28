@@ -599,8 +599,9 @@ class BSKPDFM_Common_Display {
             
             if( $show_cat_hierarchical ){
                 //show child categories
+                $availabe_ids_array = array_map( 'intval', (array) $availabe_ids_array );
                 $sql_base = 'SELECT * FROM `'.esc_sql($wpdb->prefix.BSKPDFManager::$_cats_tbl_name).'` AS C '.
-                                 'WHERE 1 AND C.`id` IN('.implode(',', esc_sql($availabe_ids_array)).') ';
+                                 'WHERE 1 AND C.`id` IN('.implode(',', $availabe_ids_array).') ';
                 //child categories
                 $sql = $sql_base.' AND C.`parent` = '.$cat_obj->id.' ORDER BY '.$cat_order_by_str.$cat_order_str;
                 $child_results = $wpdb->get_results( $sql );

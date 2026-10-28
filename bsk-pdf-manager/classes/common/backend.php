@@ -201,7 +201,8 @@ class BSKPDFM_Common_Backend {
             foreach( $children_results as $cat_obj ){
                 $children_ids[] = $cat_obj->id;
             }
-            $children_ids_str = implode(',', esc_sql($children_ids));
+            $children_ids = array_map( 'intval', (array) $children_ids );
+            $children_ids_str = implode(',', $children_ids);
             $sql = 'SELECT `id` FROM `'.esc_sql($wpdb->prefix.BSKPDFManager::$_cats_tbl_name).'` '.
                      'WHERE `parent` IN( '.$children_ids_str.')';
             $children_results = $wpdb->get_results( $sql );

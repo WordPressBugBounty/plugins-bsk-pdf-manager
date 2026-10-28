@@ -180,7 +180,8 @@ class BSKPDFM_Dashboard_PDF_List_Action {
             if( $selected_PDFs && is_array($selected_PDFs) && count($selected_PDFs) > 0 ){
                 global $wpdb;
                 
-                $pdfs_id_str = implode( ', ', esc_sql($selected_PDFs) );
+                $selected_PDFs = array_map( 'intval', (array) $selected_PDFs );
+                $pdfs_id_str = implode( ', ', $selected_PDFs );
                 $sql = 'SELECT `id`, `title`, `slug`, `file_name`, `last_date`, `by_media_uploader` '.
                         'FROM `'.esc_sql($wpdb->prefix.BSKPDFManager::$_pdfs_tbl_name).'` '.
                         'WHERE `id` IN('.$pdfs_id_str.')';
@@ -328,7 +329,8 @@ class BSKPDFM_Dashboard_PDF_List_Action {
             if( $selected_PDFs && is_array($selected_PDFs) && count($selected_PDFs) > 0 ){
                 global $wpdb;
                 
-                $pdfs_id_str = implode( ', ', esc_sql($selected_PDFs) );
+                $selected_PDFs = array_map( 'intval', (array) $selected_PDFs );
+                $pdfs_id_str = implode( ', ', $selected_PDFs );
                 $sql = 'SELECT `id`, `title`, `slug`, `file_name`, `last_date`, `by_media_uploader` '.
                         'FROM `'.esc_sql($wpdb->prefix.BSKPDFManager::$_pdfs_tbl_name).'` '.
                         'WHERE `id` IN('.$pdfs_id_str.')';
@@ -459,10 +461,11 @@ class BSKPDFM_Dashboard_PDF_List_Action {
                 if( $selected_PDFs && is_array($selected_PDFs) && count($selected_PDFs) > 0 ){
                     global $wpdb;
 
+                    $selected_PDFs = array_map( 'intval', (array) $selected_PDFs );
                     $pdfs_id_str = implode( ', ', $selected_PDFs );
                     $sql = 'SELECT `id`, `title`, `slug`, `file_name`, `last_date`, `by_media_uploader`, `thumbnail_id` '.
                             'FROM `'.$wpdb->prefix.BSKPDFManager::$_pdfs_tbl_name.'` '.
-                            'WHERE `id` IN('.esc_sql($pdfs_id_str).')';
+                            'WHERE `id` IN('.$pdfs_id_str.')';
                     $pdfs_array_to_update = $wpdb->get_results( $sql );
                 }
                 ?>
@@ -611,10 +614,11 @@ class BSKPDFM_Dashboard_PDF_List_Action {
             if( $selected_PDFs && is_array($selected_PDFs) && count($selected_PDFs) > 0 ){
                 global $wpdb;
 
+                $selected_PDFs = array_map( 'intval', (array) $selected_PDFs );
                 $pdfs_id_str = implode( ', ', $selected_PDFs );
                 $sql = 'SELECT `id`, `title`, `slug`, `file_name`, `last_date`, `by_media_uploader`, `thumbnail_id` '.
                         'FROM `'.$wpdb->prefix.BSKPDFManager::$_pdfs_tbl_name.'` '.
-                        'WHERE `id` IN('.esc_sql($pdfs_id_str).')';
+                        'WHERE `id` IN('.$pdfs_id_str.')';
                 $pdfs_array_to_update = $wpdb->get_results( $sql );
             }
             ?>

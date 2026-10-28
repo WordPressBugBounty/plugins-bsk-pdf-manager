@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class BSKPDFM_Dashboard_PDF {
 
     private $_file_upload_message = array();
@@ -1397,11 +1401,11 @@ class BSKPDFM_Dashboard_PDF {
             //organize pdf ids
             $pdfs_id = array();
             foreach( $data['bsk_pdfm_bulk_delete_pdf_ids'] as $pdf_id ){
-                $pdfs_id[] = intval( sanitize_text_field($pdf_id) );
+                $pdfs_id[] = sanitize_text_field($pdf_id);
             }
-				
+			
+            $pdfs_id = array_map( 'intval', (array) $pdfs_id );
             $ids = implode(',', $pdfs_id);
-            $ids = trim($ids,',');
 
             //delete all files
             $sql = 'SELECT `id`, `file_name`, `thumbnail_id` FROM `'.esc_sql($wpdb->prefix.BSKPDFManager::$_pdfs_tbl_name).'` WHERE id IN('.$ids.')';

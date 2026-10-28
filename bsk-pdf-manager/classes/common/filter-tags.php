@@ -67,8 +67,9 @@ class BSKPDFM_Common_Filter_Tags {
         }else if( $tags_filter_type == 'SPECIFIC' && !empty($tags_specific) && trim($tags_specific) ){
             $tags_specific_array = explode( ',', $tags_specific );
             if( $tags_specific_array && is_array( $tags_specific_array ) && count( $tags_specific_array ) ){
+                $tags_specific_array = array_map( 'intval', (array) $tags_specific_array );
                 $sql = 'SELECT `id`, `title` FROM `'.$tags_table.'` '.
-                       'WHERE `id` IN('.( implode(',', esc_sql($tags_specific_array) ) ).') AND `type` LIKE "TAG" ORDER BY `title` ASC';
+                       'WHERE `id` IN('.( implode(',', $tags_specific_array ) ).') AND `type` LIKE "TAG" ORDER BY `title` ASC';
                 $results = $wpdb->get_results( $sql );
                 if( $results && is_array( $results ) && count( $results ) ){
                     foreach( $results as $tag_obj ){

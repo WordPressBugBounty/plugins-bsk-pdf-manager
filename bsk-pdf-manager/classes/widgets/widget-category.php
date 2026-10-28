@@ -77,8 +77,9 @@ class BSKPDFManagerWidget_Category extends WP_Widget {
             echo '<h2 class="widget-title">'.$pdfm_widget_title.'</h2>';
         }
 
+        $pdfm_category_id = intval($pdfm_category_id);
         $sql = 'SELECT * FROM `'.esc_sql($wpdb->prefix.BSKPDFManager::$_cats_tbl_name).'`  AS C '.
-               'WHERE `id` IN('.esc_sql($pdfm_category_id).') ';
+               'WHERE `id` IN('.$pdfm_category_id.') ';
         $categories_results = $wpdb->get_results($sql);
         if( !$categories_results || !is_array( $categories_results ) || count($categories_results) < 1 ){
             echo $args['after_widget'];

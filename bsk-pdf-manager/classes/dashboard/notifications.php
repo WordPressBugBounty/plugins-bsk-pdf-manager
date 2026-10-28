@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! class_exists( 'WP_List_Table' ) ) {
     require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 }
@@ -226,6 +230,7 @@ class BSKPDFM_Dashboard_Notifications extends WP_List_Table {
                              is_array( $auto_meta['auto_specific_categories'] ) && 
                              count( $auto_meta['auto_specific_categories'] ) > 0 ) {
 
+                            $auto_meta['auto_specific_categories'] = array_map( 'intval', (array) $auto_meta['auto_specific_categories'] );
                             $sql = 'SELECT `title` FROM `' . esc_sql( $wpdb->prefix.BSKPDFManager::$_cats_tbl_name ) . '` WHERE `id` IN( ' . implode( ',', $auto_meta['auto_specific_categories'] ) . ' )';
                             $category_title_reuslts = $wpdb->get_results( $sql );
                             if ( $category_title_reuslts && is_array( $category_title_reuslts ) && count( $category_title_reuslts ) > 0 ) {

@@ -3,8 +3,8 @@ Contributors: bannersky
 Plugin URI: https://www.bannersky.com/bsk-pdf-manager/
 Tags: PDF manager, meeting minutes tool, printable forms tool, data sheets tool, embed PDF
 Requires at least: 5.3
-Tested up to: 7.0.3
-Stable tag: 3.8.1
+Tested up to: 7.1
+Stable tag: 3.8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,12 @@ Please visit <a href="http://www.bannersky.com/bsk-pdf-manager/">http://www.bann
 4. Permalink settings
 
 == Changelog ==
+
+3.8.2
+
+Fixed: authenticated SQL injection vulnerabilities in the tags_specific, extension_filter which could allow users with the Contributor role or higher to read arbitrary database data, including administrator password hashes. Affected shortcodes: bsk-pdfm-pdfs-ul, bsk-pdfm-pdfs-ol, bsk-pdfm-pdfs-dropdown, bsk-pdfm-category-ul, bsk-pdfm-category-ol, bsk-pdfm-category-dropdown.
+
+Compatible: WordPress 7.1
 
 3.8.1
 

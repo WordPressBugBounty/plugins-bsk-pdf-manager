@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 abstract class BSKPDFM_Forms_Integration {
 
 	protected $_plugin_settings;

@@ -1,5 +1,9 @@
 <?php
 
+if ( !defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class BSKPDFM_Forms_GravityForms extends BSKPDFM_Forms_Integration {
 		
 	public function load_field_integration_settings(){

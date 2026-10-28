@@ -66,7 +66,8 @@ class BSKPDFM_Common_Data_Source {
             $where_case_array[] = 'WHERE 1 ';
         }else{
             $ids_array = $args['ids_array'];
-            $where_case_array[] = 'WHERE `id` IN('.implode(',', esc_sql($ids_array)).')';
+            $ids_array = array_map( 'intval', (array) $ids_array );
+            $where_case_array[] = 'WHERE `id` IN('.implode(',', $ids_array).')';
         }
         
         //exclude draft
@@ -104,7 +105,8 @@ class BSKPDFM_Common_Data_Source {
                 $tags_associated_pdfs_id_a[] = -1;
             }
             
-            $where_case_array[] = 'AND ( `id` IN( '.implode( ',', esc_sql($tags_associated_pdfs_id_a) ).' ) )';
+            $tags_associated_pdfs_id_a = array_map( 'intval', (array) $tags_associated_pdfs_id_a );
+            $where_case_array[] = 'AND ( `id` IN( '.implode( ',', $tags_associated_pdfs_id_a ).' ) )';
         }
         
         $most_top = isset( $args['most_top'] ) ? absint($args['most_top']) : false;
@@ -225,6 +227,7 @@ class BSKPDFM_Common_Data_Source {
                 $tags_associated_pdfs_id_a[] = -1;
             }
             
+            $tags_associated_pdfs_id_a = array_map( 'intval', (array) $tags_associated_pdfs_id_a );
             $where_case_array[] = 'AND ( P.`id` IN( '.implode( ',', $tags_associated_pdfs_id_a ).' ) )';
         }
         
@@ -345,13 +348,14 @@ class BSKPDFM_Common_Data_Source {
 			$temp_array = explode(',', $id_string);
             $temp_valid_array = array();
             foreach($temp_array as $key => $cat_id){
-                $cat_id = absint(trim($cat_id));
                 $temp_valid_array[] = $cat_id;
             }
             
             if( !is_array($temp_valid_array) || count($temp_valid_array) < 1 ){
 				return false;
 			}
+
+            $temp_valid_array = array_map( 'intval', (array) $temp_valid_array );
 			$sql = $sql_base.
                    ' AND C.`id` IN('.implode(',', $temp_valid_array).') '.
                    ' ORDER BY '.esc_sql($cat_order_by_str.$cat_order_str);
